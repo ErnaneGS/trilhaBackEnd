@@ -3,7 +3,7 @@
 Repositório destinado a entrega dos desafios da trilha Back-end
 
 # 💻 trilhaBackEnd
-A missão nessa nova jornada é a capacitação nos pontos de vista técnico e profissional, a fim de se tornar um desenvolvedor NTT. Visando alcançar um patamar de especialista. Trilhando sempre pelo caminho da ética e transparência.
+A missão nessa nova jornada é a capacitação nos pontos de vista técnico e profissional, a fim de tornar um desenvolvedor NTT. Visando alcançar um patamar de especialista. Trilhando sempre pelo caminho da ética e transparência.
 
 # 📖 Desafios
 - [Desafio 1](#-Desafio-1)

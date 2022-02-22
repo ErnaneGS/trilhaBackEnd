@@ -31,8 +31,8 @@ b) Cite cinco vantagens em utilizar um VCS?
 ```
 c) Cite três exemplos de VCS?
 ----------
-1 - Git https://git-scm.com/
-2 - SVN https://subversion.apache.org/
-3 - CVS http://savannah.nongnu.org/projects/cvs
+1 - Git
+2 - SVN
+3 - CVS
 ```
 [Voltar para menu de desafios](#-Desafios)

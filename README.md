@@ -1,4 +1,4 @@
-![Screenshot](imagemGit.png)
+![imagemGit](https://user-images.githubusercontent.com/97994560/155146294-e61f3fe0-ee97-4fdf-acd6-2d4c4349ae6a.png)
 
 Repositório destinado a entrega dos desafios da trilha Back-End
 

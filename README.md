@@ -3,7 +3,7 @@
 Repositório destinado a entrega dos desafios da trilha Back-end
 
 # 💻 trilhaBackEnd
-A missão nessa nova jornada é a capacitação nos pontos de vista técnico e profissional, a fim de se tornar um desenvolvedor NTT. Visando alcançar um patamar de especialista. Trilhando sempre pelo caminho da ética e transparência.
+A missão nessa nova jornada é a capacitação nos pontos de vista técnico e profissional, a fim de tornar um desenvolvedor NTT. Visando alcançar um patamar de especialista. Trilhando sempre pelo caminho da ética e transparência.
 
 # 📖 Desafios
 - [Desafio 1](#-Desafio-1)
@@ -31,8 +31,8 @@ b) Cite cinco vantagens em utilizar um VCS?
 ```
 c) Cite três exemplos de VCS?
 ----------
-1 - Git https://git-scm.com/
-2 - SVN https://subversion.apache.org/
-3 - CVS http://savannah.nongnu.org/projects/cvs
+1 - Git
+2 - SVN
+3 - CVS
 ```
 [Voltar para menu de desafios](#-Desafios)

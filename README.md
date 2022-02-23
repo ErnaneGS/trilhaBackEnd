@@ -84,8 +84,8 @@ public class Cachorro {
 c) Exemplifique e explique um cenário de encapsulamento:
 ----------
 Técnica usada para não expor dados internos de um objeto ao usuário. No exemplo temos o objeto Cliente e não
-queremos expor seus dados pessoais como, nome, cpf e telefone, desse modo definimos os atributos em questão como privados 
-e usaremos os métodos setters e getters para acessar os dados.
+queremos expor seus dados pessoais como, nome, cpf e telefone, desse modo definimos os atributos em questão como
+privados e usaremos os métodos setters e getters para acessar os dados.
 ```
 ```java
 public class Cliente {
@@ -199,8 +199,8 @@ e) Exemplifique e explique um cenário de polimorfismo:
 ----------
 O polimorfismo permite o uso de métodos com implantações distintas em diferentes objetos, desde que mantenha-se a 
 mesma assinatura do método da superclasse. No exemplo temos a superclasse abstrata animal que não poderá ser instanciada
-e as subclasses cachorro e peixe, as subclasses herdam o método locomover da classe animal, porém cada uma implementa a sua forma específica de locomover 
-em seu método.
+e as subclasses cachorro e peixe, as subclasses herdam o método locomover da classe animal, porém cada uma implementa a
+sua forma específica de locomover em seu método.
 ```
 ```java
 public abstract class Animal {

@@ -32,19 +32,17 @@ public class Main {
         lancamento02.setCategoriaId(02L);
 
         //Produto
-        Product produto01 = new Product(01L, "Cadeira de escritório", "Cadeira de escritório giratória", 100.0);
-        Product produto02 = new Product(02L, "Mesa de escritório", "Mesa de escritório MDF", 90.0);
-        Product produto03 = new Product(03L, "Ventilador", "Ventilador de mesa médio", 120.0);
-        Product produto04 = new Product(04L, "Abajur", "Abajur médio", 513.0);
-        Product produto05 = new Product(05L, "Umidifcador de ar", "Umidificador de ar 3 em 1", 5.0);
+        Product produto01 = new Product(01L, "Cadeira de escritório", "Cadeira de escritório giratória", 150.00);
+        Product produto02 = new Product(02L, "Mesa de escritório", "Mesa de escritório MDF", 250.00);
+        Product produto03 = new Product(03L, "Ventilador", "Ventilador de mesa médio", 90.00);
+        Product produto04 = new Product(04L, "Abajur", "Abajur médio", 40.00);
+        Product produto05 = new Product(05L, "Umidifcador de ar", "Umidificador de ar 3 em 1", 450.0);
 
         List<Product> produtos = Arrays.asList(produto01, produto02, produto03, produto04, produto05);
 
-        produto01.setPrice(produto01.getPrice() + 10.00);
-        produto02.setPrice(produto02.getPrice() + 10.00);
-        produto03.setPrice(produto03.getPrice() + 10.00);
-        produto04.setPrice(produto04.getPrice() + 10.00);
-        produto05.setPrice(produto05.getPrice() + 10.00);
+        for (Product p : produtos) {
+            p.setPrice(p.getPrice() + 10.00);
+        }
 
         System.out.println();
         System.out.println("Imprimindo todos os produtos");;
@@ -53,12 +51,17 @@ public class Main {
             System.out.println(p);
         }
 
+        produtos.sort(Comparator.comparing(Product::getPrice).reversed());
+
+        List<Product> produtosMaisCaros = produtos.stream().limit(3).toList();
+
         System.out.println();
         System.out.println("Imprimindo os 03 produtos mais caros");
 
-        produtos.sort(Comparator.comparing(Product::getPrice).reversed());
-
-        System.out.println( produtos.stream().limit(3).toList().toString());
+        for (Product p : produtosMaisCaros) {
+            System.out.println(p);
+        }
 
     }
+
 }

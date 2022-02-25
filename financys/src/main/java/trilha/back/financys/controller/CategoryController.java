@@ -22,7 +22,7 @@ public class CategoryController {
     }
 
     @GetMapping
-    public ResponseEntity<List> read() {
+    public ResponseEntity<List<Category>> read() {
 
         return ResponseEntity.ok(listaCategory);
 

@@ -27,7 +27,7 @@ public class EntryController {
 
         listaEntry.sort(Comparator.comparing(Entry::getDate));
 
-        List<Entry> listaEntryOrdenadaDate = listaEntry.stream().limit(3).toList();
+        List<Entry> listaEntryOrdenadaDate = listaEntry.stream().toList();
 
         return ResponseEntity.ok(listaEntryOrdenadaDate);
 

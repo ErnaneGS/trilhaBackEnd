@@ -256,19 +256,19 @@ a) Com suas palavras defina:
 I. O que é o protocolo de comunicação HTTP e como ele funciona:
 ----------
 É um protocolo que determina os padrões e regras de troca de informações entre servidores. O seu funcionamento se da
-quando um cliente inicia uma solicitação ao seridor através do request HTTP, que faz o acesso ao servidor e retorna 
-o conteúdo desejado ao clientre ou uma mensagem de erro HTT informando o porque não foi possível localizar ou realizar
+quando um cliente inicia uma solicitação ao servidor através do request HTTP, que faz o acesso ao servidor e retorna 
+o conteúdo desejado ao cliente ou uma mensagem de erro HTT informando o porquê não foi possível localizar ou realizar
 aquela solicitação.
 
 II. O que é REST, e qual é a sua relação com o protocolo HTTP:
 ----------
-O REST é um padrão de arquitetura que define como vai acontecer a comunicação entre camadas da aplicação, esssa
-comunicação acotece atraves dos verbos do HTTP correspondentes ao método CRUD (Create, Read, Update e Delete).
+O REST é um padrão de arquitetura que define como vai acontecer a comunicação entre camadas da aplicação, essa
+comunicação acontece através dos verbos do HTTP correspondentes ao método CRUD (Create, Read, Update e Delete).
 
 III. O que é Web API, e qual é a sua relação com REST:
 ----------
-API é um conjunto de regras quee permite que diferentes programas se comuniquem
-
+API é um conjunto de regras que permite a comunicação de diferentes programas, essa comunicação se torna mais fácil
+utilizando o REST e suas funções, a qual podemos executar solicitações e receber respostas através do protocolo HTTP.
 ```
 ```
 b) Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e suas respectivas finalidades:
@@ -380,11 +380,10 @@ h) Liste os lançamentos ordenados por data:
 ]
 ```
 ```
-i) O que é Swagger? (máx 5 linhas)
+i) O que é Swagger?
 ----------
-
-
-
+O Swagger é um framework composto por diversas ferramentas que, independente da linguagem, auxilia a descrição, consumo
+e visualização de serviços de uma API REST. 
 ```
 ```
 j) Implemente o Swagger na sua Spring Rest API;
@@ -394,4 +393,6 @@ j) Implemente o Swagger na sua Spring Rest API;
 ```
 k) Repita as letras e, f  , g e h porém agora em vez de usar o postman, vamos usar o swagger
 ```
+
+
 [Voltar para menu de desafios](#-Desafios)

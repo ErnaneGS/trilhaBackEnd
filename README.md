@@ -36,7 +36,7 @@ c) Cite três exemplos de VCS?
 2 - SVN
 3 - CVS
 ```
-[Voltar para menu de desafios](#-Desafios)
+◀️[Voltar para menu de desafios](#-Desafios)
 
 ## 🎯 Desafio 2
 ```
@@ -244,7 +244,7 @@ f) Cite 5 vantagens da POO:
 5 - Processo de desenvolvimento ágil. Várias equipes podem trabalhar no mesmo projeto de
 forma independente.
 ```
-[Voltar para menu de desafios](#-Desafios)
+◀️[Voltar para menu de desafios](#-Desafios)
 
 ## 🎯 Desafio 3
 O objetivo durante o desafio 3 é entender o básico a respeito do protocolo de comunicação  mais  utilizado  da  internet,
@@ -393,6 +393,4 @@ j) Implemente o Swagger na sua Spring Rest API;
 ```
 k) Repita as letras e, f  , g e h porém agora em vez de usar o postman, vamos usar o swagger
 ```
-
-
-[Voltar para menu de desafios](#-Desafios)
+◀️[Voltar para menu de desafios](#-Desafios)

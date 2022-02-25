@@ -245,3 +245,152 @@ forma independente.
 ```
 [Voltar para menu de desafios](#-Desafios)
 
+## 🎯 Desafio 3
+O objetivo durante o desafio 3 é entender o básico a respeito do protocolo de comunicação  mais  utilizado  da  internet,
+e  a  partir  desses  princípios  ser  capaz  de  implementar controllers a fim de se comunicar com uma aplicação de 
+front-end, um micro serviço ou outros tipos de aplicações.
+
+```
+a) Com suas palavras defina:
+I. O que é o protocolo de comunicação HTTP e como ele funciona:
+----------
+É um protocolo que determina os padrões e regras de troca de informações entre servidores. O seu funcionamento se da
+quando um cliente inicia uma solicitação ao seridor através do request HTTP, que faz o acesso ao servidor e retorna 
+o conteúdo desejado ao clientre ou uma mensagem de erro HTT informando o porque não foi possível localizar ou realizar
+aquela solicitação.
+
+II. O que é REST, e qual é a sua relação com o protocolo HTTP:
+----------
+O REST é um padrão de arquitetura que define como vai acontecer a comunicação entre camadas da aplicação, esssa
+comunicação acotece atraves dos verbos do HTTP correspondentes ao método CRUD (Create, Read, Update e Delete).
+
+III. O que é Web API, e qual é a sua relação com REST:
+----------
+API é um conjunto de regras quee permite que diferentes programas se comuniquem
+
+```
+```
+b) Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e suas respectivas finalidades:
+```
+|Requisições | Descrição                                                                    |
+|-----------|------------------------------------------------------------------------------|
+| POST      | Usado para enviar dados para o servidor.                                     |
+| GET       | Usado para recuperar informações de um determinado servidor.                 |
+| PATCH     | Usado para realizar modificações parciais nos recursos.                      |
+| PUT       | Usado para substituir os dados atuais pelos dados da nova requisição enviada |
+| DEL       | Usado para deletar um recurso.                                               |
+
+```
+c) Crie uma classe do tipo controller para a entidade categoria:
+```
+[Codificação disponível neste link](https://https://github.com/ErnaneGS/trilhaBackEnd/tree/desafioTres/src/controller/CategoryController)<br/>
+
+```
+d) Repita o item c para lançamentos:
+```
+[Codificação disponível neste link](https://https://github.com/ErnaneGS/trilhaBackEnd/tree/desafioTres/src/controller/EntryController)<br/>
+
+```
+e) Crie 2 objetos do tipo categoria:
+```
+```json
+  {
+       "id": 1,
+       "name": "Salario",
+       "description": "Pagamento mensal"
+  }
+```
+```json
+  {
+       "id": 2,
+       "name": "Vale Alimentação",
+       "description": "Pagamento mensal"
+  }
+```
+```
+f) Liste as categorias:
+```
+```json
+[
+    {
+        "id": 1,
+        "name": "Salario",
+        "description": "Pagamento mensal"
+    },
+    {
+        "id": 2,
+        "name": "Vale Alimentação",
+        "description": "Pagamento mensal"
+    }
+]
+```
+```
+g) Crie 2 objetos do tipo lançamentos:
+```
+```json
+  {
+    "id": 1,
+    "name": "Pagamento de Salário",
+    "description": "Pagamento de salário referente ao mês de janeiro",
+    "type": "Despesa",
+    "amount": "5000,00",
+    "date": "2022-02-24",
+    "paid": true,
+    "categoriaId": 1
+}
+```
+```json
+  {
+    "id": 2,
+    "name": "Pagamento de Vale Alimentação",
+    "description": "Pagamento de VA referente ao mês de janeiro",
+    "type": "Despesa",
+    "amount": "500,00",
+    "date": "2022-02-25",
+    "paid": true,
+    "categoriaId": 2
+}
+```
+```
+h) Liste os lançamentos ordenados por data:
+```
+```json
+[
+    {
+        "id": 1,
+        "name": "Pagamento de Salário",
+        "description": "Pagamento de salário referente ao mês de janeiro",
+        "type": "Despesa",
+        "amount": "5000,00",
+        "date": "2022-02-24",
+        "paid": true,
+        "categoriaId": 1
+    },
+    {
+        "id": 2,
+        "name": "Pagamento de Vale Alimentação",
+        "description": "Pagamento de VA referente ao mês de janeiro",
+        "type": "Despesa",
+        "amount": "500,00",
+        "date": "2022-02-25",
+        "paid": true,
+        "categoriaId": 2
+    }
+]
+```
+```
+i) O que é Swagger? (máx 5 linhas)
+----------
+
+
+
+```
+```
+j) Implemente o Swagger na sua Spring Rest API;
+```
+[Implementação disponível neste link](https://https://github.com/ErnaneGS/trilhaBackEnd/tree/)<br/>
+
+```
+k) Repita as letras e, f  , g e h porém agora em vez de usar o postman, vamos usar o swagger
+```
+[Codificação disponível neste link](https://https://github.com/ErnaneGS/trilhaBackEnd/tree/)<br/>

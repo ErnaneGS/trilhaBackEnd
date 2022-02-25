@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "5250d0cb-6be3-4bbb-b043-89d137b252a8",
+		"name": "trilhaBackEnd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n       \"id\": 1,\r\n       \"name\": \"Teste\",\r\n       \"description\": \"Categoria de teste\"\r\n  }\r\n   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Entry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n       \"id\": 1,\r\n       \"name\": \"Teste\",\r\n       \"description\": \"Categoria de teste\",\r\n       \"type\": \"Despesa\",\r\n       \"amount\": \"500,00\",\r\n       \"date\": \"24022022\",\r\n       \"paid\": true,\r\n       \"vategoryId\": 1\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/entry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"entry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Entry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/entry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"entry"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

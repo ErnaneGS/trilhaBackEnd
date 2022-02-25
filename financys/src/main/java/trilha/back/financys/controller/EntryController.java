@@ -32,5 +32,4 @@ public class EntryController {
         return ResponseEntity.ok(listaEntryOrdenadaDate);
 
     }
-
 }

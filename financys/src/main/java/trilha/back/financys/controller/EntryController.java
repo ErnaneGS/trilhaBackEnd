@@ -30,6 +30,7 @@ public class EntryController {
         List<Entry> listaEntryOrdenadaDate = listaEntry.stream().limit(3).toList();
 
         return ResponseEntity.ok(listaEntryOrdenadaDate);
+
     }
 
 }

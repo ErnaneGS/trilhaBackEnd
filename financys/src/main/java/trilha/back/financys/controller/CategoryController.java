@@ -15,8 +15,6 @@ public class CategoryController {
     @PostMapping
     public String create(@RequestBody Category category) {
 
-
-
         listaCategory.add(category);
 
         return "Categoria inserida na lista na posição " + listaCategory.size();
@@ -27,6 +25,7 @@ public class CategoryController {
     public ResponseEntity<List> read() {
 
         return ResponseEntity.ok(listaCategory);
+
     }
 
 }

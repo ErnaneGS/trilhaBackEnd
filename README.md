@@ -8,6 +8,7 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 # 📖 Desafios
 - [Desafio 1](#-Desafio-1)
 - [Desafio 2](#-Desafio-2)
+- [Desafio 3](#-Desafio-3)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
@@ -388,9 +389,9 @@ i) O que é Swagger? (máx 5 linhas)
 ```
 j) Implemente o Swagger na sua Spring Rest API;
 ```
-[Implementação disponível neste link](https://https://github.com/ErnaneGS/trilhaBackEnd/tree/)<br/>
+[Implementação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafioTres/financys/pom.xml)<br/>
 
 ```
 k) Repita as letras e, f  , g e h porém agora em vez de usar o postman, vamos usar o swagger
 ```
-[Codificação disponível neste link](https://https://github.com/ErnaneGS/trilhaBackEnd/tree/)<br/>
+[Voltar para menu de desafios](#-Desafios)

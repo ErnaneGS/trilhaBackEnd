@@ -283,12 +283,12 @@ b) Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e
 ```
 c) Crie uma classe do tipo controller para a entidade categoria:
 ```
-[Codificação disponível neste link](https://https://github.com/ErnaneGS/trilhaBackEnd/tree/desafioTres/src/controller/CategoryController)<br/>
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafioTres/financys/src/main/java/trilha/back/financys/controller/CategoryController.java)<br/>
 
 ```
 d) Repita o item c para lançamentos:
 ```
-[Codificação disponível neste link](https://https://github.com/ErnaneGS/trilhaBackEnd/tree/desafioTres/src/controller/EntryController)<br/>
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafioTres/financys/src/main/java/trilha/back/financys/controller/EntryController.java)<br/>
 
 ```
 e) Crie 2 objetos do tipo categoria:

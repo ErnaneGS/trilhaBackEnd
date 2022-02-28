@@ -290,12 +290,12 @@ b) Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e
 ```
 c) Crie uma classe do tipo controller para a entidade categoria:
 ```
-[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafioTres/financys/src/main/java/trilha/back/financys/controller/CategoryController.java)<br/>
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio03/financys/src/main/java/trilha/back/financys/controller/CategoryController.java)<br/>
 
 ```
 d) Repita o item c para lançamentos:
 ```
-[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafioTres/financys/src/main/java/trilha/back/financys/controller/EntryController.java)<br/>
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio03/financys/src/main/java/trilha/back/financys/controller/EntryController.java)<br/>
 
 ```
 e) Crie 2 objetos do tipo categoria:
@@ -394,7 +394,7 @@ e visualização de serviços de uma API REST.
 ```
 j) Implemente o Swagger na sua Spring Rest API;
 ```
-[Implementação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafioTres/financys/pom.xml)<br/>
+[Implementação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio03/financys/pom.xml)<br/>
 
 ```
 k) Repita as letras e, f  , g e h porém agora em vez de usar o postman, vamos usar o swagger

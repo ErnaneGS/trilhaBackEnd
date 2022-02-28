@@ -255,31 +255,37 @@ front-end, um micro serviço ou outros tipos de aplicações.
 a) Com suas palavras defina:
 I. O que é o protocolo de comunicação HTTP e como ele funciona:
 ----------
-É um protocolo que determina os padrões e regras de troca de informações entre servidores. O seu funcionamento se da
-quando um cliente inicia uma solicitação ao servidor através do request HTTP, que faz o acesso ao servidor e retorna 
-o conteúdo desejado ao cliente ou uma mensagem de erro HTT informando o porquê não foi possível localizar ou realizar
-aquela solicitação.
+É um protocolo de comunicação entre aplicações para a transmissão de documentos hipermídia. O seu funcionamento segue o
+modelo cliente servidor para a comunicação entre navegadores web w servidores web. O cliente abre uma conexão, executa
+uma requisição e espera até receber uma resposta.
 
 II. O que é REST, e qual é a sua relação com o protocolo HTTP:
 ----------
-O REST é um padrão de arquitetura que define como vai acontecer a comunicação entre camadas da aplicação, essa
-comunicação acontece através dos verbos do HTTP correspondentes ao método CRUD (Create, Read, Update e Delete).
+O REST é um padrão de arquitetura que define diretrizes para a comunicação (requisição e resposta) dos sistemas 
+distributivos. Nas requisições é preciso que o cliente faça a solicitação que consiste em: (um método http, um header
+e um patch). Já na resposta que a aplicação REST retorna é enviado um código de status de resposta http definindo o
+status da requisição. 
 
 III. O que é Web API, e qual é a sua relação com REST:
 ----------
-API é um conjunto de regras que permite a comunicação de diferentes programas, essa comunicação se torna mais fácil
-utilizando o REST e suas funções, a qual podemos executar solicitações e receber respostas através do protocolo HTTP.
+API é uma Interface de Programação de Aplicações onde permite que dois softwares diferentes comuniquem-se entre si, 
+podendo utilizar o padrão RESTFul que é uma interface que fornece dados em um formato padronizado baseado em requisições
+HTTP.
 ```
 ```
 b) Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e suas respectivas finalidades:
 ```
-|Requisições | Descrição                                                                    |
-|-----------|------------------------------------------------------------------------------|
-| POST      | Usado para enviar dados para o servidor.                                     |
-| GET       | Usado para recuperar informações de um determinado servidor.                 |
-| PATCH     | Usado para realizar modificações parciais nos recursos.                      |
-| PUT       | Usado para substituir os dados atuais pelos dados da nova requisição enviada |
-| DEL       | Usado para deletar um recurso.                                               |
+| Requisições   | Descrição                                                                                                                                                                |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET           | O método GET solicita a representação de um recurso específico. Requisições utilizando o método GET devem retornar apenas dados.                                         |
+| HEAD          | O método HEAD solicita uma resposta de forma idêntica ao método GET, porém sem conter o corpo da resposta.                                                               |
+| POST          | O método POST é utilizado para submeter uma entidade a um recurso específico, frequentemente causando uma mudança no estado do recurso ou efeitos colaterais no servidor. |
+| PUT           | O método PUT substitui todas as atuais representações do recurso de destino pela carga de dados da requisição.                                                                                                                                                                         |
+| DELETE        | O método DELETE remove um recurso específico                                                                                                                                                                         |
+| CONNECT       | O método CONNECT estabelece um túnel para o servidor identificado pelo recurso de destino.                                                                                                                                                                         |
+| OPTIONS       | O método OPTIONS é usado para descrever as opções de comunicação com o recurso de destino                                                                                                                                                                         |
+| TRACE         | O método TRACE executa um teste de chamada loop-back junto com o caminho para o recurso de destino.                                                                                                                                                                         |
+| PATCH         | O método PATCH é utilizado para aplicar modificações parciais em um recurso.                                                                                                                                                                         |
 
 ```
 c) Crie uma classe do tipo controller para a entidade categoria:

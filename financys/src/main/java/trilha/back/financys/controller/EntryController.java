@@ -15,21 +15,13 @@ public class EntryController {
 
     @PostMapping
     public String create(@RequestBody Entry entry) {
-
         listaEntry.add(entry);
-
         return "Lançamento inserido na lista na posição " + listaEntry.size();
-
     }
 
     @GetMapping
     public ResponseEntity<List<Entry>> read() {
-
         listaEntry.sort(Comparator.comparing(Entry::getDate));
-
-        List<Entry> listaEntryOrdenadaDate = listaEntry.stream().toList();
-
-        return ResponseEntity.ok(listaEntryOrdenadaDate);
-
+        return ResponseEntity.ok(listaEntry);
     }
 }

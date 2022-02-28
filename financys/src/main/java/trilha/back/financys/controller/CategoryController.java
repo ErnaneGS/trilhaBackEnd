@@ -14,17 +14,13 @@ public class CategoryController {
 
     @PostMapping
     public String create(@RequestBody Category category) {
-
         listaCategory.add(category);
-
         return "Categoria inserida na lista na posição " + listaCategory.size();
 
     }
 
     @GetMapping
     public ResponseEntity<List<Category>> read() {
-
         return ResponseEntity.ok(listaCategory);
-
     }
 }

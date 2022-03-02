@@ -9,7 +9,8 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 - [Desafio 1](#-Desafio-1)
 - [Desafio 2](#-Desafio-2)
 - [Desafio 3](#-Desafio-3)
-
+- [Desafio 3](#-Desafio-4)
+- 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
 
@@ -399,4 +400,51 @@ j) Implemente o Swagger na sua Spring Rest API;
 ```
 k) Repita as letras e, f  , g e h porém agora em vez de usar o postman, vamos usar o swagger
 ```
+◀️[Voltar para menu de desafios](#-Desafios)
+
+## 🎯 Desafio 4
+O objetivo durante o desafio 4 é entender o papel da camada de persistência, a abstração da linguagem dos bancos de
+dados criada pelas ferramentas de ORM e a partir desse entendimento ser capaz de comunicar com qualquer tipo de banco
+de  dados independendo  da  sua  linguagem  nativa.  O  foco  durante  o  desafio 4 deve estar em saber implementar
+suas próprias classes de repositório.
+
+```
+a) Com suas palavras conceitue:
+I. O que é JDBC?
+----------
+Java Database Connectivity é num conjunto de classes e interfaces que fazem o envio de intruções SQL 
+     
+II. O que é ORM, cite 3 exemplos?
+----------
+
+     
+III. O que é JPA e qual é a sua relação com os ORM’s?
+----------
+
+     
+IV. O que é Spring Data?
+----------
+
+
+```
+```
+b) Instale, configure e teste um banco de dados SQL.
+
+
+```
+
+```
+c) Implemente uma interface repository (nossa camada de persistência) utilizandospring data e as entidades criadas no
+desafio anterior.
+```
+
+```
+d) O que caracteriza um projeto “CRUD básico”? (máx 10 linhas)
+```
+
+```
+e) Com base nas classes de controller, use as interfaces desenvolvidas e crie osseguintes métodos e refatore os
+existentes se necessário:
+```
+
 ◀️[Voltar para menu de desafios](#-Desafios)

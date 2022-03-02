@@ -1,9 +1,13 @@
 package trilha.back.financys.domains;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
 public class Entry {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String description;
@@ -11,12 +15,14 @@ public class Entry {
     private String amount;
     private LocalDate date;
     private Boolean paid;
-    private Long categoriaId;
+
+    @ManyToOne
+    private Category categoriaId;
 
     public Entry() {
     }
 
-    public Entry(Long id, String name, String description, String type, String amount, LocalDate date, Boolean paid, Long categoriaId) {
+    public Entry(Long id, String name, String description, String type, String amount, LocalDate date, Boolean paid, Category categoriaId) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -97,11 +103,11 @@ public class Entry {
         this.paid = paid;
     }
 
-    public Long getCategoriaId() {
+    public Category getCategoriaId() {
         return categoriaId;
     }
 
-    public void setCategoriaId(Long categoriaId) {
+    public void setCategoriaId(Category categoriaId) {
         this.categoriaId = categoriaId;
     }
 }

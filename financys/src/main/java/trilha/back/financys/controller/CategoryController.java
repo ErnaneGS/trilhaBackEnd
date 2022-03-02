@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import trilha.back.financys.domains.Category;
 import trilha.back.financys.repositories.CategoryRepository;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/category")
@@ -28,26 +29,33 @@ public class CategoryController {
 
     @GetMapping("{id}")
     public ResponseEntity<Category> findById(@PathVariable Long id) {
-        Category category = categoryRepository.findById(id).get();
-        if(category == null) {
-            throw new RuntimeException("Categoria não encontrado!");
+        if(categoryRepository.findById(id).isPresent()) {
+            return ResponseEntity.ok(categoryRepository.findById(id).get());
+        } else {
+            throw new NoSuchElementException("Categoria não encontrada através do id informado.");
         }
-        return ResponseEntity.ok(category);
     }
 
     @PutMapping("{id}")
     public ResponseEntity<Category> update(@RequestBody Category category, @PathVariable long id) {
-        Category categoryId = categoryRepository.findById(id).get();
-        categoryId.setDescription(category.getDescription());
-        categoryId.setName(category.getName());
-        categoryRepository.save(categoryId);
-        return ResponseEntity.ok(categoryId);
+        if(categoryRepository.findById(id).isPresent()) {
+            Category categoryId = categoryRepository.findById(id).get();
+            categoryId.setDescription(category.getDescription());
+            categoryId.setName(category.getName());
+            categoryRepository.save(categoryId);
+            return ResponseEntity.ok(categoryId);
+        } else {
+            throw new NoSuchElementException("Categoria não encontrada para atualizar através do id informado.");
+        }
     }
 
     @DeleteMapping("{id}")
     public ResponseEntity<String> delete(@PathVariable long id) {
-        categoryRepository.deleteById(id);
-        return ResponseEntity.noContent().build();
+        if(categoryRepository.findById(id).isPresent()) {
+            categoryRepository.deleteById(id);
+            return ResponseEntity.noContent().build();
+        } else {
+            throw new NoSuchElementException("Categoria não encontrada para deletar através do id informado.");
+        }
     }
-
 }

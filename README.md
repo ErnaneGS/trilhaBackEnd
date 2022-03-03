@@ -449,6 +449,7 @@ Um projeto CRUD é caracterizado pelas quatro operações básicas:
 1 - CREATE: Criar um novo registro;
 2 - READ: Exibir informações de um registro;
 3 - UPDATE: Atualizar informações de um registro;
+4 - DELETE: Deleta um registro;
 ```
 ```
 e) Com base nas classes de controller, use as interfaces desenvolvidas e crie/refatore métodos

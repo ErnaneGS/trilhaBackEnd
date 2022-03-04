@@ -12,7 +12,7 @@ public class Category {
     private String name;
     private String description;
 
-    @OneToMany
+    @OneToMany(mappedBy = "categoriaId")
     private List<Entry> entries;
 
     public Category() {

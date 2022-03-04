@@ -146,25 +146,6 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/entry",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"entry"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Entry Read Paid",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
 					"raw": "http://localhost:8080/entry/paid",
 					"protocol": "http",
 					"host": [
@@ -174,26 +155,6 @@
 					"path": [
 						"entry",
 						"paid"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Entry Read NoPaid",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/entry/noPaid",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"entry",
-						"noPaid"
 					]
 				}
 			},

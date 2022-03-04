@@ -9,7 +9,6 @@ import trilha.back.financys.repositories.EntryRepository;
 import java.util.Comparator;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.function.Predicate;
 
 @RestController
 @RequestMapping("/entry")
@@ -25,34 +24,21 @@ public class EntryController {
     public ResponseEntity<Entry> create(@RequestBody Entry entry) {
         if (categoryRepository.findById(entry.getCategoriaId().getId()).isPresent()){
             entry.setCategoriaId(categoryRepository.findById(entry.getCategoriaId().getId()).get());
-            entryRepository.save(entry);
-            return ResponseEntity.created(null).body(entry);
+            return ResponseEntity.created(null).body(entryRepository.save(entry));
         } else {
             throw new NoSuchElementException("Categoria não encontrada através do id informado.");
         }
     }
 
-    @GetMapping
-    public ResponseEntity<List<Entry>> read() {
-        List<Entry> entities = entryRepository.findAll();
-        entities.sort(Comparator.comparing(Entry::getDate));
-        return ResponseEntity.ok(entities);
-    }
-
-    @GetMapping({"/paid"})
-    public ResponseEntity<List<Entry>> readPaid() {
-        List<Entry> entities = entryRepository.findAll();
-        entities.sort(Comparator.comparing(Entry::getDate));
-        Predicate<Entry> pagos = p -> p.isPaid() == true;
-        return ResponseEntity.ok(entities.stream().filter(pagos).toList());
-    }
-
-    @GetMapping({"/noPaid"})
-    public ResponseEntity<List<Entry>> readNoPaid() {
-        List<Entry> entities = entryRepository.findAll();
-        entities.sort(Comparator.comparing(Entry::getDate));
-        Predicate<Entry> naoPagos = p -> p.isPaid() == false;
-        return ResponseEntity.ok(entities.stream().filter(naoPagos).toList());
+    @GetMapping()
+    public ResponseEntity<List<Entry>> read(@RequestParam(required = false) Boolean paid) {
+        if(paid != null) {
+            List<Entry> entities = entryRepository.findByPaid(paid);
+            entities.sort(Comparator.comparing(Entry::getDate));
+            return ResponseEntity.ok(entities);
+        } else {
+            return ResponseEntity.ok(entryRepository.findAll());
+        }
     }
 
     @GetMapping("{id}")
@@ -60,13 +46,13 @@ public class EntryController {
         if(entryRepository.findById(id).isPresent()) {
             return ResponseEntity.ok(entryRepository.findById(id).get());
         } else {
-            throw new NoSuchElementException("Lançamento não encontrado através do id informado.");
+            throw new NoSuchElementException();
         }
     }
 
     @PutMapping("{id}")
     public ResponseEntity<Entry> update(@RequestBody Entry entry, @PathVariable long id) {
-        if(categoryRepository.findById(id).isPresent()) {
+        if(entryRepository.findById(id).isPresent()) {
             Entry entryId = entryRepository.findById(id).get();
             entryId.setAmount(entry.getAmount());
             entryId.setDate(entry.getDate());
@@ -74,9 +60,8 @@ public class EntryController {
             entryId.setPaid(entry.isPaid());
             entryId.setType(entry.getType());
             entryId.setDescription(entry.getDescription());
-            entryId.setCategoriaId(entry.getCategoriaId());
-            entryRepository.save(entryId);
-            return ResponseEntity.ok(entryId);
+            entry.setCategoriaId(categoryRepository.findById(entry.getCategoriaId().getId()).get());
+            return ResponseEntity.ok(entryRepository.save(entryId));
         } else {
             throw new NoSuchElementException("Categoria não encontrada para atualizar através do id informado.");
         }
@@ -86,7 +71,7 @@ public class EntryController {
     public ResponseEntity<String> delete(@PathVariable long id) {
         if(entryRepository.findById(id).isPresent()){
             entryRepository.deleteById(id);
-            return ResponseEntity.noContent().build();
+            return ResponseEntity.ok("Objeto excluido");
         }
         throw new NoSuchElementException("Lançemento não encontrado para deletar através do id informado.");
     }

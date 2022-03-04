@@ -17,6 +17,7 @@ public class Entry {
     private Boolean paid;
 
     @ManyToOne
+    @JoinColumn(name = "categoriaId", referencedColumnName = "id")
     private Category categoriaId;
 
     public Entry() {

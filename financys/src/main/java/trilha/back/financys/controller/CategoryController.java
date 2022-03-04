@@ -17,14 +17,12 @@ public class CategoryController {
 
     @PostMapping
     public ResponseEntity<Category> create(@RequestBody Category category) {
-        categoryRepository.save(category);
-        return ResponseEntity.created(null).body(category);
+        return ResponseEntity.created(null).body(categoryRepository.save(category));
     }
 
     @GetMapping
     public ResponseEntity<List<Category>> read() {
-        List<Category> categories = categoryRepository.findAll();
-        return ResponseEntity.ok(categories);
+        return ResponseEntity.ok(categoryRepository.findAll());
     }
 
     @GetMapping("{id}")
@@ -53,7 +51,7 @@ public class CategoryController {
     public ResponseEntity<String> delete(@PathVariable long id) {
         if(categoryRepository.findById(id).isPresent()) {
             categoryRepository.deleteById(id);
-            return ResponseEntity.noContent().build();
+            return ResponseEntity.ok("Objeto excluido");
         } else {
             throw new NoSuchElementException("Categoria não encontrada para deletar através do id informado.");
         }

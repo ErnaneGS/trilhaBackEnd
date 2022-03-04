@@ -9,6 +9,7 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 - [Desafio 1](#-Desafio-1)
 - [Desafio 2](#-Desafio-2)
 - [Desafio 3](#-Desafio-3)
+- [Desafio 4](#-Desafio-4)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.

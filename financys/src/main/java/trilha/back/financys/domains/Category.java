@@ -1,10 +1,19 @@
 package trilha.back.financys.domains;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
 public class Category {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String description;
+
+    @OneToMany(mappedBy = "categoriaId")
+    private List<Entry> entries;
 
     public Category() {
     }

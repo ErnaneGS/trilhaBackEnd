@@ -8,6 +8,7 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 # 📖 Desafios
 - [Desafio 1](#-Desafio-1)
 - [Desafio 2](#-Desafio-2)
+- [Desafio 3](#-Desafio-3)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
@@ -35,7 +36,7 @@ c) Cite três exemplos de VCS?
 2 - SVN
 3 - CVS
 ```
-[Voltar para menu de desafios](#-Desafios)
+◀️[Voltar para menu de desafios](#-Desafios)
 
 ## 🎯 Desafio 2
 ```
@@ -243,5 +244,159 @@ f) Cite 5 vantagens da POO:
 5 - Processo de desenvolvimento ágil. Várias equipes podem trabalhar no mesmo projeto de
 forma independente.
 ```
-[Voltar para menu de desafios](#-Desafios)
+◀️[Voltar para menu de desafios](#-Desafios)
 
+## 🎯 Desafio 3
+O objetivo durante o desafio 3 é entender o básico a respeito do protocolo de comunicação  mais  utilizado  da  internet,
+e  a  partir  desses  princípios  ser  capaz  de  implementar controllers a fim de se comunicar com uma aplicação de 
+front-end, um micro serviço ou outros tipos de aplicações.
+
+```
+a) Com suas palavras defina:
+I. O que é o protocolo de comunicação HTTP e como ele funciona:
+----------
+É um protocolo de comunicação entre aplicações para a transmissão de documentos hipermídia. O seu funcionamento segue o
+modelo cliente servidor para a comunicação entre navegadores web w servidores web. O cliente abre uma conexão, executa
+uma requisição e espera até receber uma resposta.
+
+II. O que é REST, e qual é a sua relação com o protocolo HTTP:
+----------
+O REST é um padrão de arquitetura que define diretrizes para a comunicação (requisição e resposta) dos sistemas 
+distributivos. Nas requisições é preciso que o cliente faça a solicitação que consiste em: (um método http, um header
+e um patch). Já na resposta que a aplicação REST retorna é enviado um código de status de resposta http definindo o
+status da requisição. 
+
+III. O que é Web API, e qual é a sua relação com REST:
+----------
+API é uma Interface de Programação de Aplicações onde permite que dois softwares diferentes comuniquem-se entre si, 
+podendo utilizar o padrão RESTFul que é uma interface que fornece dados em um formato padronizado baseado em requisições
+HTTP.
+```
+```
+b) Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e suas respectivas finalidades:
+```
+| Requisições   | Descrição                                                                                                                                                                |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET           | O método GET solicita a representação de um recurso específico. Requisições utilizando o método GET devem retornar apenas dados.                                         |
+| HEAD          | O método HEAD solicita uma resposta de forma idêntica ao método GET, porém sem conter o corpo da resposta.                                                               |
+| POST          | O método POST é utilizado para submeter uma entidade a um recurso específico, frequentemente causando uma mudança no estado do recurso ou efeitos colaterais no servidor. |
+| PUT           | O método PUT substitui todas as atuais representações do recurso de destino pela carga de dados da requisição.                                                                                                                                                                         |
+| DELETE        | O método DELETE remove um recurso específico                                                                                                                                                                         |
+| CONNECT       | O método CONNECT estabelece um túnel para o servidor identificado pelo recurso de destino.                                                                                                                                                                         |
+| OPTIONS       | O método OPTIONS é usado para descrever as opções de comunicação com o recurso de destino                                                                                                                                                                         |
+| TRACE         | O método TRACE executa um teste de chamada loop-back junto com o caminho para o recurso de destino.                                                                                                                                                                         |
+| PATCH         | O método PATCH é utilizado para aplicar modificações parciais em um recurso.                                                                                                                                                                         |
+
+```
+c) Crie uma classe do tipo controller para a entidade categoria:
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio03/financys/src/main/java/trilha/back/financys/controller/CategoryController.java)<br/>
+
+```
+d) Repita o item c para lançamentos:
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio03/financys/src/main/java/trilha/back/financys/controller/EntryController.java)<br/>
+
+```
+e) Crie 2 objetos do tipo categoria:
+```
+```json
+  {
+       "id": 1,
+       "name": "Salario",
+       "description": "Pagamento mensal"
+  }
+```
+```json
+  {
+       "id": 2,
+       "name": "Vale Alimentação",
+       "description": "Pagamento mensal"
+  }
+```
+```
+f) Liste as categorias:
+```
+```json
+[
+    {
+        "id": 1,
+        "name": "Salario",
+        "description": "Pagamento mensal"
+    },
+    {
+        "id": 2,
+        "name": "Vale Alimentação",
+        "description": "Pagamento mensal"
+    }
+]
+```
+```
+g) Crie 2 objetos do tipo lançamentos:
+```
+```json
+  {
+    "id": 1,
+    "name": "Pagamento de Salário",
+    "description": "Pagamento de salário referente ao mês de janeiro",
+    "type": "Despesa",
+    "amount": "5000,00",
+    "date": "2022-02-24",
+    "paid": true,
+    "categoriaId": 1
+}
+```
+```json
+  {
+    "id": 2,
+    "name": "Pagamento de Vale Alimentação",
+    "description": "Pagamento de VA referente ao mês de janeiro",
+    "type": "Despesa",
+    "amount": "500,00",
+    "date": "2022-02-25",
+    "paid": true,
+    "categoriaId": 2
+}
+```
+```
+h) Liste os lançamentos ordenados por data:
+```
+```json
+[
+    {
+        "id": 1,
+        "name": "Pagamento de Salário",
+        "description": "Pagamento de salário referente ao mês de janeiro",
+        "type": "Despesa",
+        "amount": "5000,00",
+        "date": "2022-02-24",
+        "paid": true,
+        "categoriaId": 1
+    },
+    {
+        "id": 2,
+        "name": "Pagamento de Vale Alimentação",
+        "description": "Pagamento de VA referente ao mês de janeiro",
+        "type": "Despesa",
+        "amount": "500,00",
+        "date": "2022-02-25",
+        "paid": true,
+        "categoriaId": 2
+    }
+]
+```
+```
+i) O que é Swagger?
+----------
+O Swagger é um framework composto por diversas ferramentas que, independente da linguagem, auxilia a descrição, consumo
+e visualização de serviços de uma API REST. 
+```
+```
+j) Implemente o Swagger na sua Spring Rest API;
+```
+[Implementação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio03/financys/pom.xml)<br/>
+
+```
+k) Repita as letras e, f  , g e h porém agora em vez de usar o postman, vamos usar o swagger
+```
+◀️[Voltar para menu de desafios](#-Desafios)

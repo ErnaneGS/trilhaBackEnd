@@ -401,3 +401,59 @@ j) Implemente o Swagger na sua Spring Rest API;
 k) Repita as letras e, f  , g e h porém agora em vez de usar o postman, vamos usar o swagger
 ```
 ◀️[Voltar para menu de desafios](#-Desafios)
+
+## 🎯 Desafio 4
+O objetivo durante o desafio 4 é entender o papel da camada de persistência, a abstração da linguagem dos bancos de
+dados criada pelas ferramentas de ORM e a partir desse entendimento ser capaz de comunicar com qualquer tipo de banco
+de dados independendo da sua linguagem nativa.  O foco durante o  desafio 4 deve estar em saber implementar
+suas próprias classes de repositório.
+
+```
+a) Com suas palavras conceitue:
+I. O que é JDBC?
+----------
+Java Database Connectivity é um conjunto de classes e interfaces de instruções SQL que ajudam na interação com um banco
+de dados. Por exemplo, quando baixamos os drives do mysql é implementada as interfaces definidas no JDBC para conexão.
+     
+II. O que é ORM, cite 3 exemplos?
+----------
+O ORM (mapeamento objeto relacional) é uma ferramenta para o mapeamento de nossos objetos (classes) e seus atributos  
+para o modelo entidade relacionamento do banco de dados, aprimorando o paradigma de orientação a objetos ao paradigma de
+banco de dados relacional. Exemplos: Hibernate, EclipseLink e ActiveJPA.
+
+III. O que é JPA e qual é a sua relação com os ORM’s?
+----------
+O JPA (API de Persistência do Java) é um framework para persistir objetos Java, ou seja, uma especificação de como o ORM
+deve ser implementado. 
+     
+IV. O que é Spring Data?
+----------
+É um conjunto de projetos para manipulação de dados de diversas formas, como por exemplo o projeto Spring Data JPA para
+o desenvolvimento de aplicações com a Java Persistence API (JPA).
+```
+```
+b) Instale, configure e teste um banco de dados SQL.
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio04/financys/src/main/resources/application.properties)
+
+```
+c) Implemente uma interface repository (nossa camada de persistência) utilizando spring data e as entidades criadas no
+desafio anterior.
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio04/financys/src/main/java/trilha/back/financys/repositories)
+
+```
+d) O que caracteriza um projeto “CRUD básico”?
+----------
+Um projeto CRUD é caracterizado pelas quatro operações básicas:
+1 - CREATE: Criar um novo registro;
+2 - READ: Exibir informações de um registro;
+3 - UPDATE: Atualizar informações de um registro;
+4 - DELETE: Deleta um registro;
+```
+```
+e) Com base nas classes de controller, use as interfaces desenvolvidas e crie/refatore métodos
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio04/financys/src/main/java/trilha/back/financys/controller)
+
+◀️[Voltar para menu de desafios](#-Desafios)

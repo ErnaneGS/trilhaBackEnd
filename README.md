@@ -478,9 +478,31 @@ II. Crie um método dentro na nova classe de serviço para validar categoriapelo
 validateCategoryById(long idCategory) { }
 III. Refatore a controller de lançamentos para utilizaro método validateCategoryById(  );
 ```
-[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio04/financys/src/main/java/trilha/back/financys/controller)
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/services/EntryService.java)
 
+```
+c) Com base na informação anterior (Category):
+I. Crie uma classe de serviço para category;
+II.  Crie  um  método  dentro na  nova  classe  de  serviço  para  trazer  o  id  da  categoria  passando   o   nome
+da   categoria;   Ex:   public   String   idCategoryByName(name   nameCategory) { };
+III. Refatore a controller de lançamentos para utilizar o método idCategoryByName( )
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/services/CategoryService.java)
 
+```
+d) Com base na informação anterior (Entry):
+I. Adicione a anotação “@RestController” na classe da controller;
+II.    Refatore    todas    os    retornos    da    controller    adicionando    o    retorno    como    ResponseEntity;
+III. No end-point com o método Post adicione a anotação “@RequestBody” na classe de entrada.
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/controller/EntryController.java)
 
+```
+e) Com base na informação anterior(Category): 
+I. Adicione a anotação “@RestController” na classe da controller;
+II. Refatore    todas    os    retornos    da    controller    adicionando    o    retorno    como    ResponseEntity;
+III. No end-point com o método Post adicione a anotação “@RequestBody” na classe de entrada.
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/controller/CategoryController.java)
 
 ◀️[Voltar para menu de desafios](#-Desafios)

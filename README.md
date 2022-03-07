@@ -10,6 +10,7 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 - [Desafio 2](#-Desafio-2)
 - [Desafio 3](#-Desafio-3)
 - [Desafio 4](#-Desafio-4)
+- [Desafio 5](#-Desafio-5)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
@@ -455,5 +456,31 @@ Um projeto CRUD é caracterizado pelas quatro operações básicas:
 e) Com base nas classes de controller, use as interfaces desenvolvidas e crie/refatore métodos
 ```
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio04/financys/src/main/java/trilha/back/financys/controller)
+
+◀️[Voltar para menu de desafios](#-Desafios)
+
+## 🎯 Desafio 5
+O objetivo durante o desafio 5 é conhecer mais uma das camadas de uma aplicação,  sendo  capaz  de  entender  qual  o
+papel  de  cada  uma  das  camadas  apresentadas  até  o  momento,  e  por  consequência  saber  replicar  seus  
+conceitos  para diferentes tipos de projetos.
+
+```
+a)  Defina  com  suas  palavras  qual  é  a  responsabilidade  das  camadas  vistas  até  agora, entity, controller,
+repository e service.
+----------
+
+
+```
+```
+b) Com base na informação anterior (Entry):
+I. Crie uma classe de serviço para lançamentos;
+II. Crie um método dentro na nova classe de serviço para validar categoriapelo ID; Ex: public boolean
+validateCategoryById(long idCategory) { }
+III. Refatore a controller de lançamentos para utilizaro método validateCategoryById(  );
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio04/financys/src/main/java/trilha/back/financys/controller)
+
+
+
 
 ◀️[Voltar para menu de desafios](#-Desafios)

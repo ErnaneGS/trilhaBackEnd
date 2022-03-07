@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.*;
 import trilha.back.financys.domains.Entry;
 import trilha.back.financys.repositories.CategoryRepository;
 import trilha.back.financys.repositories.EntryRepository;
-import java.util.Comparator;
+import trilha.back.financys.services.CategoryService;
+import trilha.back.financys.services.EntryService;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/entry")
@@ -20,59 +20,39 @@ public class EntryController {
     @Autowired
     private CategoryRepository categoryRepository;
 
+    @Autowired
+    private CategoryService categoryService;
+
+    @Autowired
+    private EntryService entryService;
+
     @PostMapping
     public ResponseEntity<Entry> create(@RequestBody Entry entry) {
-        if (categoryRepository.findById(entry.getCategoriaId().getId()).isPresent()){
-            entry.setCategoriaId(categoryRepository.findById(entry.getCategoriaId().getId()).get());
-            return ResponseEntity.created(null).body(entryRepository.save(entry));
-        } else {
-            throw new NoSuchElementException("Categoria não encontrada através do id informado.");
-        }
+        Entry entryCriada = entryService.create(entry);
+        return ResponseEntity.created(null).body(entryCriada);
     }
 
     @GetMapping()
     public ResponseEntity<List<Entry>> read(@RequestParam(required = false) Boolean paid) {
-        if(paid != null) {
-            List<Entry> entities = entryRepository.findByPaid(paid);
-            entities.sort(Comparator.comparing(Entry::getDate));
-            return ResponseEntity.ok(entities);
-        } else {
-            return ResponseEntity.ok(entryRepository.findAll());
-        }
+       List<Entry> entries = entryService.read(paid);
+       return ResponseEntity.ok(entries);
     }
 
     @GetMapping("{id}")
     public ResponseEntity<Entry> findById(@PathVariable Long id) {
-        if(entryRepository.findById(id).isPresent()) {
-            return ResponseEntity.ok(entryRepository.findById(id).get());
-        } else {
-            throw new NoSuchElementException();
-        }
+        Entry entry = entryService.findById(id);
+        return ResponseEntity.ok(entry);
     }
 
     @PutMapping("{id}")
     public ResponseEntity<Entry> update(@RequestBody Entry entry, @PathVariable long id) {
-        if(entryRepository.findById(id).isPresent()) {
-            Entry entryId = entryRepository.findById(id).get();
-            entryId.setAmount(entry.getAmount());
-            entryId.setDate(entry.getDate());
-            entryId.setName(entry.getName());
-            entryId.setPaid(entry.isPaid());
-            entryId.setType(entry.getType());
-            entryId.setDescription(entry.getDescription());
-            entry.setCategoriaId(categoryRepository.findById(entry.getCategoriaId().getId()).get());
-            return ResponseEntity.ok(entryRepository.save(entryId));
-        } else {
-            throw new NoSuchElementException("Categoria não encontrada para atualizar através do id informado.");
-        }
+        Entry entryUpdate = entryService.update(entry, id);
+        return ResponseEntity.ok(entryUpdate);
     }
 
     @DeleteMapping("{id}")
     public ResponseEntity<String> delete(@PathVariable long id) {
-        if(entryRepository.findById(id).isPresent()){
-            entryRepository.deleteById(id);
-            return ResponseEntity.ok("Objeto excluido");
-        }
-        throw new NoSuchElementException("Lançemento não encontrado para deletar através do id informado.");
+        entryService.delete(id);
+        return ResponseEntity.ok("Lançamento excluido");
     }
 }

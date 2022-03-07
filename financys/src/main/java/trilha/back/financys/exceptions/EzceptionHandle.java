@@ -11,12 +11,23 @@ import java.util.NoSuchElementException;
 public class EzceptionHandle {
 
     @ExceptionHandler(NoSuchElementException.class)
-    public ResponseEntity<DefaultException> handlde(NoSuchElementException e ) {
+    public ResponseEntity<DefaultException> handle(NoSuchElementException e ) {
         DefaultException defaultException = new DefaultException();
 
-        defaultException.setMensagem( "Objeto não encontrado com o id informado" );
+        defaultException.setMensagem(e.getLocalizedMessage());
         defaultException.setStatus(HttpStatus.NOT_FOUND.value());
         defaultException.setDataHoraAtual( LocalDateTime.now() );
+
+        return ResponseEntity.status(defaultException.getStatus()).body(defaultException);
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<DefaultException> handle(RuntimeException e ) {
+        DefaultException defaultException = new DefaultException();
+
+        defaultException.setMensagem(e.getLocalizedMessage());
+        defaultException.setStatus(HttpStatus.BAD_REQUEST.value());
+        defaultException.setDataHoraAtual(LocalDateTime.now());
 
         return ResponseEntity.status(defaultException.getStatus()).body(defaultException);
     }

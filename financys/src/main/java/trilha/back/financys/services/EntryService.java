@@ -81,7 +81,7 @@ public class EntryService {
         }
     }
 
-    public boolean validateCategoryById(Long idCategory){
+    public Boolean validateCategoryById(Long idCategory){
         if (categoryRepository.findById(idCategory).isPresent()) {
             return true;
         } else {

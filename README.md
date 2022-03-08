@@ -468,8 +468,14 @@ conceitos  para diferentes tipos de projetos.
 a)  Defina  com  suas  palavras  qual  é  a  responsabilidade  das  camadas  vistas  até  agora, entity, controller,
 repository e service.
 ----------
-
-
+- Entity: Classe principal onde possui a lógica da aplicação responsável por determinar as características e comportamentos
+dos objetos, responsável também pelo mapeamento de entidades para o banco de dados.
+- Controller: Camada intermediária entre a entity e a view (parte do sistema que interage com o usuário), responsável por
+intermediar a comunicação do usuário com a aplicação através de requisições e respostas.
+- Repository: Interface responsável pelo relacionamento entre a aplicação e o banco de dados com funções para criar, deletar,
+atualizar, obter e filtrar objetos do banco de dados.
+- Service: Classe responsável pela operação dos serviços de acordo com as regras de negócio definidas em cada um dos métodos
+nela declarados.
 ```
 ```
 b) Com base na informação anterior (Entry):

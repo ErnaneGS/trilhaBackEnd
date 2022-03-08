@@ -57,7 +57,7 @@ public class CategoryService {
     }
 
     public String idCategoryByNome(String categoryNome) {
-        Category categoryObtida = categoryRepository.findByName(categoryNome);
+        Category categoryObtida = categoryRepository.findByName(categoryNome.trim().toLowerCase());
         return "O id da categoria " + categoryObtida.getName() + " é: " + categoryObtida.getId();
     }
 

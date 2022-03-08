@@ -4,21 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import trilha.back.financys.domains.Entry;
-import trilha.back.financys.repositories.CategoryRepository;
-import trilha.back.financys.repositories.EntryRepository;
 import trilha.back.financys.services.CategoryService;
 import trilha.back.financys.services.EntryService;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/entry")
 public class EntryController {
-
-    @Autowired
-    private EntryRepository entryRepository;
-
-    @Autowired
-    private CategoryRepository categoryRepository;
 
     @Autowired
     private CategoryService categoryService;

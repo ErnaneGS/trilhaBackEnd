@@ -5,8 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import trilha.back.financys.domains.Category;
 import trilha.back.financys.repositories.CategoryRepository;
+import trilha.back.financys.services.CategoryService;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/category")
@@ -15,45 +15,42 @@ public class CategoryController {
     @Autowired
     private CategoryRepository categoryRepository;
 
+    @Autowired
+    private CategoryService categoryService;
+
     @PostMapping
     public ResponseEntity<Category> create(@RequestBody Category category) {
-        return ResponseEntity.created(null).body(categoryRepository.save(category));
+        Category categoryCriada = categoryService.create(category);
+        return ResponseEntity.created(null).body(categoryCriada);
     }
 
     @GetMapping
     public ResponseEntity<List<Category>> read() {
-        return ResponseEntity.ok(categoryRepository.findAll());
+        List<Category> categories = categoryService.read();
+        return ResponseEntity.ok(categories);
     }
 
     @GetMapping("{id}")
     public ResponseEntity<Category> findById(@PathVariable Long id) {
-        if(categoryRepository.findById(id).isPresent()) {
-            return ResponseEntity.ok(categoryRepository.findById(id).get());
-        } else {
-            throw new NoSuchElementException("Categoria não encontrada através do id informado.");
-        }
+        Category category = categoryService.findById(id);
+        return ResponseEntity.ok(category);
     }
 
     @PutMapping("{id}")
     public ResponseEntity<Category> update(@RequestBody Category category, @PathVariable long id) {
-        if(categoryRepository.findById(id).isPresent()) {
-            Category categoryId = categoryRepository.findById(id).get();
-            categoryId.setDescription(category.getDescription());
-            categoryId.setName(category.getName());
-            categoryRepository.save(categoryId);
-            return ResponseEntity.ok(categoryId);
-        } else {
-            throw new NoSuchElementException("Categoria não encontrada para atualizar através do id informado.");
-        }
+        Category categoryUpdated = categoryService.update(category, id);
+        return ResponseEntity.ok(categoryUpdated);
     }
 
     @DeleteMapping("{id}")
     public ResponseEntity<String> delete(@PathVariable long id) {
-        if(categoryRepository.findById(id).isPresent()) {
-            categoryRepository.deleteById(id);
-            return ResponseEntity.ok("Objeto excluido");
-        } else {
-            throw new NoSuchElementException("Categoria não encontrada para deletar através do id informado.");
-        }
+        categoryService.delete(id);
+        return ResponseEntity.ok("Categoria excluida");
     }
+
+    @GetMapping("/nomeCategory/{nomeCategory}")
+    public ResponseEntity<String> idCategoryByNome(@PathVariable String nomeCategory) {
+        return ResponseEntity.ok(categoryService.idCategoryByNome(nomeCategory));
+    }
+
 }

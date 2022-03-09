@@ -7,6 +7,7 @@ import trilha.back.financys.domains.Entry;
 import trilha.back.financys.services.CategoryService;
 import trilha.back.financys.services.EntryService;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -22,7 +23,7 @@ public class EntryController {
     @PostMapping
     public ResponseEntity<Entry> create(@RequestBody Entry entry) {
         Entry entryCriada = entryService.create(entry);
-        return ResponseEntity.created(null).body(entryCriada);
+        return ResponseEntity.created(URI.create("/entry" + entryCriada.getName())).body(entryCriada);
     }
 
     @GetMapping()

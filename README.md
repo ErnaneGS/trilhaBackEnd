@@ -81,6 +81,7 @@ public class Cachorro {
      public String abanarRabo() {
         return  "Abanando rabo...";
     }
+}
 ```
 
 ```

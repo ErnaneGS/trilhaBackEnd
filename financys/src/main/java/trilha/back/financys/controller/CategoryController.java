@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.*;
 import trilha.back.financys.domains.Category;
 import trilha.back.financys.repositories.CategoryRepository;
 import trilha.back.financys.services.CategoryService;
+
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -21,7 +23,7 @@ public class CategoryController {
     @PostMapping
     public ResponseEntity<Category> create(@RequestBody Category category) {
         Category categoryCriada = categoryService.create(category);
-        return ResponseEntity.created(null).body(categoryCriada);
+        return ResponseEntity.created(URI.create("/category" + categoryCriada.getName())).body(categoryCriada);
     }
 
     @GetMapping

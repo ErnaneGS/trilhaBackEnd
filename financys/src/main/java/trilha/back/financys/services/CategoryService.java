@@ -14,9 +14,7 @@ public class CategoryService {
     private CategoryRepository categoryRepository;
 
     public Category create(Category category) {
-
         Category categorySalva = categoryRepository.save(category);
-
         return categorySalva;
     }
 
@@ -26,12 +24,10 @@ public class CategoryService {
     }
 
     public Category findById(Long idCategory) {
-
         if(!categoryRepository.findById(idCategory).isPresent()){
             throw new NoSuchElementException("Não foi encontrado nenhum lançamento com o ID informado.");
         } else {
             Category category = categoryRepository.findById(idCategory).get();
-
             return category;
         }
     }
@@ -57,8 +53,12 @@ public class CategoryService {
     }
 
     public String idCategoryByNome(String categoryNome) {
-        Category categoryObtida = categoryRepository.findByName(categoryNome.trim().toLowerCase());
-        return "O id da categoria " + categoryObtida.getName() + " é: " + categoryObtida.getId();
+        Category categoryObtida = categoryRepository.findByName(categoryNome.trim());
+        if (categoryObtida == null) {
+            throw new NoSuchElementException("Não foi encontrado nenhuma categoria com o nome informado.");
+        } else {
+            return "O id da categoria " + categoryObtida.getName() + " é: " + categoryObtida.getId();
+        }
     }
 
 }

@@ -21,7 +21,6 @@ public class EntryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
-
     public Entry create(Entry entry) {
         if (validateCategoryById(entry.getCategoriaId().getId()) == false){
             throw new NoSuchElementException("Impossível criar lançamento pois a categoria não foi encontrada com o ID informado");
@@ -88,4 +87,5 @@ public class EntryService {
             return false;
         }
     }
+
 }

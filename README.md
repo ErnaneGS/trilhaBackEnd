@@ -11,6 +11,7 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 - [Desafio 3](#-Desafio-3)
 - [Desafio 4](#-Desafio-4)
 - [Desafio 5](#-Desafio-5)
+- [Desafio 6](#-Desafio-6)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
@@ -510,5 +511,21 @@ II. Refatore    todas    os    retornos    da    controller    adicionando    o 
 III. No end-point com o método Post adicione a anotação “@RequestBody” na classe de entrada.
 ```
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/controller/CategoryController.java)
+
+◀️[Voltar para menu de desafios](#-Desafios)
+
+## 🎯 Desafio 6
+O objetivo durante o desafio 6 é conhecer o funcionamento das classes de DTO e a importância dessa prática que tem
+como viés de trazer maior segurança para a nossa aplicação.
+
+```
+a) O que significa DTO, e qual sua importância?
+----------
+
+
+```
+
+
+
 
 ◀️[Voltar para menu de desafios](#-Desafios)

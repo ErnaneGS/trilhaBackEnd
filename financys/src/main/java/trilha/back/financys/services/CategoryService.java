@@ -3,9 +3,15 @@ package trilha.back.financys.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import trilha.back.financys.domains.Category;
+import trilha.back.financys.dtos.request.CategoryRequest;
+import trilha.back.financys.dtos.response.CategoryResponse;
+import trilha.back.financys.dtos.response.GetCategoryListarResponse;
+import trilha.back.financys.dtos.response.GetCategoryObterResponse;
+import trilha.back.financys.mappers.CategoryMapper;
 import trilha.back.financys.repositories.CategoryRepository;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.stream.Collectors;
 
 @Service
 public class CategoryService {
@@ -13,34 +19,45 @@ public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
-    public Category create(Category category) {
-        Category categorySalva = categoryRepository.save(category);
-        return categorySalva;
+    @Autowired
+    private CategoryMapper categoryMapper;
+
+    public CategoryResponse create(CategoryRequest categoryRequest) {
+        Category category = categoryMapper.categoryRequestToCategory(categoryRequest);
+        categoryRepository.save(category);
+        CategoryResponse categoryResponse = categoryMapper.categoryToCategoryResponse(category);
+        categoryResponse.setMensagem("Categoria " +category.getName()+ " criada com sucesso.");
+        return categoryResponse;
     }
 
-    public List<Category> read() {
+    public List<GetCategoryListarResponse> read() {
         List<Category> categories = categoryRepository.findAll();
-        return categories;
+        return categories
+                .stream()
+                .map(categoryMapper::categoryToCategoryListarResponse)
+                .collect(Collectors.toList());
     }
 
-    public Category findById(Long idCategory) {
+    public GetCategoryObterResponse findById(Long idCategory) {
         if(!categoryRepository.findById(idCategory).isPresent()){
-            throw new NoSuchElementException("Não foi encontrado nenhum lançamento com o ID informado.");
+            throw new NoSuchElementException("Não foi encontrada nenhuma categoria com o ID informado.");
         } else {
             Category category = categoryRepository.findById(idCategory).get();
-            return category;
+            GetCategoryObterResponse getCategoryObterResponse = categoryMapper.categoryToCategoryObterResponse(category);
+            return getCategoryObterResponse;
         }
     }
 
-    public Category update(Category category, Long idCategory) {
+    public CategoryResponse update(CategoryRequest categoryRequest, Long idCategory) {
         if(!categoryRepository.findById(idCategory).isPresent()){
             throw new NoSuchElementException("Não foi encontrado nenhuma categoria para atualização com o ID informado.");
         } else {
-            Category categoryId = categoryRepository.findById(idCategory).get();
-            categoryId.setDescription(category.getDescription());
-            categoryId.setName(category.getName());
-            categoryRepository.save(categoryId);
-            return categoryId;
+            Category category = categoryRepository.findById(idCategory).get();
+            categoryMapper.categoryAtualizar(categoryRequest, category);
+            categoryRepository.save(category);
+            CategoryResponse categoryResponse = categoryMapper.categoryToCategoryResponse(category);
+            categoryResponse.setMensagem("Categoria atualizada com sucesso.");
+            return categoryResponse;
         }
     }
 

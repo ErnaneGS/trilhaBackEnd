@@ -34,6 +34,27 @@
 			"response": []
 		},
 		{
+			"name": "idCategoryByNome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/category/nomeCategory/Vale",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"nomeCategory",
+						"Vale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Category Read",
 			"request": {
 				"method": "GET",
@@ -175,6 +196,26 @@
 					"path": [
 						"entry",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Entry Chart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/entry/chart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"entry",
+						"chart"
 					]
 				}
 			},

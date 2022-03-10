@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 public class GetEntryObterResponse {
 
+    private Long id;
     private String name;
     private String description;
     private String type;
@@ -13,7 +14,8 @@ public class GetEntryObterResponse {
     private Boolean paid;
     private Category categoriaId;
 
-    public GetEntryObterResponse(String name, String description, String type, String amount, LocalDate date, Boolean paid, Category categoriaId) {
+    public GetEntryObterResponse(Long id, String name, String description, String type, String amount, LocalDate date, Boolean paid, Category categoriaId) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.type = type;
@@ -24,6 +26,14 @@ public class GetEntryObterResponse {
     }
 
     public GetEntryObterResponse() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -81,4 +91,5 @@ public class GetEntryObterResponse {
     public void setCategoriaId(Category categoriaId) {
         this.categoriaId = categoriaId;
     }
+
 }

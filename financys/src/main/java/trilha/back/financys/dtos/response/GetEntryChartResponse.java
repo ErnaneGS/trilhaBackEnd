@@ -4,9 +4,9 @@ public class GetEntryChartResponse {
 
     private String name;
     private String type;
-    private String amount;
+    private Double amount;
 
-    public GetEntryChartResponse(String name, String type, String amount) {
+    public GetEntryChartResponse(String name, String type, Double amount) {
         this.name = name;
         this.type = type;
         this.amount = amount;
@@ -31,11 +31,11 @@ public class GetEntryChartResponse {
         this.type = type;
     }
 
-    public String getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 

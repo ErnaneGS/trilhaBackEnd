@@ -530,8 +530,7 @@ atender certa requisição.
 ```
 b) Com base no artigo passado, crie classes de DTO’s para as entidades de lançamento e de categoria
 ```
-[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/services/EntryService.java)
-
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/dtos)
 ```
 c) Com base na informação anterior:
 I. Crie uma classe (objeto) DTO chart;
@@ -539,11 +538,33 @@ II.  Crie  um  método  dentro  da  classe  de  serviço  de  lançamentos  e  u
 agrupamento por categoria e retornar uma lista de objetos do tipo DTO;
 III. Crie um método dentro da controller de lançamentos para retornar a lista criada no item anterior;
 ```
-[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/services/EntryService.java)
+```java
+    public List<GetEntryChartResponse> chart() {
 
+        List<Category> categories = categoryRepository.findAll();
+        List<GetEntryChartResponse> chart = new ArrayList<>();
+
+        for (Category category : categories) {
+
+            Double total = 0.0;
+            GetEntryChartResponse getEntryChartResponse = new GetEntryChartResponse();
+            getEntryChartResponse.setName(category.getName());
+
+            for (Entry entry : category.getEntries()) {
+                String ammount = entry.getAmount().replaceAll(",", ".");
+                Double annount = Double.parseDouble(ammount);
+                total = total + annount;
+                getEntryChartResponse.setAmount(total);
+            }
+            chart.add(getEntryChartResponse);
+        }
+        return chart;
+    }
 ```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio06/financys/src/main/java/trilha/back/financys/services/EntryService.java)
+
 d)  Implemente uma nova serialização dos dados utilizando Mapper
 ```
-[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/services/EntryService.java)
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/mappers)
 
 ◀️[Voltar para menu de desafios](#-Desafios)

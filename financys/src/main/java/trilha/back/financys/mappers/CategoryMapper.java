@@ -7,7 +7,6 @@ import trilha.back.financys.dtos.request.CategoryRequest;
 import trilha.back.financys.dtos.response.CategoryResponse;
 import trilha.back.financys.dtos.response.GetCategoryListarResponse;
 import trilha.back.financys.dtos.response.GetCategoryObterResponse;
-import trilha.back.financys.dtos.response.GetEntryChartResponse;
 
 @Mapper
 public interface CategoryMapper {

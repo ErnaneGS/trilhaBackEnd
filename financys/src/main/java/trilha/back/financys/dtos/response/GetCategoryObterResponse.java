@@ -1,32 +1,18 @@
-package trilha.back.financys.domains;
+package trilha.back.financys.dtos.response;
 
-import javax.persistence.*;
+public class GetCategoryObterResponse {
 
-@Entity
-public class Category {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String description;
 
-    public Category() {
-    }
-
-    public Category(Long id, String name, String description) {
+    public GetCategoryObterResponse(Long id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Categoria{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+    public GetCategoryObterResponse() {
     }
 
     public Long getId() {
@@ -52,5 +38,4 @@ public class Category {
     public void setDescription(String description) {
         this.description = description;
     }
-
 }

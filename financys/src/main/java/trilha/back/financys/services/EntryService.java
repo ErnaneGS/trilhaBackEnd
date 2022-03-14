@@ -2,12 +2,15 @@ package trilha.back.financys.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import trilha.back.financys.domains.Category;
 import trilha.back.financys.domains.Entry;
+import trilha.back.financys.dtos.request.EntryRequest;
+import trilha.back.financys.dtos.response.*;
+import trilha.back.financys.mappers.EntryMapper;
 import trilha.back.financys.repositories.CategoryRepository;
 import trilha.back.financys.repositories.EntryRepository;
-import java.util.Comparator;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class EntryService {
@@ -21,62 +24,76 @@ public class EntryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
-    public Entry create(Entry entry) {
-        if (validateCategoryById(entry.getCategoriaId().getId()) == false){
+    @Autowired
+    private EntryMapper entryMapper;
+
+    public EntryResponse create(EntryRequest entryRequest) {
+        if (validateCategoryById(entryRequest.getCategoriaId().getId()) == false){
             throw new NoSuchElementException("Impossível criar lançamento pois a categoria não foi encontrada com o ID informado");
         } else {
+            Entry entry = entryMapper.entryyRequestToEntry(entryRequest);
             entry.setCategoriaId(categoryRepository.findById(entry.getCategoriaId().getId()).get());
             entryRepository.save(entry);
-            return entry;
+            EntryResponse entryResponse = entryMapper.entryToEntryResponse(entry);
+            entryResponse.setMensagem("Lançamento " +entry.getName()+ " criado com sucesso!");
+            return entryResponse;
         }
     }
 
-    public List<Entry> read(Boolean paid) {
-        if(paid != null) {
+    public List<GetEntryListarResponse> read(Boolean paid) {
+        if(paid == null) {
+            List<Entry> entries = entryRepository.findAll();
+            entries.sort(Comparator.comparing(Entry::getDate));
+            return entries
+                    .stream()
+                    .map(entryMapper::emtryToEntryListarResponse)
+                    .collect(Collectors.toList());
+        } else {
             List<Entry> entries = entryRepository.findByPaid(paid);
             entries.sort(Comparator.comparing(Entry::getDate));
-            return entries;
-        } else {
-            List<Entry> entries = entryRepository.findAll();
-            return entries;
+            return entries
+                    .stream()
+                    .map(entryMapper::emtryToEntryListarResponse)
+                    .collect(Collectors.toList());
         }
     }
 
-    public Entry findById(Long idEntry) {
-        if(entryRepository.findById(idEntry).isPresent()){
-            Entry entry = entryRepository.findById(idEntry).get();
-            return entry;
-        } else {
+    public GetEntryObterResponse findById(Long idEntry) {
+        if(!entryRepository.findById(idEntry).isPresent()){
             throw new NoSuchElementException("Não foi encontrado nenhum lançamento com o ID informado.");
+        } else {
+            Entry entry = entryRepository.findById(idEntry).get();
+            GetEntryObterResponse getEntryObterResponse = entryMapper.entryToEntryObterResponse(entry);
+            return getEntryObterResponse;
         }
     }
 
-    public Entry update(Entry entry, Long idEntry) {
+    public EntryResponse update(EntryRequest entryRequest, Long idEntry) {
         if(entryRepository.findById(idEntry).isPresent()) {
-            if (validateCategoryById(entry.getCategoriaId().getId()) == false) {
+            if (validateCategoryById(entryRequest.getCategoriaId().getId()) == false) {
                 throw new NoSuchElementException("Impossível atualizar o lançamento id:" +idEntry+ ", pois a categoria não foi encontrada com o ID informado");
             } else {
-                Entry entryId = entryRepository.findById(idEntry).get();
-                entryId.setAmount(entry.getAmount());
-                entryId.setDate(entry.getDate());
-                entryId.setName(entry.getName());
-                entryId.setPaid(entry.isPaid());
-                entryId.setType(entry.getType());
-                entryId.setDescription(entry.getDescription());
+                Entry entry = entryRepository.findById(idEntry).get();
+                entryMapper.entryAtualizar(entryRequest, entry);
                 entry.setCategoriaId(categoryRepository.findById(entry.getCategoriaId().getId()).get());
-                entryRepository.save(entryId);
-                return entryId;
+                entryRepository.save(entry);
+                EntryResponse entryResponse = entryMapper.entryToEntryResponse(entry);
+                entryResponse.setMensagem("Lançamento atualizado com sucesso!");
+                return entryResponse;
             }
         } else {
             throw new NoSuchElementException("Não foi encontrado nenhum lançamento para atualização com o ID informado.");
         }
     }
 
-    public void delete(Long idEntry) {
-        if(entryRepository.findById(idEntry).isPresent()){
-            entryRepository.deleteById(idEntry);
-        } else {
+    public DeleteResponse delete(Long idEntry) {
+        if(!entryRepository.findById(idEntry).isPresent()){
             throw new NoSuchElementException("Não foi encontrado nenhum lançamento para exclusão com o ID informado.");
+        } else {
+            entryRepository.deleteById(idEntry);
+            DeleteResponse deleteResponse = new DeleteResponse();
+            deleteResponse.setMensagem("Lançamento id: " + idEntry + " exlcuído com sucesso.");
+            return deleteResponse;
         }
     }
 
@@ -88,4 +105,25 @@ public class EntryService {
         }
     }
 
+    public List<GetEntryChartResponse> chart() {
+        List<Category> categories = categoryRepository.findAll();
+        List<Entry> entries = entryRepository.findAll();
+        List<GetEntryChartResponse> chart = new ArrayList<>();
+        for (Category category : categories) {
+            Double total = 0.0;
+            GetEntryChartResponse getEntryChartResponse = new GetEntryChartResponse();
+            getEntryChartResponse.setName(category.getName());
+            for (Entry entry : entries) {
+                if(entry.getCategoriaId().getId() == category.getId()) {
+                    getEntryChartResponse.setType(entry.getType());
+                    String str = entry.getAmount().replaceAll(",", ".");
+                    Double annount = Double.parseDouble(str);
+                    total = total + annount;
+                    getEntryChartResponse.setAmount(total);
+                }
+            }
+            chart.add(getEntryChartResponse);
+        }
+        return chart;
+    }
 }

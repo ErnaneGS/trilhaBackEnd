@@ -11,6 +11,7 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 - [Desafio 3](#-Desafio-3)
 - [Desafio 4](#-Desafio-4)
 - [Desafio 5](#-Desafio-5)
+- [Desafio 6](#-Desafio-6)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
@@ -511,5 +512,61 @@ II. Refatore    todas    os    retornos    da    controller    adicionando    o 
 III. No end-point com o método Post adicione a anotação “@RequestBody” na classe de entrada.
 ```
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/controller/CategoryController.java)
+
+◀️[Voltar para menu de desafios](#-Desafios)
+
+## 🎯 Desafio 6
+O objetivo durante o desafio 6 é conhecer o funcionamento das classes de DTO e a importância dessa prática que tem
+como viés de trazer maior segurança para a nossa aplicação.
+
+```
+a) O que significa DTO, e qual sua importância?
+----------
+Data Transfer Object (DTO)  é um padrão de projeto usado em java para o transporte de dados entre diferentes componentes
+de um sistema, atualmente na arquitetura MVC o DTO tem a responsabilidade de separar as camadas model e view, deixando
+explicito quais campos da model irão para a camada de view, assim os responses terão apenas informações necessárias para 
+atender certa requisição. 
+```
+```
+b) Com base no artigo passado, crie classes de DTO’s para as entidades de lançamento e de categoria
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/dtos)
+
+```
+c) Com base na informação anterior:
+I. Crie uma classe (objeto) DTO chart;
+II.  Crie  um  método  dentro  da  classe  de  serviço  de  lançamentos  e  utilize  um  laço  for para realizar o
+agrupamento por categoria e retornar uma lista de objetos do tipo DTO;
+III. Crie um método dentro da controller de lançamentos para retornar a lista criada no item anterior;
+```
+```java
+ public List<GetEntryChartResponse> chart() {
+        List<Category> categories = categoryRepository.findAll();
+        List<Entry> entries = entryRepository.findAll();
+        List<GetEntryChartResponse> chart = new ArrayList<>();
+        for (Category category : categories) {
+            Double total = 0.0;
+            GetEntryChartResponse getEntryChartResponse = new GetEntryChartResponse();
+            getEntryChartResponse.setName(category.getName());
+            for (Entry entry : entries) {
+                if(entry.getCategoriaId().getId() == category.getId()) {
+                    getEntryChartResponse.setType(entry.getType());
+                    String str = entry.getAmount().replaceAll(",", ".");
+                    Double annount = Double.parseDouble(str);
+                    total = total + annount;
+                    getEntryChartResponse.setAmount(total);
+                }
+            }
+            chart.add(getEntryChartResponse);
+        }
+        return chart;
+    }
+ ```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio06/financys/src/main/java/trilha/back/financys/services/EntryService.java)
+
+```
+d)  Implemente uma nova serialização dos dados utilizando Mapper
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/mappers)
 
 ◀️[Voltar para menu de desafios](#-Desafios)

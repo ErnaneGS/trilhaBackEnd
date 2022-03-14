@@ -531,6 +531,7 @@ atender certa requisição.
 b) Com base no artigo passado, crie classes de DTO’s para as entidades de lançamento e de categoria
 ```
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/dtos)
+
 ```
 c) Com base na informação anterior:
 I. Crie uma classe (objeto) DTO chart;
@@ -560,9 +561,7 @@ III. Crie um método dentro da controller de lançamentos para retornar a lista 
         }
         return chart;
     }
- ```  
-
-```
+ ```
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio06/financys/src/main/java/trilha/back/financys/services/EntryService.java)
 
 ```

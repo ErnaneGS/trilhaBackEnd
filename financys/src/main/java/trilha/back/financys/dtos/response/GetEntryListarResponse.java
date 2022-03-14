@@ -1,5 +1,7 @@
 package trilha.back.financys.dtos.response;
 
+import java.time.LocalDate;
+
 public class GetEntryListarResponse {
 
     private Long id;
@@ -7,13 +9,15 @@ public class GetEntryListarResponse {
     private String type;
     private String amount;
     private Boolean paid;
+    private LocalDate date;
 
-    public GetEntryListarResponse(Long id, String name, String type, String amount, Boolean paid) {
+    public GetEntryListarResponse(Long id, String name, String type, String amount, Boolean paid, LocalDate date) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.amount = amount;
         this.paid = paid;
+        this.date = date;
     }
 
     public GetEntryListarResponse() {
@@ -58,4 +62,13 @@ public class GetEntryListarResponse {
     public void setPaid(Boolean paid) {
         this.paid = paid;
     }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
 }

@@ -539,27 +539,7 @@ agrupamento por categoria e retornar uma lista de objetos do tipo DTO;
 III. Crie um método dentro da controller de lançamentos para retornar a lista criada no item anterior;
 ```
 ```java
-    public List<GetEntryChartResponse> chart() {
 
-        List<Category> categories = categoryRepository.findAll();
-        List<GetEntryChartResponse> chart = new ArrayList<>();
-
-        for (Category category : categories) {
-
-            Double total = 0.0;
-            GetEntryChartResponse getEntryChartResponse = new GetEntryChartResponse();
-            getEntryChartResponse.setName(category.getName());
-
-            for (Entry entry : category.getEntries()) {
-                String ammount = entry.getAmount().replaceAll(",", ".");
-                Double annount = Double.parseDouble(ammount);
-                total = total + annount;
-                getEntryChartResponse.setAmount(total);
-            }
-            chart.add(getEntryChartResponse);
-        }
-        return chart;
-    }
 ```
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio06/financys/src/main/java/trilha/back/financys/services/EntryService.java)
 

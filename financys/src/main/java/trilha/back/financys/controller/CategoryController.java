@@ -5,11 +5,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import trilha.back.financys.dtos.request.CategoryRequest;
 import trilha.back.financys.dtos.response.CategoryResponse;
+import trilha.back.financys.dtos.response.DeleteResponse;
 import trilha.back.financys.dtos.response.GetCategoryListarResponse;
 import trilha.back.financys.dtos.response.GetCategoryObterResponse;
 import trilha.back.financys.repositories.CategoryRepository;
 import trilha.back.financys.services.CategoryService;
-
 import java.net.URI;
 import java.util.List;
 
@@ -48,9 +48,9 @@ public class CategoryController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<String> delete(@PathVariable long id) {
-        categoryService.delete(id);
-        return ResponseEntity.ok("Categoria excluida");
+    public ResponseEntity<DeleteResponse> delete(@PathVariable long id) {
+        DeleteResponse deleteResponse = categoryService.delete(id);
+        return ResponseEntity.ok(deleteResponse);
     }
 
     @GetMapping("/nomeCategory/{nomeCategory}")

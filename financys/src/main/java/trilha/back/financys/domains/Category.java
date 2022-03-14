@@ -1,7 +1,6 @@
 package trilha.back.financys.domains;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 public class Category {
@@ -11,9 +10,6 @@ public class Category {
     private Long id;
     private String name;
     private String description;
-
-    @OneToMany(mappedBy = "categoriaId")
-    private List<Entry> entries;
 
     public Category() {
     }
@@ -57,10 +53,4 @@ public class Category {
         this.description = description;
     }
 
-    public List<Entry> getEntries() {
-        return entries;
-    }
-    public void setEntries(List<Entry> entries) {
-        this.entries = entries;
-    }
 }

@@ -91,5 +91,4 @@ public class GetEntryObterResponse {
     public void setCategoriaId(Category categoriaId) {
         this.categoriaId = categoriaId;
     }
-
 }

@@ -2,9 +2,7 @@ package trilha.back.financys.mappers;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
-import trilha.back.financys.domains.Category;
 import trilha.back.financys.domains.Entry;
-import trilha.back.financys.dtos.request.CategoryRequest;
 import trilha.back.financys.dtos.request.EntryRequest;
 import trilha.back.financys.dtos.response.*;
 

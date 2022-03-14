@@ -35,27 +35,29 @@ public class EntryService {
             entry.setCategoriaId(categoryRepository.findById(entry.getCategoriaId().getId()).get());
             entryRepository.save(entry);
             EntryResponse entryResponse = entryMapper.entryToEntryResponse(entry);
-            entryResponse.setMensagem("Lançamento " +entry.getName()+ " ceiado com sucesso!");
+            entryResponse.setMensagem("Lançamento " +entry.getName()+ " criado com sucesso!");
             return entryResponse;
         }
     }
 
     public List<GetEntryListarResponse> read(Boolean paid) {
-        if(paid != null) {
-            List<Entry> entries = entryRepository.findByPaid(paid);
+        if(paid == null) {
+            List<Entry> entries = entryRepository.findAll();
             entries.sort(Comparator.comparing(Entry::getDate));
             return entries
                     .stream()
                     .map(entryMapper::emtryToEntryListarResponse)
                     .collect(Collectors.toList());
         } else {
-            List<Entry> entries = entryRepository.findAll();
+            List<Entry> entries = entryRepository.findByPaid(paid);
+            entries.sort(Comparator.comparing(Entry::getDate));
             return entries
                     .stream()
                     .map(entryMapper::emtryToEntryListarResponse)
                     .collect(Collectors.toList());
         }
     }
+
     public GetEntryObterResponse findById(Long idEntry) {
         if(!entryRepository.findById(idEntry).isPresent()){
             throw new NoSuchElementException("Não foi encontrado nenhum lançamento com o ID informado.");
@@ -84,11 +86,14 @@ public class EntryService {
         }
     }
 
-    public void delete(Long idEntry) {
-        if(entryRepository.findById(idEntry).isPresent()){
-            entryRepository.deleteById(idEntry);
-        } else {
+    public DeleteResponse delete(Long idEntry) {
+        if(!entryRepository.findById(idEntry).isPresent()){
             throw new NoSuchElementException("Não foi encontrado nenhum lançamento para exclusão com o ID informado.");
+        } else {
+            entryRepository.deleteById(idEntry);
+            DeleteResponse deleteResponse = new DeleteResponse();
+            deleteResponse.setMensagem("Lançamento id: " + idEntry + " exlcuído com sucesso.");
+            return deleteResponse;
         }
     }
 
@@ -101,25 +106,24 @@ public class EntryService {
     }
 
     public List<GetEntryChartResponse> chart() {
-
         List<Category> categories = categoryRepository.findAll();
+        List<Entry> entries = entryRepository.findAll();
         List<GetEntryChartResponse> chart = new ArrayList<>();
-
         for (Category category : categories) {
-
             Double total = 0.0;
             GetEntryChartResponse getEntryChartResponse = new GetEntryChartResponse();
             getEntryChartResponse.setName(category.getName());
-
-            for (Entry entry : category.getEntries()) {
-                String ammount = entry.getAmount().replaceAll(",", ".");
-                Double annount = Double.parseDouble(ammount);
-                total = total + annount;
-                getEntryChartResponse.setAmount(total);
+            for (Entry entry : entries) {
+                if(entry.getCategoriaId().getId() == category.getId()) {
+                    getEntryChartResponse.setType(entry.getType());
+                    String str = entry.getAmount().replaceAll(",", ".");
+                    Double annount = Double.parseDouble(str);
+                    total = total + annount;
+                    getEntryChartResponse.setAmount(total);
+                }
             }
             chart.add(getEntryChartResponse);
         }
         return chart;
     }
-
 }

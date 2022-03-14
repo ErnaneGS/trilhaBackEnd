@@ -7,7 +7,6 @@ import trilha.back.financys.dtos.request.EntryRequest;
 import trilha.back.financys.dtos.response.*;
 import trilha.back.financys.services.CategoryService;
 import trilha.back.financys.services.EntryService;
-
 import java.net.URI;
 import java.util.List;
 
@@ -29,8 +28,8 @@ public class EntryController {
 
     @GetMapping()
     public ResponseEntity<List<GetEntryListarResponse>> read(@RequestParam(required = false) Boolean paid) {
-       List<GetEntryListarResponse> entries = entryService.read(paid);
-       return ResponseEntity.ok(entries);
+        List<GetEntryListarResponse> entries = entryService.read(paid);
+        return ResponseEntity.ok(entries);
     }
 
     @GetMapping("{id}")
@@ -52,8 +51,8 @@ public class EntryController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<String> delete(@PathVariable long id) {
-        entryService.delete(id);
-        return ResponseEntity.ok("Lançamento excluido");
+    public ResponseEntity<DeleteResponse> delete(@PathVariable long id) {
+        DeleteResponse deleteResponse = entryService.delete(id);
+        return ResponseEntity.ok(deleteResponse);
     }
 }

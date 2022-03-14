@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import trilha.back.financys.domains.Category;
 import trilha.back.financys.dtos.request.CategoryRequest;
 import trilha.back.financys.dtos.response.CategoryResponse;
+import trilha.back.financys.dtos.response.DeleteResponse;
 import trilha.back.financys.dtos.response.GetCategoryListarResponse;
 import trilha.back.financys.dtos.response.GetCategoryObterResponse;
 import trilha.back.financys.mappers.CategoryMapper;
@@ -61,11 +62,14 @@ public class CategoryService {
         }
     }
 
-    public void delete(Long idCategory) {
+    public DeleteResponse delete(Long idCategory) {
         if(!categoryRepository.findById(idCategory).isPresent()){
             throw new NoSuchElementException("Não foi encontrado nenhuma categoria para exlcusão com o ID informado.");
         } else {
-            categoryRepository.deleteById(idCategory);
+           categoryRepository.deleteById(idCategory);
+           DeleteResponse deleteResponse = new DeleteResponse();
+           deleteResponse.setMensagem("Categoria id: " + idCategory + " exlcuída com sucesso.");
+           return deleteResponse;
         }
     }
 
@@ -77,5 +81,4 @@ public class CategoryService {
             return "O id da categoria " + categoryObtida.getName() + " é: " + categoryObtida.getId();
         }
     }
-
 }

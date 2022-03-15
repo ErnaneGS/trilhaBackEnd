@@ -10,6 +10,8 @@ import trilha.back.financys.dtos.response.GetCategoryListarResponse;
 import trilha.back.financys.dtos.response.GetCategoryObterResponse;
 import trilha.back.financys.repositories.CategoryRepository;
 import trilha.back.financys.services.CategoryService;
+
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -24,7 +26,7 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @PostMapping
-    public ResponseEntity<CategoryResponse> create(@RequestBody CategoryRequest categoryRequest) {
+    public ResponseEntity<CategoryResponse> create(@RequestBody @Valid CategoryRequest categoryRequest) {
         CategoryResponse categoryResponse = categoryService.create(categoryRequest);
         return ResponseEntity.created(URI.create("/category" + categoryResponse.getId())).body(categoryResponse);
     }
@@ -42,7 +44,7 @@ public class CategoryController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<CategoryResponse> update(@RequestBody CategoryRequest categoryRequest, @PathVariable long id) {
+    public ResponseEntity<CategoryResponse> update(@RequestBody @Valid CategoryRequest categoryRequest, @PathVariable long id) {
         CategoryResponse categoryResponse = categoryService.update(categoryRequest, id);
         return ResponseEntity.ok(categoryResponse);
     }

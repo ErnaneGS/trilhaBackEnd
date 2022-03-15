@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="293a1c04-e59d-4085-886d-e28de91550b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/financys/src/main/resources/ValidationMessages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/EntryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/EntryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/request/CategoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/request/CategoryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/request/EntryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/request/EntryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/EzceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/EzceptionHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/services/EntryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/services/EntryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

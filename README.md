@@ -570,3 +570,43 @@ d)  Implemente uma nova serialização dos dados utilizando Mapper
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/mappers)
 
 ◀️[Voltar para menu de desafios](#-Desafios)
+
+## 🎯 Desafio 7
+O objetivo durante o desafio 7 é aprender os conceitos de validação, tratamento e manipulação de dados de forma otimizada.
+
+```
+a) Crie uma validação para a entidade de categoria seguindo os seguintes requisitos:
+I. name: não pode ser nulo ou vazio, min = 3 e max = 15
+II. description: não pode ser nulo ou vazio, min = 15 e max = 50
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/mappers)
+
+```
+b) Crie uma validação para a entidade de lançamento seguindo os seguintes requisitos:
+I. name: não pode ser nulo ou vazio, min = 3 e max = 45
+II. description: não pode ser nulo ou vazio, min = 15 e max = 150
+III. type: não pode ser nulo ou vazio, min = 3 e max = 10 (nota extra pra quem usar enum)
+IV. amount: não pode ser nulo ou vazio, < 0;
+V. date: não pode ser nulo ou vazio;
+VI. paid: não pode ser nulo ou vazio;
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/mappers)
+
+```
+c) Configure mensagens específicas para cada uma das validações
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/mappers)
+
+```
+d) Realize novos testes com dados incorretos para tirar a prova real
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/mappers)
+
+```
+e) No desafio anterior, mais especificamente na letra c é utilizando o comando for para criar o agrupamento das informações
+necessárias para criar o gráfico. Existem maneiras mais otimizadas para realizar essas manipulações, experimente refatorar
+o item c, agora utilizando o stream( ) no lugar do for e if’s.
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/mappers)
+
+◀️[Voltar para menu de desafios](#-Desafios)

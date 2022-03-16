@@ -14,7 +14,8 @@ public class EntryRequest {
     @Size(min = 15, max = 150)
     private String description;
 
-    @NotNull(message = "{entry.type.not.null")
+    @NotBlank(message = "{entry.type.not.blank")
+    @Size(min = 3, max = 10)
     private String type;
 
     @NotNull(message = "{entry.amount.not.null}")

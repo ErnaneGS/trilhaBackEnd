@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="293a1c04-e59d-4085-886d-e28de91550b7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/EntryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/EntryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/domains/Entry.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/domains/Entry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/request/EntryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/request/EntryRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/EntryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/EntryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryListarResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryListarResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryObterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryObterResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/DefaultException.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/handle/DefaultException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/EzceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/handle/EzceptionHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/services/EntryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/services/EntryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/financys/src/main/resources/validationMessages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/resources/validationMessages.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -596,7 +596,7 @@ VI. paid: não pode ser nulo ou vazio;
 ```
 c) Configure mensagens específicas para cada uma das validações
 ```
-[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/resources/ValidationMessages.properties)
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/resources/validationMessages.properties)
 
 ```
 e) No desafio anterior, mais especificamente na letra c é utilizando o comando for para criar o agrupamento das informações

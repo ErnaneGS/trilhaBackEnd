@@ -13,6 +13,7 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 - [Desafio 5](#-Desafio-5)
 - [Desafio 6](#-Desafio-6)
 - [Desafio 7](#-Desafio-7)
+- [Desafio 8](#-Desafio-8)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
@@ -606,3 +607,52 @@ o item c, agora utilizando o stream( ) no lugar do for e if’s.
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/java/trilha/back/financys/services/EntryService.java)
 
 ◀️[Voltar para menu de desafios](#-Desafios)
+
+## 🎯 Desafio 8
+O objetivo durante o desafio 8 é entender como funcionam as exceptions, e ser capaz de trata-las com o intuito de manter
+um bom funcionamento da API.
+```
+a) O que são exceptions?
+----------
+
+```
+```
+b) Qual é o funcionamento do try, catch e finally?
+----------
+
+```
+```
+c) Qual a relação entre “try, catch e finally” e “throws”? 
+----------
+
+```
+```
+d) Para que serve a annotation @ExceptionHandler? 
+----------
+
+```
+```
+e) Para que serve o comando throw?
+----------
+
+```
+```
+e) Para que serve a annotation @ControllerAdvice?
+----------
+
+```
+
+```
+f) Crie o seguinte método na classe de serviço do lançamento
+Integer calculaMedia(Integer x, Integer y) {     return (x/y);
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/java/trilha/back/financys/services/EntryService.java)
+
+```
+f) I - I. Dentro   da   controller   de   lançamentos   crie   um   endopint   com   as   seguintes   características:
+calculaMediaPath: /calcula
+Method: GET
+Pathvariable: variáveis x e y
+Response: retorna divisão x/y
+```
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/java/trilha/back/financys/services/EntryService.java)

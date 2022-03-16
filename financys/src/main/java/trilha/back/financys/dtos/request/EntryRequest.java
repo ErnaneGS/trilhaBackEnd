@@ -19,7 +19,7 @@ public class EntryRequest {
     private String type;
 
     @NotBlank(message = "{entry.amount.not.blank")
-    @Pattern(regexp = "^([1-9][0-9]*)+(,[0-9]{1,2})$", message = "{entry.amount.regexp}")
+    @Pattern(regexp = "^([1-9][0-9]*)+(,[0-9]{1,2})?$", message = "{entry.amount.regexp}")
     private String amount;
 
     @NotNull(message = "{entry.date.not.null}")

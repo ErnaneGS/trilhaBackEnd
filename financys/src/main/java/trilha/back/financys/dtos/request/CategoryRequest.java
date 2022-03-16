@@ -1,8 +1,16 @@
 package trilha.back.financys.dtos.request;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 public class CategoryRequest {
 
+    @NotBlank(message = "{category.nome.not.blank}")
+    @Size(min = 3, max = 15)
     private String name;
+
+    @NotBlank(message = "{category.description.not.blank")
+    @Size(min = 15, max = 50)
     private String description;
 
     public CategoryRequest(String name, String description) {

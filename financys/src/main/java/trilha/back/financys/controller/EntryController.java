@@ -7,6 +7,7 @@ import trilha.back.financys.dtos.request.EntryRequest;
 import trilha.back.financys.dtos.response.*;
 import trilha.back.financys.services.CategoryService;
 import trilha.back.financys.services.EntryService;
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class EntryController {
     private EntryService entryService;
 
     @PostMapping
-    public ResponseEntity<EntryResponse> create(@RequestBody EntryRequest entryRequest) {
+    public ResponseEntity<EntryResponse> create(@RequestBody @Valid EntryRequest entryRequest) {
         EntryResponse entryResponse = entryService.create(entryRequest);
         return ResponseEntity.created(URI.create("/entry" + entryResponse.getId())).body(entryResponse);
     }
@@ -45,7 +46,7 @@ public class EntryController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<EntryResponse> update(@RequestBody EntryRequest entryRequest, @PathVariable long id) {
+    public ResponseEntity<EntryResponse> update(@RequestBody @Valid EntryRequest entryRequest, @PathVariable long id) {
         EntryResponse entryResponse = entryService.update(entryRequest, id);
         return ResponseEntity.ok(entryResponse);
     }

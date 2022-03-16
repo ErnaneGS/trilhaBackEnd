@@ -10,6 +10,7 @@ import trilha.back.financys.mappers.EntryMapper;
 import trilha.back.financys.repositories.CategoryRepository;
 import trilha.back.financys.repositories.EntryRepository;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
 @Service
@@ -109,21 +110,20 @@ public class EntryService {
         List<Category> categories = categoryRepository.findAll();
         List<Entry> entries = entryRepository.findAll();
         List<GetEntryChartResponse> chart = new ArrayList<>();
-        for (Category category : categories) {
-            Double total = 0.0;
-            GetEntryChartResponse getEntryChartResponse = new GetEntryChartResponse();
-            getEntryChartResponse.setName(category.getName());
-            for (Entry entry : entries) {
-                if(entry.getCategoriaId().getId() == category.getId()) {
-                    getEntryChartResponse.setType(entry.getType());
-                    String str = entry.getAmount().replaceAll(",", ".");
-                    Double annount = Double.parseDouble(str);
-                    total = total + annount;
-                    getEntryChartResponse.setAmount(total);
-                }
-            }
-            chart.add(getEntryChartResponse);
-        }
+        categories.stream()
+                .forEach(category -> {
+                    AtomicReference<Double> total = new AtomicReference<>(0.0);
+                    GetEntryChartResponse getEntryChartResponse = new GetEntryChartResponse();
+                    getEntryChartResponse.setName(category.getName());
+                    entries.stream()
+                            .filter(entry -> entry.getCategoriaId().getId() == category.getId())
+                            .forEach(entry -> {
+                                getEntryChartResponse.setType(entry.getType());
+                                total.set(total.get() + entry.getAmount());
+                                getEntryChartResponse.setAmount(total.get());
+                            });
+                    chart.add(getEntryChartResponse);
+                });
         return chart;
     }
 }

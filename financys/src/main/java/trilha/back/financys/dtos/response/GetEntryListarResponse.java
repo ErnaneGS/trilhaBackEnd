@@ -7,11 +7,11 @@ public class GetEntryListarResponse {
     private Long id;
     private String name;
     private String type;
-    private String amount;
+    private Double amount;
     private Boolean paid;
     private LocalDate date;
 
-    public GetEntryListarResponse(Long id, String name, String type, String amount, Boolean paid, LocalDate date) {
+    public GetEntryListarResponse(Long id, String name, String type, Double amount, Boolean paid, LocalDate date) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -47,11 +47,11 @@ public class GetEntryListarResponse {
         this.type = type;
     }
 
-    public String getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
 

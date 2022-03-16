@@ -1,4 +1,4 @@
-package trilha.back.financys.exceptions;
+package trilha.back.financys.exceptions.handle;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

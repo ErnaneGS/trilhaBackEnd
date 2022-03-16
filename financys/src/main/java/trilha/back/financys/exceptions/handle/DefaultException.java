@@ -1,4 +1,4 @@
-package trilha.back.financys.exceptions;
+package trilha.back.financys.exceptions.handle;
 
 import java.time.LocalDateTime;
 

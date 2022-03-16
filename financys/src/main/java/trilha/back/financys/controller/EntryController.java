@@ -7,7 +7,6 @@ import trilha.back.financys.dtos.request.EntryRequest;
 import trilha.back.financys.dtos.response.*;
 import trilha.back.financys.services.CategoryService;
 import trilha.back.financys.services.EntryService;
-
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;

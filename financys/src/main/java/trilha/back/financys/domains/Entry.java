@@ -9,10 +9,11 @@ public class Entry {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private String description;
     private String type;
-    private String amount;
+    private Double amount;
     private LocalDate date;
     private Boolean paid;
 
@@ -23,7 +24,7 @@ public class Entry {
     public Entry() {
     }
 
-    public Entry(Long id, String name, String description, String type, String amount, LocalDate date, Boolean paid, Category categoriaId) {
+    public Entry(Long id, String name, String description, String type, Double amount, LocalDate date, Boolean paid, Category categoriaId) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -80,12 +81,16 @@ public class Entry {
         this.type = type;
     }
 
-    public String getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
+    }
+
+    public Boolean getPaid() {
+        return paid;
     }
 
     public LocalDate getDate() {

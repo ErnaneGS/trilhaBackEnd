@@ -119,9 +119,7 @@ public class EntryService {
                             .filter(entry -> entry.getCategoriaId().getId() == category.getId())
                             .forEach(entry -> {
                                 getEntryChartResponse.setType(entry.getType());
-                                String str = entry.getAmount().replaceAll(",", ".");
-                                Double annount = Double.parseDouble(str);
-                                total.set(total.get() + annount);
+                                total.set(total.get() + entry.getAmount());
                                 getEntryChartResponse.setAmount(total.get());
                             });
                     chart.add(getEntryChartResponse);

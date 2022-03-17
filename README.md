@@ -614,11 +614,15 @@ um bom funcionamento da API.
 ```
 a) O que são exceptions?
 ----------
-
+Exceptions são eventos que ocorrem durante a execução de um progranma, fazendo com que a execução da aplicação seja
+interrompida e encerrada de forma anormal, uma excessão pode acontecer por vários motivos e devem ser tratadas.
 ```
 ```
 b) Qual é o funcionamento do try, catch e finally?
 ----------
+O Try-Cath-Finally é usado para capturar excessões na execução de programas, no bloco Try é inserido códigos que
+são propensos a excessões que caso aconteçam serão tratadas pelos comandos do bloco catch associado a ela. 
+
 
 ```
 ```
@@ -646,13 +650,67 @@ e) Para que serve a annotation @ControllerAdvice?
 f) Crie o seguinte método na classe de serviço do lançamento
 Integer calculaMedia(Integer x, Integer y) {     return (x/y);
 ```
-[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/java/trilha/back/financys/services/EntryService.java)
-
+```java
+    public Integer calculaMedia(Integer x, Integer y) {
+        return (x/y);
+    }
 ```
-f) I - I. Dentro   da   controller   de   lançamentos   crie   um   endopint   com   as   seguintes   características:
+```
+f) I. Dentro   da   controller   de   lançamentos   crie   um   endopint   com   as   seguintes   características:
 calculaMediaPath: /calcula
 Method: GET
 Pathvariable: variáveis x e y
 Response: retorna divisão x/y
 ```
+
+```java
+    @GetMapping("/calcula/{x}/{y}")
+    public ResponseEntity<Integer> calculaMedia(@PathVariable Integer x, @PathVariable Integer y) {
+        return ResponseEntity.ok(entryService.calculaMedia(x,y));
+    }
+```
+```
+f) II. Realize uma chamada passando o valor x=10 e y=5 e verifique o retorno. Agora faça outra chamada passando x=10 e
+ y=0;
+f) III. O que aconteceu?
+----------
+
+
+```
+```json
+{
+    "status": 400,
+    "mensagem": "/ by zero",
+    "dataHoraAtual": "2022-03-16T16:09:10.514773"
+}
+```
+```
+f) IV. Faça o tratamento dessa exception utilizando try catch e se necessário finally;
+```
+```java
+    public Integer calculaMedia(Integer x, Integer y) {
+        try {
+            return (x/y);
+        } catch (ArithmeticException e) {
+            throw new ArithmeticException("Impossível realizar a divisão por zero.");
+        }
+    }
+```
+```
+f) V. Agora faça o tratamento utilizando throw e @ExceptionHandler;
+```
+```java
+package trilha.back.financys.exceptions.exceptions;
+public class CalculaMediaExceptions extends ArithmeticException{
+    public CalculaMediaExceptions(String exception) {
+        super(exception);
+    }
+}
+```
+```
+f) VI. VI. Aproveitando o método criado com @ExceptionHandler crie sua própria classe para tratamento de exceptions
+utilizando @ControllerAdvice;
+```
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/java/trilha/back/financys/services/EntryService.java)
+
+◀️[Voltar para menu de desafios](#-Desafios)

@@ -45,6 +45,11 @@ public class EntryController {
         return ResponseEntity.ok(entries);
     }
 
+    @GetMapping("/calcula/{x}/{y}")
+    public ResponseEntity<Integer> calculaMedia(@PathVariable Integer x, @PathVariable Integer y) {
+        return ResponseEntity.ok(entryService.calculaMedia(x,y));
+    }
+
     @PutMapping("{id}")
     public ResponseEntity<EntryResponse> update(@RequestBody @Valid EntryRequest entryRequest, @PathVariable long id) {
         EntryResponse entryResponse = entryService.update(entryRequest, id);

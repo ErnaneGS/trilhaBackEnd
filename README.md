@@ -611,72 +611,69 @@ o item c, agora utilizando o stream( ) no lugar do for e if’s.
 ## 🎯 Desafio 8
 O objetivo durante o desafio 8 é entender como funcionam as exceptions, e ser capaz de trata-las com o intuito de manter
 um bom funcionamento da API.
+
+**a) O que são exceptions?**
 ```
-a) O que são exceptions?
-----------
 Exceptions são eventos que ocorrem durante a execução de um programa, fazendo com que a execução da aplicação seja
 interrompida e encerrada de forma anormal, uma exceção pode acontecer por vários motivos e devem ser tratadas.
 ```
+
+**b) Qual é o funcionamento do try, catch e finally?**
 ```
-b) Qual é o funcionamento do try, catch e finally?
-----------
 O Try-Cath-Finally é usado para capturar exceções na execução de programas, no bloco Try é inserido códigos que
 são propensos a exceções que caso aconteçam serão tratadas pelos comandos do bloco catch associado a ela. No bloco
 fo Finally teremos comandos que sempre serão executados independendo da exceção ser executada ou não, basicamente o 
 finally irá forçar a execução dos comandos do seu bloco sem depender de outros resultados.
 ```
+
+**c) Qual a relação entre “try, catch e finally” e “throws”?**
 ```
-c) Qual a relação entre “try, catch e finally” e “throws”? 
-----------
 Ambos são usados no tratamento de exceções, porém o throws é usado na assinatura do método para declarar as exceções
 que podem ser lançadas naquele método, deixando de modo explícito o erro que pode acontecer no método.
 ```
+
+**d) Para que serve a annotation @ExceptionHandler?**
 ```
-d) Para que serve a annotation @ExceptionHandler?
-----------
 A @ExceptionHandler é uma anotação do Spring  para manusear exceções em classes de manipuladores específicas e/ou métodos
 de manipulador.
 ```
+
+**e) Para que serve o comando throw?**
 ```
-e) Para que serve o comando throw?
-----------
 A instrução throw é usada para lançar uma exceção explicitamente. O lançamento é seguido por uma instância da classe
 Exception e é realizado dentro do corpo de um método.
 ```
+
+**f) Para que serve a annotation @ControllerAdvice?**
 ```
-f) Para que serve a annotation @ControllerAdvice?
-----------
 @ControllerAdvice é uma especialização da anotação que permite lidar com exceções em toda a aplicação em um componente
 de manuseio global. Pode ser visto como um interceptador de exceções lançadas por métodos anotados e similares.
 ```
-```
-g) Crie o seguinte método na classe de serviço do lançamento
-Integer calculaMedia(Integer x, Integer y) {     return (x/y);
-```
+
+**g) Crie o seguinte método na classe de serviço do lançamento
+Integer calculaMedia(Integer x, Integer y) {     return (x/y);**
 ```java
     public Integer calculaMedia(Integer x, Integer y) {
         return (x/y);
     }
 ```
-```
-g) I. Dentro   da   controller   de   lançamentos   crie   um   endopint   com   as   seguintes   características:
+
+**g) I. Dentro   da   controller   de   lançamentos   crie   um   endopint   com   as   seguintes   características:
 calculaMediaPath: /calcula
 Method: GET
 Pathvariable: variáveis x e y
-Response: retorna divisão x/y
-```
-
+Response: retorna divisão x/y**
 ```java
     @GetMapping("/calcula/{x}/{y}")
     public ResponseEntity<Integer> calculaMedia(@PathVariable Integer x, @PathVariable Integer y) {
         return ResponseEntity.ok(entryService.calculaMedia(x,y));
     }
 ```
-```
-g) II. Realize uma chamada passando o valor x=10 e y=5 e verifique o retorno. Agora faça outra chamada passando x=10 e
+
+**g) II. Realize uma chamada passando o valor x=10 e y=5 e verifique o retorno. Agora faça outra chamada passando x=10 e
  y=0;
-f) III. O que aconteceu?
-```
+g) III. O que aconteceu?**
+
 ```json
 {
   "timestamp": "2022-03-17T19:03:53.486+00:00",
@@ -687,9 +684,8 @@ f) III. O que aconteceu?
   "path": "/entry/calcula/10/0"
 }
 ```
-```
-g) IV. Faça o tratamento dessa exception utilizando try catch e se necessário finally;
-```
+
+**g) IV. Faça o tratamento dessa exception utilizando try catch e se necessário finally**
 ```java
     public Integer calculaMedia(Integer x, Integer y) {
         try {
@@ -699,9 +695,8 @@ g) IV. Faça o tratamento dessa exception utilizando try catch e se necessário 
         }
     }
 ```
-```
-g) V. Agora faça o tratamento utilizando throw e @ExceptionHandler;
-```
+
+**g) V. Agora faça o tratamento utilizando throw e @ExceptionHandler**
 ```java
 package trilha.back.financys.exceptions.exceptions;
 public class CalculaMediaExceptions extends ArithmeticException{
@@ -710,15 +705,15 @@ public class CalculaMediaExceptions extends ArithmeticException{
     }
 }
 ```
-```
-g) VI. Aproveitando o método criado com @ExceptionHandler crie sua própria classe para tratamento de exceptions
-utilizando @ControllerAdvice;
-```
+
+**g) VI. Aproveitando o método criado com @ExceptionHandler crie sua própria classe para tratamento de exceptions
+utilizando @ControllerAdvice**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio08/financys/src/main/java/trilha/back/financys/exceptions/handle/ExceptionHandle.java)
 
+
+**g) VII. Realize novos testes, verifique o resultado final e escreva sua própria conclusão sobre exceptions:**
 ```
-g) VII. Realize novos testes, verifique o resultado final e escreva sua própria conclusão sobre exceptions:
-----------
 Podemos concluir que as exceções quando usadas da melhor forma melhoram a legibilidade, confiabilidade e manutenção de
 um programa, pois ajuda a detectar e tratar possíveis erros que possam acontecer. O tratamento das exceções, é o 
 mecanismo responsável pelo tratamento da ocorrência de condições que alteram o fluxo normal da execução de programas.

@@ -9,7 +9,7 @@ public class CategoryRequest {
     @Size(min = 3, max = 15)
     private String name;
 
-    @NotBlank(message = "{category.description.not.blank")
+    @NotBlank(message = "{category.description.not.blank}")
     @Size(min = 15, max = 50)
     private String description;
 

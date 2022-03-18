@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "  {\r\n       \"id\": 1,\r\n       \"name\": \"Teste\",\r\n       \"description\": \"Categoria de teste\"\r\n  }\r\n   ",
+					"raw": "  {\r\n       \"name\": \"Venda\",\r\n       \"description\": \"Vendas de produtos da loja\"\r\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -79,7 +79,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/category/",
+					"raw": "http://localhost:8080/category/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -87,7 +87,7 @@
 					"port": "8080",
 					"path": [
 						"category",
-						""
+						"3"
 					]
 				}
 			},
@@ -98,8 +98,17 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n       \"name\": \"Salario\",\r\n       \"description\": \"Pagamento de salario\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8080/category/",
+					"raw": "http://localhost:8080/category/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -107,7 +116,7 @@
 					"port": "8080",
 					"path": [
 						"category",
-						""
+						"1"
 					]
 				}
 			},
@@ -119,7 +128,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/category/",
+					"raw": "http://localhost:8080/category/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -127,7 +136,7 @@
 					"port": "8080",
 					"path": [
 						"category",
-						""
+						"3"
 					]
 				}
 			},
@@ -140,7 +149,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "  {\r\n       \"id\": 1,\r\n       \"name\": \"Teste\",\r\n       \"description\": \"Categoria de teste\",\r\n       \"type\": \"Despesa\",\r\n       \"amount\": \"500,00\",\r\n       \"date\": \"24022022\",\r\n       \"paid\": true,\r\n       \"vategoryId\": 1\r\n  }",
+					"raw": "  {\r\n    \"name\": \"Venda de produtos\",\r\n    \"description\": \"Vendas 00011\",\r\n    \"type\": \"Entrada\",\r\n    \"amount\": \"10000,00\",\r\n    \"date\": \"2090-09-01\",\r\n    \"paid\": false,\r\n    \"categoriaId\": {\r\n        \"id\": 2\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -167,7 +176,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/entry/paid",
+					"raw": "http://localhost:8080/entry/?paid=",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -175,7 +184,13 @@
 					"port": "8080",
 					"path": [
 						"entry",
-						"paid"
+						""
+					],
+					"query": [
+						{
+							"key": "paid",
+							"value": ""
+						}
 					]
 				}
 			},
@@ -222,12 +237,12 @@
 			"response": []
 		},
 		{
-			"name": "Entry Update",
+			"name": "Entry Calcula Media",
 			"request": {
-				"method": "PUT",
+				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/entry/",
+					"raw": "http://localhost:8080/entry/calcula/20/20",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -235,7 +250,38 @@
 					"port": "8080",
 					"path": [
 						"entry",
-						""
+						"calcula",
+						"20",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Entry Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Venda\",\r\n    \"description\": \"Venda de produto 0012\",\r\n    \"type\": \"Entrada\",\r\n    \"amount\": \"1500,00\",\r\n    \"date\": \"2090-09-01\",\r\n    \"paid\": true,\r\n    \"categoriaId\": {\r\n        \"id\": 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/entry/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"entry",
+						"2"
 					]
 				}
 			},
@@ -247,7 +293,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/entry/",
+					"raw": "http://localhost:8080/entry/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -255,7 +301,7 @@
 					"port": "8080",
 					"path": [
 						"entry",
-						""
+						"3"
 					]
 				}
 			},

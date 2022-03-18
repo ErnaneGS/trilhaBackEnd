@@ -6,6 +6,7 @@ import trilha.back.financys.domains.Category;
 import trilha.back.financys.domains.Entry;
 import trilha.back.financys.dtos.request.EntryRequest;
 import trilha.back.financys.dtos.response.*;
+import trilha.back.financys.exceptions.CalculaMediaExceptions;
 import trilha.back.financys.mappers.EntryMapper;
 import trilha.back.financys.repositories.CategoryRepository;
 import trilha.back.financys.repositories.EntryRepository;
@@ -126,4 +127,13 @@ public class EntryService {
                 });
         return chart;
     }
+
+    public Integer calculaMedia(Integer x, Integer y) {
+        try {
+            return (x/y);
+        } catch (ArithmeticException e) {
+            throw new CalculaMediaExceptions();
+        }
+    }
+
 }

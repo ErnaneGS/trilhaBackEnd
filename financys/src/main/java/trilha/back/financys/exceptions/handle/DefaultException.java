@@ -1,6 +1,7 @@
 package trilha.back.financys.exceptions.handle;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class DefaultException {
 

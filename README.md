@@ -285,9 +285,11 @@ HTTP.
 | PATCH         | O método PATCH é utilizado para aplicar modificações parciais em um recurso.                                                                                                                                                                         |
 
 **c) Crie uma classe do tipo controller para a entidade categoria:**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio03/financys/src/main/java/trilha/back/financys/controller/CategoryController.java)<br/>
 
 **d) Repita o item c para lançamentos:**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio03/financys/src/main/java/trilha/back/financys/controller/EntryController.java)<br/>
 
 **e) Crie 2 objetos do tipo categoria:**
@@ -380,6 +382,7 @@ e visualização de serviços de uma API REST.
 ```
 
 **j) Implemente o Swagger na sua Spring Rest API;**
+
 [Implementação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio03/financys/pom.xml)<br/>
 
 **k) Repita as letras e, f  , g e h porém agora em vez de usar o postman, vamos usar o swagger**
@@ -416,10 +419,12 @@ o desenvolvimento de aplicações com a Java Persistence API (JPA).
 ```
 
 **b) Instale, configure e teste um banco de dados SQL.**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio04/financys/src/main/resources/application.properties)
 
 **c) Implemente uma interface repository (nossa camada de persistência) utilizando spring data e as entidades criadas no
 desafio anterior.**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio04/financys/src/main/java/trilha/back/financys/repositories)
 
 
@@ -433,6 +438,7 @@ Um projeto CRUD é caracterizado pelas quatro operações básicas:
 ```
 
 **e) Com base nas classes de controller, use as interfaces desenvolvidas e crie/refatore métodos**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio04/financys/src/main/java/trilha/back/financys/controller)
 
 ◀️[Voltar para menu de desafios](#-Desafios)
@@ -455,30 +461,34 @@ atualizar, obter e filtrar objetos do banco de dados.
 nela declarados.
 ```
 
-**b) Com base na informação anterior (Entry):
-I. Crie uma classe de serviço para lançamentos;
+**b) Com base na informação anterior (Entry): \
+I. Crie uma classe de serviço para lançamentos; \
 II. Crie um método dentro na nova classe de serviço para validar categoriapelo ID; Ex: public boolean
-validateCategoryById(long idCategory) { }
+validateCategoryById(long idCategory) { } \
 III. Refatore a controller de lançamentos para utilizaro método validateCategoryById(  );**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/services/EntryService.java)
 
-**c) Com base na informação anterior (Category):
-I. Crie uma classe de serviço para category;
+**c) Com base na informação anterior (Category): \
+I. Crie uma classe de serviço para category; \
 II.  Crie  um  método  dentro na  nova  classe  de  serviço  para  trazer  o  id  da  categoria  passando   o   nome
-da   categoria;   Ex:   public   String   idCategoryByName(name   nameCategory) { };
+da   categoria;   Ex:   public   String   idCategoryByName(name   nameCategory) { }; \
 III. Refatore a controller de lançamentos para utilizar o método idCategoryByName( )**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/services/CategoryService.java)
 
-**d) Com base na informação anterior (Entry):
-I. Adicione a anotação “@RestController” na classe da controller;
-II.    Refatore    todas    os    retornos    da    controller    adicionando    o    retorno    como    ResponseEntity;
-III. No end-point com o método Post adicione a anotação “@RequestBody” na classe de entrada.**
+**d) Com base na informação anterior (Entry): \
+I. Adicione a anotação “@RestController” na classe da controller; \
+II.    Refatore    todas    os    retornos    da    controller    adicionando    o    retorno    como    ResponseEntity; \
+III. No end-point com o método Post adicione a anotação “@RequestBody” na classe de entrada.** 
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/controller/EntryController.java)
 
-**e) Com base na informação anterior(Category): 
-I. Adicione a anotação “@RestController” na classe da controller;
-II. Refatore    todas    os    retornos    da    controller    adicionando    o    retorno    como    ResponseEntity;
+**e) Com base na informação anterior(Category): \
+I. Adicione a anotação “@RestController” na classe da controller; \
+II. Refatore    todas    os    retornos    da    controller    adicionando    o    retorno    como    ResponseEntity; \
 III. No end-point com o método Post adicione a anotação “@RequestBody” na classe de entrada.**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio05/financys/src/main/java/trilha/back/financys/controller/CategoryController.java)
 
 ◀️[Voltar para menu de desafios](#-Desafios)
@@ -496,12 +506,13 @@ atender certa requisição.
 ```
 
 **b) Com base no artigo passado, crie classes de DTO’s para as entidades de lançamento e de categoria**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/dtos)
 
-**c) Com base na informação anterior:
-I. Crie uma classe (objeto) DTO chart;
+**c) Com base na informação anterior: \
+I. Crie uma classe (objeto) DTO chart; \
 II.  Crie  um  método  dentro  da  classe  de  serviço  de  lançamentos  e  utilize  um  laço  for para realizar o
-agrupamento por categoria e retornar uma lista de objetos do tipo DTO;
+agrupamento por categoria e retornar uma lista de objetos do tipo DTO; \
 III. Crie um método dentro da controller de lançamentos para retornar a lista criada no item anterior**
 ```java
  public List<GetEntryChartResponse> chart() {
@@ -529,6 +540,7 @@ III. Crie um método dentro da controller de lançamentos para retornar a lista 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio06/financys/src/main/java/trilha/back/financys/services/EntryService.java)
 
 **d)  Implemente uma nova serialização dos dados utilizando Mapper**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/mappers)
 
 ◀️[Voltar para menu de desafios](#-Desafios)
@@ -536,29 +548,32 @@ III. Crie um método dentro da controller de lançamentos para retornar a lista 
 ## 🎯 Desafio 7
 O objetivo durante o desafio 7 é aprender os conceitos de validação, tratamento e manipulação de dados de forma otimizada.
 
-**a) Crie uma validação para a entidade de categoria seguindo os seguintes requisitos:
-I. name: não pode ser nulo ou vazio, min = 3 e max = 15
+**a) Crie uma validação para a entidade de categoria seguindo os seguintes requisitos: \
+I. name: não pode ser nulo ou vazio, min = 3 e max = 15 \
 II. description: não pode ser nulo ou vazio, min = 15 e max = 50**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/java/trilha/back/financys/dtos/request/CategoryRequest.java)
 
-
-**b) Crie uma validação para a entidade de lançamento seguindo os seguintes requisitos:
-I. name: não pode ser nulo ou vazio, min = 3 e max = 45
-II. description: não pode ser nulo ou vazio, min = 15 e max = 150
-III. type: não pode ser nulo ou vazio, min = 3 e max = 10 (nota extra pra quem usar enum)
-IV. amount: não pode ser nulo ou vazio, < 0;
-V. date: não pode ser nulo ou vazio;
+**b) Crie uma validação para a entidade de lançamento seguindo os seguintes requisitos: \
+I. name: não pode ser nulo ou vazio, min = 3 e max = 45 \
+II. description: não pode ser nulo ou vazio, min = 15 e max = 150 \
+III. type: não pode ser nulo ou vazio, min = 3 e max = 10 (nota extra pra quem usar enum) \
+IV. amount: não pode ser nulo ou vazio, < 0; \
+V. date: não pode ser nulo ou vazio; \
 VI. paid: não pode ser nulo ou vazio;**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/java/trilha/back/financys/dtos/request/EntryRequest.java)
 
 
 **c) Configure mensagens específicas para cada uma das validações**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/resources/validationMessages.properties)
 
 
 **e) No desafio anterior, mais especificamente na letra c é utilizando o comando for para criar o agrupamento das informações
 necessárias para criar o gráfico. Existem maneiras mais otimizadas para realizar essas manipulações, experimente refatorar
 o item c, agora utilizando o stream( ) no lugar do for e if’s.**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/java/trilha/back/financys/services/EntryService.java)
 
 ◀️[Voltar para menu de desafios](#-Desafios)
@@ -613,10 +628,10 @@ Integer calculaMedia(Integer x, Integer y) {     return (x/y);**
     }
 ```
 
-**g) I. Dentro   da   controller   de   lançamentos   crie   um   endopint   com   as   seguintes   características:
-calculaMediaPath: /calcula
-Method: GET
-Pathvariable: variáveis x e y
+**g) I. Dentro   da   controller   de   lançamentos   crie   um   endopint   com   as   seguintes   características: \
+calculaMediaPath: /calcula \
+Method: GET \ 
+Pathvariable: variáveis x e y \
 Response: retorna divisão x/y**
 ```java
     @GetMapping("/calcula/{x}/{y}")
@@ -626,7 +641,7 @@ Response: retorna divisão x/y**
 ```
 
 **g) II. Realize uma chamada passando o valor x=10 e y=5 e verifique o retorno. Agora faça outra chamada passando x=10 e
- y=0;
+ y=0; \
 g) III. O que aconteceu?**
 
 ```json
@@ -663,6 +678,7 @@ public class CalculaMediaExceptions extends ArithmeticException{
 
 **g) VI. Aproveitando o método criado com @ExceptionHandler crie sua própria classe para tratamento de exceptions
 utilizando @ControllerAdvice**
+
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio08/financys/src/main/java/trilha/back/financys/exceptions/handle/ExceptionHandle.java)
 
 

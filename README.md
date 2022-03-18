@@ -599,7 +599,8 @@ finally irá forçar a execução dos comandos do seu bloco sem depender de outr
 **c) Qual a relação entre “try, catch e finally” e “throws”?**
 ```
 Ambos são usados no tratamento de exceções, porém o throws é usado na assinatura do método para declarar as exceções
-que podem ser lançadas naquele método, deixando de modo explícito o erro que pode acontecer no método.
+que podem ser lançadas naquele método, deixando de modo explícito o erro que pode acontecer no método. Desse modo as
+poderão ser tratadas nos demais momentos em que o método comn a assinatura for chamado.
 ```
 
 **d) Para que serve a annotation @ExceptionHandler?**

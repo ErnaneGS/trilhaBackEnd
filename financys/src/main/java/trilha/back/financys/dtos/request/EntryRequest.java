@@ -10,11 +10,11 @@ public class EntryRequest {
     @Size(min = 3, max = 45)
     private String name;
 
-    @NotBlank(message = "{entry.description.not.blank")
+    @NotBlank(message = "{entry.description.not.blank}")
     @Size(min = 15, max = 150)
     private String description;
 
-    @NotBlank(message = "{entry.type.not.blank")
+    @NotBlank(message = "{entry.type.not.blank}")
     @Size(min = 3, max = 10)
     private String type;
 

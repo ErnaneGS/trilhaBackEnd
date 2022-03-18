@@ -18,7 +18,7 @@ public class ExceptionHandle {
     public ResponseEntity<DefaultException> handle(CalculaMediaExceptions e ) {
         DefaultException defaultException = new DefaultException();
         defaultException.setMensagem("Impossível realizar a divisão por zero");
-        defaultException.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        defaultException.setStatus(HttpStatus.BAD_REQUEST.value());
         defaultException.setDataHoraAtual(LocalDateTime.now());
         return ResponseEntity.status(defaultException.getStatus()).body(defaultException);
     }
@@ -53,7 +53,7 @@ public class ExceptionHandle {
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
     public ResponseEntity<DefaultException> handlde( MethodArgumentTypeMismatchException  e ) {
         DefaultException defaultException = new DefaultException();
-        defaultException.setMensagem("Falha na conversão do tipo do valor");
+        defaultException.setMensagem("Falha na conversão do tipo do valor. Verifique seus parâmetros de entrada.");
         defaultException.setStatus(HttpStatus.BAD_REQUEST.value());
         defaultException.setDataHoraAtual( LocalDateTime.now() );
         return ResponseEntity.status(defaultException.getStatus()).body(defaultException);

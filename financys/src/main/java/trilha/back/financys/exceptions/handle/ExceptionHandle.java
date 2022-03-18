@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import trilha.back.financys.exceptions.CalculaMediaExceptions;
-
 import java.time.LocalDateTime;
 import java.util.NoSuchElementException;
 
@@ -60,15 +59,4 @@ public class ExceptionHandle {
         return ResponseEntity.status(defaultException.getStatus()).body(defaultException);
     }
 
-
-//
-////    @ExceptionHandler(RuntimeException.class)
-////    public ResponseEntity<DefaultException> handle(RuntimeException e ) {
-////        DefaultException defaultException = new DefaultException();
-////        defaultException.setMensagem(e.getLocalizedMessage());
-////        defaultException.setStatus(HttpStatus.BAD_REQUEST.value());
-////        defaultException.setDataHoraAtual(LocalDateTime.now());
-////        return ResponseEntity.status(defaultException.getStatus()).body(defaultException);
-////    }
-//
 }

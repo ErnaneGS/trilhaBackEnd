@@ -614,40 +614,43 @@ um bom funcionamento da API.
 ```
 a) O que são exceptions?
 ----------
-Exceptions são eventos que ocorrem durante a execução de um progranma, fazendo com que a execução da aplicação seja
-interrompida e encerrada de forma anormal, uma excessão pode acontecer por vários motivos e devem ser tratadas.
+Exceptions são eventos que ocorrem durante a execução de um programa, fazendo com que a execução da aplicação seja
+interrompida e encerrada de forma anormal, uma exceção pode acontecer por vários motivos e devem ser tratadas.
 ```
 ```
 b) Qual é o funcionamento do try, catch e finally?
 ----------
-O Try-Cath-Finally é usado para capturar excessões na execução de programas, no bloco Try é inserido códigos que
-são propensos a excessões que caso aconteçam serão tratadas pelos comandos do bloco catch associado a ela. 
-
-
+O Try-Cath-Finally é usado para capturar exceções na execução de programas, no bloco Try é inserido códigos que
+são propensos a exceções que caso aconteçam serão tratadas pelos comandos do bloco catch associado a ela. No bloco
+fo Finally teremos comandos que sempre serão executados independendo da exceção ser executada ou não, basicamente o 
+finally irá forçar a execução dos comandos do seu bloco sem depender de outros resultados.
 ```
 ```
 c) Qual a relação entre “try, catch e finally” e “throws”? 
 ----------
-
+Ambos são usados no tratamento de exceções, porém o throws é usado na assinatura do método para declarar as exceções
+que podem ser lançadas naquele método, deixando de modo explícito o erro que pode acontecer no método.
 ```
 ```
-d) Para que serve a annotation @ExceptionHandler? 
+d) Para que serve a annotation @ExceptionHandler?
 ----------
-
+A @ExceptionHandler é uma anotação do Spring  para manusear exceções em classes de manipuladores específicas e/ou métodos
+de manipulador.
 ```
 ```
 e) Para que serve o comando throw?
 ----------
-
+A instrução throw é usada para lançar uma exceção explicitamente. O lançamento é seguido por uma instância da classe
+Exception e é realizado dentro do corpo de um método.
 ```
 ```
-e) Para que serve a annotation @ControllerAdvice?
+f) Para que serve a annotation @ControllerAdvice?
 ----------
-
+@ControllerAdvice é uma especialização da anotação que permite lidar com exceções em toda a aplicação em um componente
+de manuseio global. Pode ser visto como um interceptador de exceções lançadas por métodos anotados e similares.
 ```
-
 ```
-f) Crie o seguinte método na classe de serviço do lançamento
+g) Crie o seguinte método na classe de serviço do lançamento
 Integer calculaMedia(Integer x, Integer y) {     return (x/y);
 ```
 ```java
@@ -656,7 +659,7 @@ Integer calculaMedia(Integer x, Integer y) {     return (x/y);
     }
 ```
 ```
-f) I. Dentro   da   controller   de   lançamentos   crie   um   endopint   com   as   seguintes   características:
+g) I. Dentro   da   controller   de   lançamentos   crie   um   endopint   com   as   seguintes   características:
 calculaMediaPath: /calcula
 Method: GET
 Pathvariable: variáveis x e y
@@ -670,7 +673,7 @@ Response: retorna divisão x/y
     }
 ```
 ```
-f) II. Realize uma chamada passando o valor x=10 e y=5 e verifique o retorno. Agora faça outra chamada passando x=10 e
+g) II. Realize uma chamada passando o valor x=10 e y=5 e verifique o retorno. Agora faça outra chamada passando x=10 e
  y=0;
 f) III. O que aconteceu?
 ```
@@ -679,13 +682,13 @@ f) III. O que aconteceu?
   "timestamp": "2022-03-17T19:03:53.486+00:00",
   "status": 500,
   "error": "Internal Server Error",
-  "trace": "java.lang.ArithmeticException: / by zero\r\n\tat trilha.back.financys.services.EntryService.calculaMedia(EntryService.java:133)\r\n\tat trilha.back.financys.controller.EntryController.calculaMedia(EntryController.java:50)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:655)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:764)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\r\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\r\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)\r\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\r\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\r\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\r\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359)\r\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\r\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\r\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)\r\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735)\r\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\r\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\r\n\tat java.base/java.lang.Thread.run(Thread.java:833)\r\n",
+  "trace": "java.lang.ArithmeticException: / by zero\r\n\tat trilha.back.financys.services.EntryService.calculaMedia(EntryService.java:133)\r\n\..."
   "message": "/ by zero",
   "path": "/entry/calcula/10/0"
 }
 ```
 ```
-f) IV. Faça o tratamento dessa exception utilizando try catch e se necessário finally;
+g) IV. Faça o tratamento dessa exception utilizando try catch e se necessário finally;
 ```
 ```java
     public Integer calculaMedia(Integer x, Integer y) {
@@ -697,7 +700,7 @@ f) IV. Faça o tratamento dessa exception utilizando try catch e se necessário 
     }
 ```
 ```
-f) V. Agora faça o tratamento utilizando throw e @ExceptionHandler;
+g) V. Agora faça o tratamento utilizando throw e @ExceptionHandler;
 ```
 ```java
 package trilha.back.financys.exceptions.exceptions;
@@ -708,9 +711,16 @@ public class CalculaMediaExceptions extends ArithmeticException{
 }
 ```
 ```
-f) VI. Aproveitando o método criado com @ExceptionHandler crie sua própria classe para tratamento de exceptions
+g) VI. Aproveitando o método criado com @ExceptionHandler crie sua própria classe para tratamento de exceptions
 utilizando @ControllerAdvice;
 ```
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio08/financys/src/main/java/trilha/back/financys/exceptions/handle/ExceptionHandle.java)
 
+```
+g) VII. Realize novos testes, verifique o resultado final e escreva sua própria conclusão sobre exceptions:
+----------
+Podemos concluir que as exceções quando usadas da melhor forma melhoram a legibilidade, confiabilidade e manutenção de
+um programa, pois ajuda a detectar e tratar possíveis erros que possam acontecer. O tratamento das exceções, é o 
+mecanismo responsável pelo tratamento da ocorrência de condições que alteram o fluxo normal da execução de programas.
+```
 ◀️[Voltar para menu de desafios](#-Desafios)

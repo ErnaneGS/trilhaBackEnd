@@ -2,9 +2,12 @@ package trilha.back.financys.mappers;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
-import trilha.back.financys.domains.Entry;
-import trilha.back.financys.dtos.request.EntryRequest;
-import trilha.back.financys.dtos.response.*;
+import trilha.back.financys.domains.entities.Entry;
+import trilha.back.financys.domains.dtos.request.EntryRequest;
+import trilha.back.financys.domains.dtos.response.EntryResponse;
+import trilha.back.financys.domains.dtos.response.GetEntryChartResponse;
+import trilha.back.financys.domains.dtos.response.GetEntryListarResponse;
+import trilha.back.financys.domains.dtos.response.GetEntryObterResponse;
 
 @Mapper
 public interface EntryMapper {

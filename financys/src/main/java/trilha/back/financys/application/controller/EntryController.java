@@ -1,10 +1,10 @@
-package trilha.back.financys.controller;
+package trilha.back.financys.application.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import trilha.back.financys.dtos.request.EntryRequest;
-import trilha.back.financys.dtos.response.*;
+import trilha.back.financys.domains.dtos.request.EntryRequest;
+import trilha.back.financys.domains.dtos.response.*;
 import trilha.back.financys.services.CategoryService;
 import trilha.back.financys.services.EntryService;
 import javax.validation.Valid;

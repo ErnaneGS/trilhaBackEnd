@@ -1,14 +1,14 @@
-package trilha.back.financys.controller;
+package trilha.back.financys.application.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import trilha.back.financys.dtos.request.CategoryRequest;
-import trilha.back.financys.dtos.response.CategoryResponse;
-import trilha.back.financys.dtos.response.DeleteResponse;
-import trilha.back.financys.dtos.response.GetCategoryListarResponse;
-import trilha.back.financys.dtos.response.GetCategoryObterResponse;
-import trilha.back.financys.repositories.CategoryRepository;
+import trilha.back.financys.domains.dtos.request.CategoryRequest;
+import trilha.back.financys.domains.dtos.response.CategoryResponse;
+import trilha.back.financys.domains.dtos.response.DeleteResponse;
+import trilha.back.financys.domains.dtos.response.GetCategoryListarResponse;
+import trilha.back.financys.domains.dtos.response.GetCategoryObterResponse;
+import trilha.back.financys.infrastructure.repositories.CategoryRepository;
 import trilha.back.financys.services.CategoryService;
 import javax.validation.Valid;
 import java.net.URI;

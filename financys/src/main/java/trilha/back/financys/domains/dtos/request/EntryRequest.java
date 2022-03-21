@@ -1,6 +1,6 @@
-package trilha.back.financys.dtos.request;
+package trilha.back.financys.domains.dtos.request;
 
-import trilha.back.financys.domains.Category;
+import trilha.back.financys.domains.entities.Category;
 import javax.validation.constraints.*;
 import java.time.LocalDate;
 

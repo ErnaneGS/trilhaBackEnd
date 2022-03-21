@@ -1,4 +1,4 @@
-package trilha.back.financys.dtos.response;
+package trilha.back.financys.domains.dtos.response;
 
 public class GetEntryChartResponse {
 

@@ -1,4 +1,4 @@
-package trilha.back.financys.exceptions;
+package trilha.back.financys.infrastructure.exceptions;
 
 public class CalculaMediaExceptions extends ArithmeticException{
 

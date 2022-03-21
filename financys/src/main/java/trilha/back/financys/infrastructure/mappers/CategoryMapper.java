@@ -1,4 +1,4 @@
-package trilha.back.financys.mappers;
+package trilha.back.financys.infrastructure.mappers;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;

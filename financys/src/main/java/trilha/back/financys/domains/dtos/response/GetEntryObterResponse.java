@@ -1,6 +1,6 @@
-package trilha.back.financys.dtos.response;
+package trilha.back.financys.domains.dtos.response;
 
-import trilha.back.financys.domains.Category;
+import trilha.back.financys.domains.entities.Category;
 import java.time.LocalDate;
 
 public class GetEntryObterResponse {

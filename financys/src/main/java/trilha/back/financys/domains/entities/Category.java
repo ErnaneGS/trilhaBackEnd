@@ -1,4 +1,4 @@
-package trilha.back.financys.domains;
+package trilha.back.financys.domains.entities;
 
 import javax.persistence.*;
 

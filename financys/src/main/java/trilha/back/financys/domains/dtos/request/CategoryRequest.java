@@ -1,4 +1,4 @@
-package trilha.back.financys.dtos.request;
+package trilha.back.financys.domains.dtos.request;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;

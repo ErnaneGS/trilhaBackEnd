@@ -5,55 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="293a1c04-e59d-4085-886d-e28de91550b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/configuration/BeanConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/exceptions/CalculaMediaExceptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Category/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Category/mappers/CategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/EntryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/response/DeleteResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/mappers/EntryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/CategoryRepositoryAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/EntryRepositoryAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/entity/CategoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/entity/EntryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/repositories/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/repositories/EntryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/domains/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/domains/Entry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/exceptions/CategoryNotFoundExceptiions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/exceptions/DivisãoPorZeroArithmeticException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/exceptions/EntryNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/CategoryRepositoryPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/CategoryServicePort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryRepositoryPort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryServicePort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/services/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/services/EntryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/CategoryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/EntryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/domains/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/domains/Entry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/request/CategoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Category/dtos/request/CategoryRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/request/EntryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/request/EntryRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/CategoryResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/DeleteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Category/dtos/response/DeleteResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/EntryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/response/EntryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetCategoryListarResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetCategoryObterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Category/dtos/response/CategoryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryChartResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/response/GetEntryChartResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryListarResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryObterResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/CalculaMediaExceptions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/handle/DefaultException.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/exceptions/handle/DefaultException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/handle/ExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/exceptions/handle/ExceptionHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/mappers/CategoryMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/mappers/EntryMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/repositories/CategoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/repositories/EntryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/services/CategoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/services/EntryService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

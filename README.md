@@ -9,4 +9,4 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 **f) Crie uma nova branch a partir da atual: trilha-back-seunome-clean. Em seguida refatore o projeto da nova branch 
 para o padrão de arquitetura hexagonal.**
 
-[implementação da Arquitetura hexagonal](https://github.com/ErnaneGS/trilhaBackEnd/tree/trilha-back-ernane-DDD/financys)
+[implementação da Arquitetura hexagonal](https://github.com/ErnaneGS/trilhaBackEnd/tree/trilha-back-ernane-clean/financys)

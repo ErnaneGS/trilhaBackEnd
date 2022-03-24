@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/entry")
 @RequiredArgsConstructor
+
 public class EntryController {
 
     private final CategoryService categoryService;

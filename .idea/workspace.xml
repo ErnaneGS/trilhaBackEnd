@@ -4,39 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="293a1c04-e59d-4085-886d-e28de91550b7" name="Changes" comment="">
+    <list default="true" id="25aa5c5c-9c1a-49a1-95d0-4a3338475e16" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desafio08_trilhaBackEnd" beforeDir="false" afterPath="$PROJECT_DIR$/desafio08_trilhaBackEnd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/financys/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/financys/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/financys/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/financys/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/financys/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/FinancysApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/FinancysApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/EntryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/controller/EntryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/domains/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/domains/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/domains/Entry.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/domains/Entry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/request/CategoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/request/CategoryRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/request/EntryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/request/EntryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/CategoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/CategoryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/DeleteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/DeleteResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/EntryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/EntryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetCategoryListarResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetCategoryListarResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetCategoryObterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetCategoryObterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryChartResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryChartResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryListarResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryListarResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryObterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/dtos/response/GetEntryObterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/CalculaMediaExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/CalculaMediaExceptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/handle/DefaultException.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/handle/DefaultException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/handle/ExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/exceptions/handle/ExceptionHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/mappers/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/mappers/CategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/mappers/EntryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/mappers/EntryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/repositories/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/repositories/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/repositories/EntryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/repositories/EntryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/services/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/services/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/services/EntryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/services/EntryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/financys/src/main/resources/validationMessages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/resources/validationMessages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/FinancysApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/FinancysApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Enum" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,7 +61,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="25kIj28pG1Ui8WWWyMgEi8xsc5k" />
+  <component name="ProjectId" id="26pfKDhUgiMVdW90l15jJpVFDtS" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,7 +69,6 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
@@ -82,23 +94,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="293a1c04-e59d-4085-886d-e28de91550b7" name="Changes" comment="" />
-      <created>1646064793113</created>
+      <changelist id="25aa5c5c-9c1a-49a1-95d0-4a3338475e16" name="Changes" comment="" />
+      <created>1648125382494</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1646064793113</updated>
+      <updated>1648125382494</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

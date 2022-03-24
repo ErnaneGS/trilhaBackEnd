@@ -11,12 +11,6 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 **e) Crie uma nova branch a partir da atual: trilha-back-seunome-DDD. Em seguida refatore o projeto da nova branch para o
 padrão de arquitetura DDD.**
 
-O Domain-Driven Design, ou DDD, foi criado para ajudar equipes a ter mais sucesso no desenvolvimento de software com 
-alta qualidade. Quando implementado corretamente, o DDD entrega um design que traduz exatamente como o dominio funciona,
-combinando práticas de design e desenvolvimento. Oferece ferramentas de modelagem estratégica e tática para entregar
-um software de alta qualidade. O objetivo é acelerar o desenvolvimento de software que lidam com complexos processos de
-negócio. Em seus princípios, DDD é sobre discussão, escuta e compreensão, todo um esforço para centralizar o conhecimento.
-
 [implementação do DDD](https://github.com/ErnaneGS/trilhaBackEnd/tree/trilha-back-ernane-DDD/financys)
 
 

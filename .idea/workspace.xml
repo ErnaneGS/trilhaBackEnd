@@ -5,6 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96a1615e-50d0-45c8-9d6b-cf84b124a073" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/financys/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financys/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financys/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financys/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financys/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financys/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financys/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>

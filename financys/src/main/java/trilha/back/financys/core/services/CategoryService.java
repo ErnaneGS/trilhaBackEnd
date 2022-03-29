@@ -2,7 +2,7 @@ package trilha.back.financys.core.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import trilha.back.financys.core.domains.Category;
-import trilha.back.financys.core.exceptions.CategoryNotFoundExceptiions;
+import trilha.back.financys.core.exceptions.CategoryNotFoundExceptions;
 import trilha.back.financys.core.ports.CategoryRepositoryPort;
 import trilha.back.financys.core.ports.CategoryServicePort;
 import java.util.List;
@@ -32,7 +32,7 @@ public class CategoryService implements CategoryServicePort {
     public Category findById(Long id) {
         Category category = categoryRepositoryPort.findById(id).get();
         if(category == null){
-            throw new CategoryNotFoundExceptiions("Não foi encontrada nenhuma categoria com o ID informado.");
+            throw new CategoryNotFoundExceptions("Não foi encontrada nenhuma categoria com o ID informado.");
         }
         return category;
     }
@@ -41,7 +41,7 @@ public class CategoryService implements CategoryServicePort {
     public Category update(Category category, Long id) {
         Category categoryObtida = categoryRepositoryPort.findById(id).get();
         if(categoryObtida == null){
-            throw new CategoryNotFoundExceptiions("Não foi encontrada nenhuma categoria com o ID informado.");
+            throw new CategoryNotFoundExceptions("Não foi encontrada nenhuma categoria com o ID informado.");
         } else {
             categoryObtida.setName(category.getName());
             categoryObtida.setDescription(category.getDescription());
@@ -54,7 +54,7 @@ public class CategoryService implements CategoryServicePort {
     public void delete(Long id) {
         Category categoryObtida = categoryRepositoryPort.findById(id).get();
         if(categoryObtida == null){
-            throw new CategoryNotFoundExceptiions("Não foi encontrada nenhuma categoria com o ID informado.");
+            throw new CategoryNotFoundExceptions("Não foi encontrada nenhuma categoria com o ID informado.");
         } else {
             categoryRepositoryPort.delete(categoryObtida);
         }

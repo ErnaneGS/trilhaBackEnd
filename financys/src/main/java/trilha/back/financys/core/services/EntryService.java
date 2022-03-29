@@ -2,7 +2,7 @@ package trilha.back.financys.core.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import trilha.back.financys.core.domains.Entry;
-import trilha.back.financys.core.exceptions.CategoryNotFoundExceptiions;
+import trilha.back.financys.core.exceptions.CategoryNotFoundExceptions;
 import trilha.back.financys.core.exceptions.DivisãoPorZeroArithmeticException;
 import trilha.back.financys.core.exceptions.EntryNotFoundException;
 import trilha.back.financys.core.ports.CategoryRepositoryPort;
@@ -77,7 +77,7 @@ public class EntryService implements EntryServicePort {
         Entry entryObtido = entryRepositoryPort.findById(id).get();
         if(entryObtido != null) {
             if (validateCategoryById(entryObtido.getCategoriaId().getId()) == false) {
-                throw new CategoryNotFoundExceptiions("Impossível atualizar o lançamento pois a categoria não foi encontrada com o ID informado");
+                throw new CategoryNotFoundExceptions("Impossível atualizar o lançamento pois a categoria não foi encontrada com o ID informado");
             } else {
                 entryObtido.setName(entry.getName());
                 entryObtido.setType(entry.getType());

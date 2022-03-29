@@ -10,7 +10,6 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import trilha.back.financys.adapters.exceptions.CalculaMediaExceptions;
 import trilha.back.financys.core.exceptions.CategoryNotFoundExceptions;
 import trilha.back.financys.core.exceptions.EntryNotFoundException;
-
 import java.time.LocalDateTime;
 import java.util.NoSuchElementException;
 
@@ -45,7 +44,7 @@ public class ExceptionHandle {
     }
 
     @ExceptionHandler(HttpMessageNotReadableException.class)
-    public ResponseEntity<DefaultException> handlde( HttpMessageNotReadableException  e ) {
+    public ResponseEntity<DefaultException> handle( HttpMessageNotReadableException  e ) {
         DefaultException defaultException = new DefaultException();
         defaultException.setMensagem("Erro de análise no JSON");
         defaultException.setStatus(HttpStatus.BAD_REQUEST.value());
@@ -79,6 +78,5 @@ public class ExceptionHandle {
         defaultException.setDataHoraAtual( LocalDateTime.now() );
         return ResponseEntity.status(defaultException.getStatus()).body(defaultException);
     }
-
 
 }

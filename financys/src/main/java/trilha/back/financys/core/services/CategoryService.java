@@ -31,7 +31,7 @@ public class CategoryService implements CategoryServicePort {
     @Override
     public Category findById(Long id) {
         Category category = categoryRepositoryPort.findById(id).get();
-        if(category == null){
+        if(!categoryRepositoryPort.findById(id).isPresent()){
             throw new CategoryNotFoundExceptions("Não foi encontrada nenhuma categoria com o ID informado.");
         }
         return category;
@@ -62,8 +62,11 @@ public class CategoryService implements CategoryServicePort {
 
     @Override
     public String idCategoryByNome(String nomeCategory) {
-        Category category = categoryRepositoryPort.findByNome(nomeCategory);
-        return "O id da categoria " +category.getName()+ " é: " +category.getId();
+       if(categoryRepositoryPort.findByNome(nomeCategory) == null) {
+           throw new CategoryNotFoundExceptions("Não foi encontrada nenhuma categoria com o nome informado.");
+       } else {
+           Category category = categoryRepositoryPort.findByNome(nomeCategory);
+           return "O id da categoria " +category.getName()+ " é: " +category.getId();
+       }
     }
-
 }

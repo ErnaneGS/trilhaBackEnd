@@ -14,6 +14,7 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 - [Desafio 6](#-Desafio-6)
 - [Desafio 7](#-Desafio-7)
 - [Desafio 8](#-Desafio-8)
+- [Desafio 9](#-Desafio-9)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
@@ -689,4 +690,354 @@ Podemos concluir que as exceções quando usadas da melhor forma melhoram a legi
 um programa, pois ajuda a detectar e tratar possíveis erros que possam acontecer. O tratamento das exceções, é o 
 mecanismo responsável pelo tratamento da ocorrência de condições que alteram o fluxo normal da execução de programas.
 ```
+◀️[Voltar para menu de desafios](#-Desafios)
+
+## 🎯 Desafio 9
+Seu objetivo durante o desafio 9 é conhecer os principais modelos de design patterns, arquiteturas de software e alguns 
+princípios de qualidade de software, com o intuito de  conhecer  fórmulas  já  validadas  de  construção  de  projetos  
+que  visam  solucionar  vários     tipos     de     problemas     de     gestão/organização     do     código/arquivos, 
+reaproveitamento de código, limitações no desenvolvimento futuro, difícil manutenção, entre outros problemas já 
+identificados pela comunidade e pelos criadores desses padrões e arquiteturas.
+
+**a) O que é um padrão de projeto e por que nós os utilizamos?**
+
+>Padrões de projeto (design patterns) são soluções típicas para problemas comuns em projeto de software. Cada padrão é
+>como uma planta de construção onde podemos customizar para resolver problemas de projetos. Usamos o padrão de projeto
+>pois ele nos ajuda a adotar, no sistema, uma solução de projeto já testada e validada.
+
+**b) Cite e explique com suas palavras:**
+<br/>
+I. Um dos padrões de criação:
+> Os padrões criacionais fornecem vários mecanismos de criação de objetos, que aumentam a flexibilidade e reutilização
+> de código já existente.
+>
+> SINGLETON (Carta única) -- O Singleton é um padrão de projeto criacional que permite a você garantir que uma classe tenha
+> apenas uma instância, enquanto provê um ponto de acesso global para essa instância. O padrão Singleton resolve dois
+> problemas:
+>
+> 1 - Garantir que uma classe tenha apenas uma única instância para controlar o acesso a algum recurso compartilhado—por
+> exemplo, uma base de dados ou um arquivo.
+>
+> 2 - Fornece um ponto de acesso global para aquela instância permitindo o acesse de qualquer lugar no programa. Contudo,
+> ele também protege aquela instância de ser sobrescrita por outro código.
+>
+> Como solução todas as implementações do Singleton tem esses dois passos em comum:
+>
+> 1 - Fazer o construtor padrão privado, para prevenir que outros objetos usem o operador new com a classe singleton.
+>
+> 2 - Criar um método estático de criação que age como um construtor. Esse método chama o construtor privado por debaixo
+> dos panos para criar um objeto e o salva em um campo estático. Todas as chamadas seguintes para esse método retornam o
+> objeto em cache.
+>
+
+> Neste exemplo, a classe de conexão com a base de dados age como um Singleton. Essa classe não tem um construtor público,
+> então a única maneira de obter seu objeto é chamando o método getInstance. Esse método coloca o primeiro objeto criado
+> em cache e o retorna em todas as chamadas subsequentes.
+
+```java
+// A classe Database define o método `getInstance` que permite
+// clientes acessar a mesma instância de uma conexão a base de
+// dados através do programa.
+class Database is
+    // O campo para armazenar a instância singleton deve ser
+    // declarado como estático.
+    private static field instance: Database
+
+    // O construtor do singleton devem sempre ser privado para
+    // prevenir chamadas diretas de construção com o operador
+    // `new`.
+    private constructor Database() is
+        // Algum código de inicialização, tal como uma conexão
+        // com um servidor de base de dados.
+        // ...
+
+    // O método estático que controla acesso à instância do
+    // singleton
+    public static method getInstance() is
+        if (Database.instance == null) then
+            acquireThreadLock() and then
+                // Certifique que a instância ainda não foi
+                // inicializada por outra thread enquanto está
+                // estiver esperando pela liberação do `lock`.
+                if (Database.instance == null) then
+                    Database.instance = new Database()
+        return Database.instance
+
+    // Finalmente, qualquer singleton deve definir alguma lógica
+    // de negócio que deve ser executada em sua instância.
+    public method query(sql) is
+        // Por exemplo, todas as solicitações à base de dados de
+        // uma aplicação passam por esse método. Portanto, você
+        // pode colocar a lógica de throttling ou cache aqui.
+        // ...
+
+class Application is
+    method main() is
+        Database foo = Database.getInstance()
+        foo.query("SELECT ...")
+        // ...
+        Database bar = Database.getInstance()
+        bar.query("SELECT ...")
+        // A variável `bar` vai conter o mesmo objeto que a
+        // variável `foo`.
+
+```
+II. Um dos padrões estruturais:
+>Os padrões estruturais explicam como montar objetos e classes em estruturas maiores mas ainda mantendo essas estruturas
+>flexíveis e eficientes.
+> 
+> PROXY é um padrão de projeto estrutural que permite que você forneça um substituto ou um espaço reservado para outro
+> objeto. Um proxy controla o acesso ao objeto original, permitindo que você faça algo ou antes ou depois do pedido chegar
+> ao objeto original. Por exemplo, quando temos um objeto muito grande que consome muitos recursos do sistema. e precisamos
+> dele de tempos em tempos, mas não sempre. Desse modo, O padrão Proxy sugere a criação de uma nova classe proxy com a
+> mesma interface do objeto do serviço original, assim se for preciso executar alguma coisa tanto antes como depois da
+> lógica primária da classe original, o proxy permite que isso seja feito sem mudar aquela classe
+>
+
+```java
+// A interface de um serviço remoto.
+interface ThirdPartyYouTubeLib is
+method listVideos()
+method getVideoInfo(id)
+method downloadVideo(id)
+
+// A implementação concreta de um serviço conector. Métodos
+// dessa classe podem pedir informações do YouTube. A velocidade
+// do pedido depende da conexão do usuário com a internet, bem
+// como do YouTube. A aplicação irá ficar lenta se muitos
+// pedidos forem feitos ao mesmo tempo, mesmo que todos peçam a
+// mesma informação.
+class ThirdPartyYouTubeClass implements ThirdPartyYouTubeLib is
+method listVideos() is
+// Envia um pedido API para o YouTube.
+
+    method getVideoInfo(id) is
+        // Obtém metadados sobre algum vídeo.
+
+    method downloadVideo(id) is
+        // Baixa um arquivo de vídeo do YouTube.
+
+// Para salvar largura de banda, nós podemos colocar os
+// resultados do pedido em cache e mantê-los por determinado
+// tempo. Mas pode ser impossível colocar tal código diretamente
+// na classe de serviço. Por exemplo, ele pode ter sido
+// fornecido como parte de uma biblioteca de terceiros e/ou
+// definida como `final`. É por isso que nós colocamos o código
+// do cache em uma nova classe proxy que implementa a mesma
+// interface que a classe de serviço. Ela delega ao objeto do
+// serviço somente quando os pedidos reais foram enviados.
+class CachedYouTubeClass implements ThirdPartyYouTubeLib is
+private field service: ThirdPartyYouTubeLib
+private field listCache, videoCache
+field needReset
+
+    constructor CachedYouTubeClass(service: ThirdPartyYouTubeLib) is
+        this.service = service
+
+    method listVideos() is
+        if (listCache == null || needReset)
+            listCache = service.listVideos()
+        return listCache
+
+    method getVideoInfo(id) is
+        if (videoCache == null || needReset)
+            videoCache = service.getVideoInfo(id)
+        return videoCache
+
+    method downloadVideo(id) is
+        if (!downloadExists(id) || needReset)
+            service.downloadVideo(id)
+
+// A classe GUI, que é usada para trabalhar diretamente com um
+// objeto de serviço, permanece imutável desde que trabalhe com
+// o objeto de serviço através de uma interface. Nós podemos
+// passar um objeto proxy com segurança ao invés de um objeto
+// real de serviço uma vez que ambos implementam a mesma
+// interface.
+class YouTubeManager is
+protected field service: ThirdPartyYouTubeLib
+
+    constructor YouTubeManager(service: ThirdPartyYouTubeLib) is
+        this.service = service
+
+    method renderVideoPage(id) is
+        info = service.getVideoInfo(id)
+        // Renderiza a página do vídeo.
+
+    method renderListPanel() is
+        list = service.listVideos()
+        // Renderiza a lista de miniaturas do vídeo.
+
+    method reactOnUserInput() is
+        renderVideoPage()
+        renderListPanel()
+
+// A aplicação pode configurar proxies de forma fácil e rápida.
+class Application is
+method init() is
+aYouTubeService = new ThirdPartyYouTubeClass()
+aYouTubeProxy = new CachedYouTubeClass(aYouTubeService)
+manager = new YouTubeManager(aYouTubeProxy)
+manager.reactOnUserInput()
+```
+
+III. Um dos padrões comportamentais:
+>Padrões comportamentais são voltados aos algoritmos e a designação de responsabilidades entre objetos.
+> 
+>OBSERVER O Observer é um padrão de projeto comportamental que permite a definição de um mecanismo de assinatura para
+> notificar múltiplos objetos sobre quaisquer eventos que aconteçam com o objeto que eles estão observando.
+> Imagine que temos dois tipos de objetos: um Cliente e uma Loja. O cliente está muito interessado em uma marca particular
+> de um produto (digamos que seja um novo modelo de iPhone) que logo deverá estar disponível na loja. O cliente pode
+> visitar a loja todos os dias e checar a disponibilidade do produto. Mas enquanto o produto ainda está a caminho, a
+> maioria dessas visitas serão em vão. Em uma outra solução a loja poderia encaminhar um e-mail sempre que novos produtos
+> chegarem a loja. Usando essa analogia o observer iria permitir que os clientes (objetos) pudessem assinar ou não uma
+> corrente de eventos que viesse da loja (classe). Na implementação isso aconteceria através de um mecanismos de assinatura
+> aplicado a classe.
+
+```java
+// A classe publicadora base inclui o código de gerenciamento de
+// inscrições e os métodos de notificação.
+class EventManager is
+private field listeners: hash map of event types and listeners
+
+    method subscribe(eventType, listener) is
+        listeners.add(eventType, listener)
+
+    method unsubscribe(eventType, listener) is
+        listeners.remove(eventType, listener)
+
+    method notify(eventType, data) is
+        foreach (listener in listeners.of(eventType)) do
+            listener.update(data)
+
+// O publicador concreto contém a verdadeira lógica de negócio
+// que é de interesse para alguns assinantes. Nós podemos
+// derivar essa classe a partir do publicador base, mas isso nem
+// sempre é possível na vida real devido a possibilidade do
+// publicador concreto já ser uma subclasse. Neste caso, você
+// pode remendar a lógica de inscrição com a composição, como
+// fizemos aqui.
+class Editor is
+public field events: EventManager
+private field file: File
+
+    constructor Editor() is
+        events = new EventManager()
+
+    // Métodos da lógica de negócio podem notificar assinantes
+    // acerca de mudanças.
+    method openFile(path) is
+        this.file = new File(path)
+        events.notify("open", file.name)
+
+    method saveFile() is
+        file.write()
+        events.notify("save", file.name)
+
+    // ...
+
+
+// Aqui é a interface do assinante. Se sua linguagem de
+// programação suporta tipos funcionais, você pode substituir
+// toda a hierarquia do assinante por um conjunto de funções.
+interface EventListener is
+method update(filename)
+
+// Assinantes concretos reagem a atualizações emitidas pelo
+// publicador a qual elas estão conectadas.
+class LoggingListener implements EventListener is
+private field log: File
+private field message: string
+
+    constructor LoggingListener(log_filename, message) is
+        this.log = new File(log_filename)
+        this.message = message
+
+    method update(filename) is
+        log.write(replace('%s',filename,message))
+
+class EmailAlertsListener implements EventListener is
+private field email: string
+private field message: string
+
+    constructor EmailAlertsListener(email, message) is
+        this.email = email
+        this.message = message
+
+    method update(filename) is
+        system.email(email, replace('%s',filename,message))
+
+
+// Uma aplicação pode configurar publicadores e assinantes
+// durante o tempo de execução.
+class Application is
+method config() is
+editor = new Editor()
+
+        logger = new LoggingListener(
+            "/path/to/log.txt",
+            "Someone has opened the file: %s")
+        editor.events.subscribe("open", logger)
+
+        emailAlerts = new EmailAlertsListener(
+            "admin@example.com",
+            "Someone has changed the file: %s")
+        editor.events.subscribe("save", emailAlerts)
+```
+
+**c) Explique o conceito de arquitetura de software e seu proposito:**
+>A arquitetura de software  consiste na definição de um conjunto de princípios, técnicas e normas usadas para a construção
+> de software. O termo também se refere à documentação da arquitetura de software do sistema. Essa documentação facilita:
+> a comunicação entre os stakeholders, registra as decisões iniciais acerca do projeto de alto-nível, e permite o reuso
+> do projeto dos componentes e padrões entre projetos.
+
+**d) I. Qual arquitetura estamos seguindo até o momento? Justifique sua resposta.**
+>Estávamos seguindo a Arquitetura em Camadas, pois a nossa aplicação foi divida em camadas formadas por um conjunto
+>de classes com um determinado propósito. Nesse projeto a camada do Controller gerencia as requisições e respostas do
+>fluxo, a Service é responsável pela regra de negócio, Repository responsável pelas operações com o banco de dados e a
+>Domains representando os domínios e entidades de relacionamento com o banco de dados.
+
+**e) Crie uma nova branch a partir da atual: trilha-back-seunome-DDD. Em seguida refatore o projeto da nova branch para
+o padrão de arquitetura DDD.**
+
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/trilha-back-ernane-DDD/financys/src/main/java/trilha/back/financys)
+
+**f) Crie uma nova branch a partir da atual: trilha-back-seunome-clean. Em seguida refatore o projeto da nova branch para
+o padrão de arquitetura hexagonal.**
+
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/trilha-back-ernane-clean/financys/src/main/java/trilha/back/financys)
+
+**g) O que significa a sigla SOLID?**
+> SOLID são cinco princípios da programação orientada a objetos que facilitam no desenvolvimento de softwares, tornando-os
+> fáceis de manter e estender. Esses princípios podem ser aplicados a qualquer linguagem de POO.
+> 
+> **S - Single Responsiblity Principle:** Classes entidades ou funções devem ter uma única responsabilidade, facilitando o 
+> reaproveitamento de códigos, a refatoração, a aplicação de testes automatizados e possibilita a geração de menos bugs na
+> aplicação.
+> 
+> **O - Open-Closed Principle:** Objetos ou entidades devem estar abertos para extensão, mas fechados para modificação,
+> ou seja, quando novos comportamentos e recursos precisam ser adicionados no software, devemos estender e não alterar o
+> código fonte original.
+> 
+> **L - Liskov Substitution Principle:** Se tivermos uma classe e dela criarmos uma subclasse através da herança, o objeto
+> da classe herdeira deve conseguir substituir o objeto da classe original, sem que seja necessário alterar propriedades
+> do programa.
+> 
+> **I - Interface Segregation Principle:** Clientes não devem ser forçados a dependerem de métodos que eles não utilizam.
+> ou seja, uma classe não deve ser forçada a implementar interfaces e métodos que não irão utilizar.
+> 
+> **D -  Dependency Inversion Principle:** Princípio da Inversão de Dependência, um módulo não deve depender diretamente
+> de detalhes de implementação de outros módulos, mais sim de abstrações.
+> 
+**h) Quais princípios foram utilizados no projeto até o momento? Explique.**
+>Neste projeto ate o momento foram utilizados os princípios do Single Responsiblity Principle, uma vez que a maioria 
+> das classes e métodos do projeto possuem responsabilidades únicas. Interface Segregation Principle pois as classes não
+> foram obrigadas a implementar interfaces e métodos que não irão utilizar e a Dependency Inversion Principle sendo que
+> as classes foram construídas de forma independente sem depender totalmente da implementação de outros métodos.
+
+**Referências** \
+https://refactoring.guru/pt-br \
+https://www.youtube.com/channel/UCFuIUoyHB12qpYa8Jpxoxow \
+https://www.youtube.com/c/FilipeDeschamps \
+
 ◀️[Voltar para menu de desafios](#-Desafios)

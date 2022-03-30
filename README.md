@@ -1058,10 +1058,10 @@ desenvolvimento e otimizar a performance da aplicação
 
 **b) Cite 3 exemplos de ferramentas Spring e suas respectivas finalidades**
 > **Spring Data:** projeto com o objetivo de tornar mais fácil a integração de aplicações Spring a novos modelos de bancos
-> de dados. \
+> de dados. 
 > **Spring Security:** é uma estrutura que se concentra em fornecer autenticação e autorização para aplicações Java. Como
 > todos os projetos da Spring, o verdadeiro poder da Segurança da Spring é encontrado na facilidade com que ele pode ser
-> estendido para atender aos requisitos personalizados. \
+> estendido para atender aos requisitos personalizados. 
 > **Spring Cloud:** estrutura que fornece ferramentas para que os desenvolvedores construam rapidamente alguns dos padrões
 > comuns em sistemas distribuídos (por exemplo, gerenciamento de configuração, detecção de serviços, disjuntores, roteamento
 > inteligente, microproxy, barramento de controle, tokens únicos, fechaduras globais, eleição de liderança, sessões 
@@ -1078,37 +1078,37 @@ desenvolvimento e otimizar a performance da aplicação
 > que é uma abreviação para Plain Old Java Object. Usar o POJO para desenvolver um aplicativo é que você não precisa de
 > um contêiner corporativo como um servidor de aplicativos. Além disso, ele ajuda você a se livrar do Convencional 
 > Enterprise Java Beans (EJB) permitindo que você possa usar um recipiente robusto de servlet como o Tomcat. Isso faz d
-> o Spring Framework uma estrutura leve. \
+> o Spring Framework uma estrutura leve. 
 > 
 > **II. Uso da Modularidade** O Spring Framework fornece modularidade aos desenvolvedores. Ele os ajuda a escolher quais
 > pacotes ou classes podem ser usados ou ignorados. Com toneladas de classes e pacotes, ele vem como um benefício para os
-> desenvolvedores identificar e escolher os pacotes ou classes sem qualquer problema. \
+> desenvolvedores identificar e escolher os pacotes ou classes sem qualquer problema. 
 > 
 > **III. Não precisa reinventar** Um dos principais benefícios do Spring Framework para o desenvolvimento de aplicativos
 > corporativos é que você pode aproveitar a partir do Spring, pois ele usa tecnologias como temporizadores JDK, frameworks
 > ORM, Java EE etc. Para que os desenvolvedores não precisem aprender todas essas tecnologias ou frameworks para desenvolver
-> aplicativos. \
+> aplicativos. 
 > 
 > **IV. Facilidade de testabilidade** Uma característica da injeção de Dependência de Mola ajuda na engrenagem da testabilidade.
-> Simplifica a injeção de dados de teste com o uso de JavaBean POJO. \
+> Simplifica a injeção de dados de teste com o uso de JavaBean POJO. 
 > 
-> **V. Otimização e produtividade** Com o Spring temos o benefício de otimizar nosso tempo e aumentar a produtividade, ou seja, não temos que gastar tempo
-> desenvolvendo uma aplicação do zero, recebemos do Spring a maioria dos recursos necessário.
+> **V. Otimização e produtividade** Com o Spring temos o benefício de otimizar nosso tempo e aumentar a produtividade, ou
+> seja, não temos que gastar tempo desenvolvendo uma aplicação do zero, recebemos do Spring a maioria dos recursos necessário.
 
 **e) Descreva os passos de criação de uma Web API Spring boot, com conexão com SQL Server**
 > 1 - Geração da base para o projeto através do: [Spring Initializr](Spring Initializr), neste momento iremos escolher e
 > a linguagem do nosso projeto, além de adicionarmos as dependências que iremos querer adicionar no projeto base. \
 > 
 > 2 - Nesse caso, como iremos utilizar uma conexão com o SQL server, ainda na página [Spring Initializr](Spring Initializr),
-> deveremos adicionar a dependência: MS SQL Server Driver. \
+> deveremos adicionar a dependência: Spring Web, Spring Boot DevTools, Spring Data JPA, Spring MS SQL Server Driver. 
 > 
-> 3 - Após iremos gerar o projeto base e iniciar ele usando uma IDE. \
+> 3 - Após iremos gerar o projeto base e iniciar ele usando uma IDE. 
 > 
-> 4 - Agora iremos especificar as propriedades do banco de dados no arquivo application.properties. \
+> 4 - Agora iremos especificar as propriedades do banco de dados no arquivo application.properties. 
 > 
-> 5 - Seguindo a arquitetura do seu projeto será necessário realizar o mapeamento de suas entidades com as anotações do
-> banco de dados além de definir os respositórios necessários, para que posteriormente seja possível realizar a comunicação 
-> com as demais camadas necessárias da aplicação..
+> 5 - Seguindo a arquitetura do seu projeto será necessário implementação do seu domínio e realizar o mapeamento de suas
+> entidades com as anotações do banco de dados além de definir os respositórios necessários, para que posteriormente seja
+> possível realizar a comunicação com as demais camadas necessárias da aplicação.
 
 **f) Qual a funcionalidade do pom.xml?**
 > POM é um acrônimo para Project Object Model. O arquivo pom.xml contém informações de projeto e configuração para o maven
@@ -1305,7 +1305,7 @@ public class FinancysApplication {
 > Suporte abrangente e extensível para autenticação e autorização. \
 > Proteção contra ataques como fixação de sessão, clickjacking, falsificação de solicitações de site cruzado, etc. \
 > Integração de API servlet. \
-> Integração opcional com O MVC da Web de Primavera. \
+> Integração opcional com O MVC da Web de Spring. 
 
 **m) Qual é o pacote Spring responsável pelas conexões com os bancos de dados?**
 > Spring Data que torna mais fácil a integração de aplicações Spring a novos modelos de bancos de dados.

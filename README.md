@@ -1344,10 +1344,10 @@ de um projeto.
 **c) Qual é o propósito do Maven, e qual é o seu relacionamento com o arquivo pom.xml?**
 > O Maven é uma ferramenta utilizada para gerenciar projetos em Java e simplificar a vida do programador, auxiliando no 
 > ciclo de desenvolvimento incluindo compilação, controle de bibliotecas, distribuição e relatórios estatísticos. tendo como
-> priniipais objetivos: 
+> priniipais objetivos: \
 > 1 - Simplificar a criação e distribuição de projetos: Criação automática da estrutura do projeto através do archetype, e
-> empacotamento da aplicação através do comando - mvn package;
-> 2 - Promover melhores práticas como a definição de um layout padrão para diretórios.
+> empacotamento da aplicação através do comando - mvn package; \
+> 2 - Promover melhores práticas como a definição de um layout padrão para diretórios. \
 > Todos os detalhes de configuração usados pelo Maven estão contidos no arquivo pom.xml, podemos citar como exemplo as 
 > configurações de: diretório de compilação, diretório de origem, dependências, diretório de origem de teste, plugin, 
 > metas etc.
@@ -1359,20 +1359,20 @@ de um projeto.
 
 **e) Com os conhecimentos adquiridos até o agora, realize uma conexão com o desafio 3 onde falamos sobre JDBC, os drivers
 de comunicação com os bancos de dados.** \
-**I - Qual a relação entre os termos lib, driver e JDBC?**
+I - Qual a relação entre os termos lib, driver e JDBC?
 > JDBC é um conjunto de classes e interfaces (API) escritas em Java que fazem o envio de instruções SQL para qualquer 
 > banco de dados relacional através de um DRIUER específico daquele bd. As LIBS são as configurações do banco de dados
 > que serão carregadas projeto.
 
-**II - Como é adicionado uma lib no projeto?**
-> Em um projeto MAVEN a lib pode ser adicionada da seguinte forma:
->  1 - Através do repositório https://mvnrepository.com/ iremos buscar a biblioteca que desejamos adicionar no projeto;
->  2 - Iremos copiar a dependência dessa biblioteca e adicionar no arquivo pom.xml;
+II - Como é adicionado uma lib no projeto?
+> Em um projeto MAVEN a lib pode ser adicionada da seguinte forma: \
+>  1 - Através do repositório https://mvnrepository.com/ iremos buscar a biblioteca que desejamos adicionar no projeto; \
+>  2 - Iremos copiar a dependência dessa biblioteca e adicionar no arquivo pom.xml; \
 >  3 - No último passo devemos carregar o nosso projeto maven com as alterações através da opção: Load Maven Changes.
 
-**II - Escolha  um  banco  de  dados  (menos  o  H2)  e  explique  como  utilizar  o  driver  de  comunicação.**
-> Banco de dados escolhido: 
-> Passo a passo para utilizar o driver de comunicação:
+II - Escolha  um  banco  de  dados  (menos  o  H2)  e  explique  como  utilizar  o  driver  de  comunicação.
+> Banco de dados escolhido: MySQL \
+> Passo a passo para utilizar o driver de comunicação: \
 > 1 - Adicionar a dependência do Spring Data JPA no pom.xml
 ```xml
 <dependency>

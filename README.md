@@ -1336,7 +1336,7 @@ de um projeto.
 
 **b) Cite 2 libs populares no Java e seu objetivo**
 > **1 - Apache Commons:** compreende 43 bibliotecas modulares que abrangem domínios como Coleções, Matemática, Classes, Banco
-> de Dados, Cache, Utilitários de E / S.
+> de Dados, Cache, Utilitários de E / S. \
 > **2 - Jackson:** é um conjunto de bibliotecas de processamento de dados para Java. Jackson JSON é a biblioteca de gerador
 > / analisador JSON de streaming de fato. Ele também suporta formatos de dados adicionais como Avro, BSON, CBOR, CSV, Smile,
 > Protobuf, XML ou YAML e tipos de dados como Guava, Joda, PCollections e muitos mais.

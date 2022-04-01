@@ -16,49 +16,42 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 - [Desafio 8](#-Desafio-8)
 - [Desafio 9](#-Desafio-9)
 - [Desafio 10](#-Desafio-10)
+- [Desafio 11](#-Desafio-11)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
 
 **a) Com suas palavras defina o que é um sistema de controle de versões (VCS)?**
-```
-O VCS é um software que tem como finalidade gerenciar e controlar as versões, históricos e documentações durante o desenvolvimento de um sistema.
-```
+> O VCS é um software que tem como finalidade gerenciar e controlar as versões, históricos e documentações durante o desenvolvimento de um sistema.
 
 **b) Cite cinco vantagens em utilizar um VCS?**
-```
-1 - Controle do histórico: facilidade na análise do histórico de desenvolvimento e no resgaste de versões mais antigas e estáveis.
-2 - Trabalho em equipe: um sistema de versionamento permite que diversas pessoas trabalhem sobre o mesmo conjunto de documentos ao mesmo tempo, minimizando o desgaste provocado por problemas com conflitos de edições.
-3 - Ramificação de projeto: possibilita a divisão do projeto em várias linhas de desenvolvimento sem que uma interfira na outra.
-4 - Segurança: o VCS usa mecanismos de segurança que evitam invasões e permita que somente usuários autorizados acessem os documentos.
-5 - Confiança: O uso do repositório remoto ajuda a não perder arquivos por eventos inesperados.
-```
+> 1 - Controle do histórico: facilidade na análise do histórico de desenvolvimento e no resgaste de versões mais antigas e estáveis. \
+> 2 - Trabalho em equipe: um sistema de versionamento permite que diversas pessoas trabalhem sobre o mesmo conjunto de documentos ao mesmo tempo, minimizando o desgaste provocado por problemas com conflitos de edições. \
+> 3 - Ramificação de projeto: possibilita a divisão do projeto em várias linhas de desenvolvimento sem que uma interfira na outra. \
+> 4 - Segurança: o VCS usa mecanismos de segurança que evitam invasões e permita que somente usuários autorizados acessem os documentos. \
+> 5 - Confiança: O uso do repositório remoto ajuda a não perder arquivos por eventos inesperados.
 
 **c) Cite três exemplos de VCS?**
-```
-1 - Git
-2 - SVN
-3 - CVS
-```
+> 1 - Git \
+> 2 - SVN \
+> 3 - CVS
+
 ◀️[Voltar para menu de desafios](#-Desafios)
 
 ## 🎯 Desafio 2
 
 **a) Com suas palavras defina o que é programação orientada a objetos (POO) e cite seus pilares?**
-```
-A programação orientada a objetos é um paradigma que utiliza objetos como elementos principais para a construção
-de uma solução, tendo como pilares:
-1 - Abstração.
-2 - Encapsulamento.
-3 - Herança.
-4 - Polimorfismo.
-```
+> A programação orientada a objetos é um paradigma que utiliza objetos como elementos principais para a construção
+> de uma solução, tendo como pilares: \
+> 1 - Abstração. \
+> 2 - Encapsulamento. \
+> 3 - Herança. \
+> 4 - Polimorfismo.
 
 **b) Exemplifique e explique um cenário de abstração:**
-```
-Abstração de características e ações do mundo real para definição de um objeto. No exemplo abstraímos do animal 
-cachorro as características: (cor do pelo, raça, tamanho e peso) e as ações: (latir, comer, andar e abanar o rabo).
-```
+> Abstração de características e ações do mundo real para definição de um objeto. No exemplo abstraímos do animal
+> cachorro as características: (cor do pelo, raça, tamanho e peso) e as ações: (latir, comer, andar e abanar o rabo).
+
 ```java
 public class Cachorro {
 
@@ -86,11 +79,10 @@ public class Cachorro {
 ```
 
 **c) Exemplifique e explique um cenário de encapsulamento:**
-```
-Técnica usada para não expor dados internos de um objeto ao usuário. No exemplo temos o objeto Cliente e não
-queremos expor seus dados pessoais como, nome, cpf e telefone, desse modo definimos os atributos em questão como
-privados e usaremos os métodos setters e getters para acessar os dados.
-```
+> Técnica usada para não expor dados internos de um objeto ao usuário. No exemplo temos o objeto Cliente e não
+> queremos expor seus dados pessoais como, nome, cpf e telefone, desse modo definimos os atributos em questão como
+> privados e usaremos os métodos setters e getters para acessar os dados.
+
 ```java
 public class Cliente {
 
@@ -126,10 +118,9 @@ public class Cliente {
 ```
 
 **d) Exemplifique e explique um cenário de herança:**
-```
-A herança permite que uma classe herde atributos e métodos de outra. No exemplo temos as classes Gerente, Secretário e 
-Técnico que herdam os atributos e métodos da classe Funcionário.
-```
+> A herança permite que uma classe herde atributos e métodos de outra. No exemplo temos as classes Gerente, Secretário e
+> Técnico que herdam os atributos e métodos da classe Funcionário.
+
 ```java
 public class Funcionario {
 
@@ -198,12 +189,11 @@ public class Tecnico extends Funcionario{
 ```
 
 **e) Exemplifique e explique um cenário de polimorfismo:**
-```
-O polimorfismo permite o uso de métodos com implantações distintas em diferentes objetos, desde que mantenha-se a 
-mesma assinatura do método da superclasse. No exemplo temos a superclasse abstrata animal que não poderá ser instanciada
-e as subclasses cachorro e peixe, as subclasses herdam o método locomover da classe animal, porém cada uma implementa a
-sua forma específica de locomover em seu método.
-```
+> O polimorfismo permite o uso de métodos com implantações distintas em diferentes objetos, desde que mantenha-se a
+> mesma assinatura do método da superclasse. No exemplo temos a superclasse abstrata animal que não poderá ser instanciada
+> e as subclasses cachorro e peixe, as subclasses herdam o método locomover da classe animal, porém cada uma implementa a
+> sua forma específica de locomover em seu método.
+
 ```java
 public abstract class Animal {
 
@@ -237,14 +227,13 @@ public class Peixe extends Animal {
 ```
 
 **f) Cite 5 vantagens da POO:**
-```
-1 - Facilidade na reutilização do código.
-2 - Possibilidade de trabalhar em um nível mais elevado de abstração.
-3 - Facilidade de manutenção considerando o conceito de herança.
-4 - O conceito de objeto fornece grande independência ao programa.
-5 - Processo de desenvolvimento ágil. Várias equipes podem trabalhar no mesmo projeto de
+> 1 - Facilidade na reutilização do código. \
+> 2 - Possibilidade de trabalhar em um nível mais elevado de abstração. \
+> 3 - Facilidade de manutenção considerando o conceito de herança. \
+> 4 - O conceito de objeto fornece grande independência ao programa. \
+> 5 - Processo de desenvolvimento ágil. Várias equipes podem trabalhar no mesmo projeto de
 forma independente.
-```
+
 ◀️[Voltar para menu de desafios](#-Desafios)
 
 ## 🎯 Desafio 3
@@ -1335,3 +1324,81 @@ https://br.bitdegree.org/tutoriais/spring-mvc/
 https://www.javatpoint.com/ioc-container
 
 ◀️[Voltar para menu de desafios](#-Desafios)
+
+## 🎯 Desafio 11
+O objetivo durante o desafio 11 é entender para o que servem as libs,  e  como  funciona o gerenciamento de dependências
+de um projeto.
+
+**a) O que são libs quando se trata de código?**
+> É uma coleção de subprogramas com recursos utilizados para o desenvolvimento de software, estes recursos podem conter
+> dados de configurações, documentações, códigos pré escritos, rotinas, classes, valores e especificações de tipo. As
+> libs tem como função facilitar o desenvolvimento garantindo mais agilidade e menos erros.
+
+**b) Cite 2 libs populares no Java e seu objetivo**
+> **1 - Apache Commons:** compreende 43 bibliotecas modulares que abrangem domínios como Coleções, Matemática, Classes, Banco
+> de Dados, Cache, Utilitários de E / S. \
+> **2 - Jackson:** é um conjunto de bibliotecas de processamento de dados para Java. Jackson JSON é a biblioteca de gerador
+> / analisador JSON de streaming de fato. Ele também suporta formatos de dados adicionais como Avro, BSON, CBOR, CSV, Smile,
+> Protobuf, XML ou YAML e tipos de dados como Guava, Joda, PCollections e muitos mais.
+
+**c) Qual é o propósito do Maven, e qual é o seu relacionamento com o arquivo pom.xml?**
+> O Maven é uma ferramenta utilizada para gerenciar projetos em Java e simplificar a vida do programador, auxiliando no 
+> ciclo de desenvolvimento incluindo compilação, controle de bibliotecas, distribuição e relatórios estatísticos. tendo como
+> priniipais objetivos: \
+> 1 - Simplificar a criação e distribuição de projetos: Criação automática da estrutura do projeto através do archetype, e
+> empacotamento da aplicação através do comando - mvn package; \
+> 2 - Promover melhores práticas como a definição de um layout padrão para diretórios. \
+> Todos os detalhes de configuração usados pelo Maven estão contidos no arquivo pom.xml, podemos citar como exemplo as 
+> configurações de: diretório de compilação, diretório de origem, dependências, diretório de origem de teste, plugin, 
+> metas etc.
+
+**d) Qual é a diferença do Maven para o Grandle?**
+> A principal diferença entre Maven e Gradle é que o O Maven é uma ferramenta de gerenciamento e compreensão de projetos
+> de software que gerencia projetos, relatórios e documentos, enquanto o Gradle é uma ferramenta de automação de desenvolvimento
+> de código aberto com foco em flexibilidade e desempenho.
+
+**e) Com os conhecimentos adquiridos até o agora, realize uma conexão com o desafio 3 onde falamos sobre JDBC, os drivers
+de comunicação com os bancos de dados.** \
+I - Qual a relação entre os termos lib, driver e JDBC?
+> JDBC é um conjunto de classes e interfaces (API) escritas em Java que fazem o envio de instruções SQL para qualquer 
+> banco de dados relacional através de um DRIUER específico daquele bd. As LIBS são as configurações do banco de dados
+> que serão carregadas projeto.
+
+II - Como é adicionado uma lib no projeto?
+> Em um projeto MAVEN a lib pode ser adicionada da seguinte forma: \
+>  1 - Através do repositório https://mvnrepository.com/ iremos buscar a biblioteca que desejamos adicionar no projeto; \
+>  2 - Iremos copiar a dependência dessa biblioteca e adicionar no arquivo pom.xml; \
+>  3 - No último passo devemos carregar o nosso projeto maven com as alterações através da opção: Load Maven Changes.
+
+II - Escolha  um  banco  de  dados  (menos  o  H2)  e  explique  como  utilizar  o  driver  de  comunicação.
+> Banco de dados escolhido: MySQL \
+> Passo a passo para utilizar o driver de comunicação: \
+> 1 - Adicionar a dependência do Spring Data JPA no pom.xml
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+```
+> 2 - Adicionar mysql no pom.xml
+```xml
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
+> 3 - Configurar as propriedades do MySQL no projeto através do arquivo application.properties, passando o usuário e senha
+> de conexão e a url com o driver.
+```properties
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_trilha_back_end?createDatabaseIfNotExist=true
+spring.datasource.username=root
+spring.datasource.password=95182764
+```
+> 4 - Em seu projeto declare os seus repositórios e realize o mapeamento de suas  entidades com as anotações do banco de
+> dados, para que posteriormente seja possível realizar a comunicação com as demais camadas necessárias da aplicação.
+
+**Referências** \
+https://ichi.pro/pt/as-10-principais-bibliotecas-que-todo-desenvolvedor-java-deve-conhecer-61422653275988 \
+https://www.devmedia.com.br/gerenciando-projetos-com-maven/10823 \

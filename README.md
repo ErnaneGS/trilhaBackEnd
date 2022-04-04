@@ -1404,3 +1404,64 @@ https://ichi.pro/pt/as-10-principais-bibliotecas-que-todo-desenvolvedor-java-dev
 https://www.devmedia.com.br/gerenciando-projetos-com-maven/10823 \
 
 ◀️[Voltar para menu de desafios](#-Desafios)
+
+## 🎯 Desafio 12
+O objetivo durante o desafio 12 deve ser realizar o entendimento sobre testes unitários de  forma  rasa  sobre  stack  
+tracer  (pilha  de  erros)    para  compreender  melhor  o  funcionamento do código, e também a análise de um possível
+erro no sistema.
+
+**a) Explique o conceito de teste unitário?**
+> Em programação de computadores, teste unitário é um método de teste de software pelo qual unidades individuais de código
+> fonte são testadas para determinar se são adequadas para o uso. Intuitivamente, pode-se considerar uma unidade como
+> a menor parte testável de uma aplicação. Testes unitários são tipicamente escritos e executados por desenvolvedores
+> para garantir que o código está de acordo com o projeto e se comporta da maneira desejada.
+
+**b) Descreva como fazer um código de teste**
+>
+>
+>
+
+**c) Qual o intuito do teste unitário?**
+>
+>
+>
+
+**d)  Quais  são  as  ferramentas  que  utilizamos  para  realizar  testes  unitários(2  pelo  menos).**
+> 1 - Junit : JUnit é um framework open-source, criado por Erich Gamma e Kent Beck, com suporte à criação de testes
+> automatizados na linguagem de programação Java. Esse framework facilita a criação e manutenção do código para a automação
+> de testes com apresentação dos resultados. \
+>
+> 2 - Mockito é um framework que pode ser usado em conjunto com o JUnit, permite criar e configurar objectos fictícios.
+> O uso do Mockito simplifica o desenvolvimento de testes para classes com dependências externas.
+
+**Neste caminho (“src/test/java/”) crie um pacote com o nome “testes”, após a criação do  pacote  crie  uma  classe  chamada
+“TrilhaBackTestes”  (como  mostra  a  figura  abaixo):**
+
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/trilha-back-ernane-DDD/financys/src/main/java/trilha/back/financys)
+
+**Crie um end-point:**
+
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/trilha-back-ernane-DDD/financys/src/main/java/trilha/back/financys)
+
+**Use a classe “service” de lançamentos para fazer as Seguintes regras de negócio: \
+IMPORTANTE: Garanta  que  exista  dados  na  base  para  realizar  o  testes  neste  end-point.Hands-on:**
+a) Instancie o método da classe service na classe controller, de forma que receba as 3 variáveis passadas pelo end-point
+
+
+b) Verifique se os valores não estão nulos. (OBS: Tratar erro de acordo com o resultado. Ex:  Se  um  valor  estiver  
+nulo,  retorne  um  erro  com  o  status  404  e  a  mensagem  "Parâmetros com valores errados”);
+
+
+c) Faça uma busca de todos os lançamentos na base de dados.
+
+
+d) Agora, filtre pelo parâmetro passado (OBS: Tratar erro de acordo com o resultado. Ex: Se a lista estiver vazia retornar
+um erro com o status 204 e mensagem “Não existe os dados pelo parâmetro passado”)
+
+
+e) E por fim retorne uma lista filtrada pelos parâmetros passados. \
+Desenvolva  o  teste  unitário  para  o  método  acima,  digitando  abaixo  todos  stack  traces de erros e explique em
+uma só frase qual o erro.
+
+
+https://carlosschults.net/pt/testes-unitarios-iniciantes-parte1

@@ -5,16 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e54e796-3d28-412d-8d6e-b6b735f4ec64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/exceptions/ListaVaziaExceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry/TrilhaBackTestes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry/TrilhaBackTestesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_21_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_4_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_6_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_5_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/financys/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/exceptions/handle/ExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/exceptions/handle/ExceptionHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/EntryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/EntryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/request/EntryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/request/EntryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/response/EntryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/response/EntryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/EntryRepositoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/EntryRepositoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/entity/EntryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/entity/EntryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/repositories/EntryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/repositories/EntryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/domains/Entry.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/domains/Entry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryRepositoryPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryRepositoryPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryServicePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryServicePort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/services/EntryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/services/EntryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/FinancysApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/test/java/FinancysApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -34,25 +68,109 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/financys/src/test/java" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager">
-    <configuration name="FinancysApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="trilha.back.financys.FinancysApplication" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\egeraldo\Documents\ProjetosTrilhaBackEnd\trilhaBackEnd\financys\src\test\java" />
+      <recent name="C:\Users\egeraldo\Documents\ProjetosTrilhaBackEnd\trilhaBackEnd\financys\src\test\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.TrilhaBackTestesController.filterLancamentoErroController (1)">
+    <configuration name="TrilhaBackTestesController.DeveRetornarOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financys" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="trilha.back.financys.*" />
+          <option name="PATTERN" value="testes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="testes" />
+      <option name="MAIN_CLASS_NAME" value="testes.TrilhaBackTestesController" />
+      <option name="METHOD_NAME" value="DeveRetornarOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrilhaBackTestesController.filterLancamentoErroController (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trilha.back.financys.adapters.inbound.http.Entry.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="trilha.back.financys.adapters.inbound.http.Entry" />
+      <option name="MAIN_CLASS_NAME" value="trilha.back.financys.adapters.inbound.http.Entry.TrilhaBackTestesController" />
+      <option name="METHOD_NAME" value="filterLancamentoErroController" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrilhaBackTestesController.filterLancamentoErroController (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financys" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TrilhaBackTestesController" />
+      <option name="METHOD_NAME" value="filterLancamentoErroController" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrilhaBackTestesController.filterLancamentoErroController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testes" />
+      <option name="MAIN_CLASS_NAME" value="testes.TrilhaBackTestesController" />
+      <option name="METHOD_NAME" value="filterLancamentoErroController" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrilhaBackTestes.deveTerSucessoAoListarLancamentos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trilha.back.financys.adapters.inbound.http.Entry.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="trilha.back.financys.adapters.inbound.http.Entry" />
+      <option name="MAIN_CLASS_NAME" value="trilha.back.financys.adapters.inbound.http.Entry.TrilhaBackTestes" />
+      <option name="METHOD_NAME" value="deveTerSucessoAoListarLancamentos" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FinancysApplication" />
+        <item itemvalue="JUnit.TrilhaBackTestesController.filterLancamentoErroController (1)" />
+        <item itemvalue="JUnit.TrilhaBackTestes.deveTerSucessoAoListarLancamentos" />
+        <item itemvalue="JUnit.TrilhaBackTestesController.filterLancamentoErroController (2)" />
+        <item itemvalue="JUnit.TrilhaBackTestesController.filterLancamentoErroController" />
+        <item itemvalue="JUnit.TrilhaBackTestesController.DeveRetornarOk" />
       </list>
     </recent_temporary>
   </component>
@@ -66,5 +184,67 @@
       <updated>1649081897882</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.UnsatisfiedDependencyException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="13" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry/TrilhaBackTestes.java</url>
+          <line>39</line>
+          <properties class="testes.TrilhaBackTestes" method="deveFalharSeParametroDateInvalido">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry/TrilhaBackTestesController.java</url>
+          <line>82</line>
+          <properties class="testes.TrilhaBackTestesController" method="DeveRetornarOk">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry/TrilhaBackTestesController.java</url>
+          <line>58</line>
+          <properties class="testes.TrilhaBackTestesController" method="filterLancamentoErroController">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry/TrilhaBackTestesController.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/EntryController.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,6 +1,7 @@
 package trilha.back.financys.core.ports;
 
 import trilha.back.financys.core.domains.Entry;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,5 +16,7 @@ public interface EntryRepositoryPort {
     void delete(Entry entry);
 
     List<Entry> findByPaid(Boolean paid);
+
+    List<Entry> lancamentosDependentes(String date, Double ammount, Boolean páid);
 
 }

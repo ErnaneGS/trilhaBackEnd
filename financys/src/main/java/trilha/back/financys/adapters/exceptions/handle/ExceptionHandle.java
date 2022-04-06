@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import trilha.back.financys.adapters.exceptions.CalculaMediaExceptions;
+import trilha.back.financys.adapters.exceptions.ListaVaziaExceptions;
 import trilha.back.financys.core.exceptions.CategoryNotFoundExceptions;
 import trilha.back.financys.core.exceptions.EntryNotFoundException;
 import java.time.LocalDateTime;
@@ -78,5 +79,16 @@ public class ExceptionHandle {
         defaultException.setDataHoraAtual( LocalDateTime.now() );
         return ResponseEntity.status(defaultException.getStatus()).body(defaultException);
     }
+
+    @ExceptionHandler(ListaVaziaExceptions.class)
+    public ResponseEntity<DefaultException> handle(ListaVaziaExceptions e ) {
+        DefaultException defaultException = new DefaultException();
+        defaultException.setMensagem(e.getLocalizedMessage());
+        defaultException.setStatus(HttpStatus.NO_CONTENT.value());
+        defaultException.setDataHoraAtual( LocalDateTime.now() );
+        return ResponseEntity.status(defaultException.getStatus()).body(defaultException);
+    }
+
+
 
 }

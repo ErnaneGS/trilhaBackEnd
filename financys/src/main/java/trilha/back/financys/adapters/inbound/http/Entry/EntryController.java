@@ -21,7 +21,6 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/entry")
 @RequiredArgsConstructor
-
 public class EntryController {
 
     private final CategoryService categoryService;
@@ -95,4 +94,17 @@ public class EntryController {
         entryService.delete(id);
         ResponseEntity.ok();
     }
+
+    @GetMapping("/filter")
+    public ResponseEntity<List<EntryResponse>> getLancamentosDependentes(@RequestParam(value = "date", required = false) String date,
+                                                                         @RequestParam(value = "amount", required = false) Double amount,
+                                                                         @RequestParam(value = "paid", required = false) Boolean paid) {
+        List<Entry> entries = entryService.lancamentosDependentes(date, amount, paid);
+        List<EntryResponse> entriesResponse = entries
+                .stream()
+                .map(entryMapper::entryToEntryResponse)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(entriesResponse);
+    }
+
 }

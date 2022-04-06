@@ -1417,22 +1417,25 @@ erro no sistema.
 > para garantir que o código está de acordo com o projeto e se comporta da maneira desejada.
 
 **b) Descreva como fazer um código de teste**
->
->
->
+> 1 - No arquivo POM XML deverá ser adicionado as dependências de acordo com a ferramenta escolhida para realizar os testes; \
+> 2 - Dentro do pacote testes deverá ser criado uma classe para teste; \
+> 3 - Na classe iremos criar os métodos que serão testados usando a anotação @Test; \
+> 4 - Simule o cenário necessário para realizar o teste usando: Um arrange — Um cenário a ser testado (um “dado”).
+> Uma action — Um método para testar (um “quando”). Um assert — Uma chamada para um método de verificação (um “então”).
 
 **c) Qual o intuito do teste unitário?**
->
->
->
+> Com o uso do teste unitário conseguimos fortalecer nossa API, com maior consistência, eliminando erros e impedindo que
+> eles se escondam no código, uma vez que através deste teste iremos issolar cada parte do sitemna para analisar o seu 
+> funcionamento. O teste unitário permite entregar uma aplicação com menos problemas para o cliente além de serem usados
+> como documentação para novos desenvolvedores que começarem a trabalhar na api.
 
 **d)  Quais  são  as  ferramentas  que  utilizamos  para  realizar  testes  unitários(2  pelo  menos).**
 > 1 - Junit : JUnit é um framework open-source, criado por Erich Gamma e Kent Beck, com suporte à criação de testes
 > automatizados na linguagem de programação Java. Esse framework facilita a criação e manutenção do código para a automação
 > de testes com apresentação dos resultados. \
 >
-> 2 - Mockito é um framework que pode ser usado em conjunto com o JUnit, permite criar e configurar objectos fictícios.
-> O uso do Mockito simplifica o desenvolvimento de testes para classes com dependências externas.
+> 2 - Jest é um framework de teste unitário de código aberto, é uma das ferramentas de teste unitário mais difundidas 
+> dentro da comunidade de JavaScript.
 
 **Neste caminho (“src/test/java/”) crie um pacote com o nome “testes”, após a criação do  pacote  crie  uma  classe  chamada
 “TrilhaBackTestes”  (como  mostra  a  figura  abaixo):**
@@ -1463,5 +1466,17 @@ e) E por fim retorne uma lista filtrada pelos parâmetros passados. \
 Desenvolva  o  teste  unitário  para  o  método  acima,  digitando  abaixo  todos  stack  traces de erros e explique em
 uma só frase qual o erro.
 
+| Requisições   | Descrição                                                                                                                                                                |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET           | O método GET solicita a representação de um recurso específico. Requisições utilizando o método GET devem retornar apenas dados.                                         |
+| HEAD          | O método HEAD solicita uma resposta de forma idêntica ao método GET, porém sem conter o corpo da resposta.                                                               |
+| POST          | O método POST é utilizado para submeter uma entidade a um recurso específico, frequentemente causando uma mudança no estado do recurso ou efeitos colaterais no servidor. |
+| PUT           | O método PUT substitui todas as atuais representações do recurso de destino pela carga de dados da requisição.                                                                                                                                                                         |
+| DELETE        | O método DELETE remove um recurso específico                                                                                                                                                                         |
+| CONNECT       | O método CONNECT estabelece um túnel para o servidor identificado pelo recurso de destino.                                                                                                                                                                         |
+| OPTIONS       | O método OPTIONS é usado para descrever as opções de comunicação com o recurso de destino                                                                                                                                                                         |
+| TRACE         | O método TRACE executa um teste de chamada loop-back junto com o caminho para o recurso de destino.                                                                                                                                                                         |
+| PATCH         | O método PATCH é utilizado para aplicar modificações parciais em um recurso.                                                                                                                                                                         |
 
 https://carlosschults.net/pt/testes-unitarios-iniciantes-parte1
+https://www.devmedia.com.br/e-ai-como-voce-testa-seus-codigos/39478

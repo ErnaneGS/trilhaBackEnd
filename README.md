@@ -1441,43 +1441,43 @@ erro no sistema.
 **Neste caminho (“src/test/java/”) crie um pacote com o nome “testes”, após a criação do  pacote  crie  uma  classe  chamada
 “TrilhaBackTestes”  (como  mostra  a  figura  abaixo):**
 
-[Codificação disponível neste link]()
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio12/financys/src/test/java)
 
 **Crie um end-point:**
+```java
+@GetMapping("/filter")
+public ResponseEntity<List<EntryResponse>> getLancamentosDependentes(@RequestParam(value = "date", required = false) String date,
+@RequestParam(value = "amount", required = false) Double amount,
+@RequestParam(value = "paid", required = false) Boolean paid) {
+List<Entry> entries = entryService.lancamentosDependentes(date, amount, paid);
+List<EntryResponse> entriesResponse = entries
+.stream()
+.map(entryMapper::entryToEntryResponse)
+.collect(Collectors.toList());
+return ResponseEntity.ok(entriesResponse);
+}
+```
 
-[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/trilha-back-ernane-DDD/financys/src/main/java/trilha/back/financys)
-
-**Use a classe “service” de lançamentos para fazer as Seguintes regras de negócio: \
-IMPORTANTE: Garanta  que  exista  dados  na  base  para  realizar  o  testes  neste  end-point.Hands-on:**
+**Use a classe “service” de lançamentos para fazer as Seguintes regras de negócio:** \
 a) Instancie o método da classe service na classe controller, de forma que receba as 3 variáveis passadas pelo end-point
-
-
 b) Verifique se os valores não estão nulos. (OBS: Tratar erro de acordo com o resultado. Ex:  Se  um  valor  estiver  
-nulo,  retorne  um  erro  com  o  status  404  e  a  mensagem  "Parâmetros com valores errados”);
-
-
-c) Faça uma busca de todos os lançamentos na base de dados.
-
-
+nulo,  retorne  um  erro  com  o  status  404  e  a  mensagem  "Parâmetros com valores errados”); \
+c) Faça uma busca de todos os lançamentos na base de dados. \
 d) Agora, filtre pelo parâmetro passado (OBS: Tratar erro de acordo com o resultado. Ex: Se a lista estiver vazia retornar
-um erro com o status 204 e mensagem “Não existe os dados pelo parâmetro passado”)
-
-
+um erro com o status 204 e mensagem “Não existe os dados pelo parâmetro passado”) \
 e) E por fim retorne uma lista filtrada pelos parâmetros passados. \
-Desenvolva  o  teste  unitário  para  o  método  acima,  digitando  abaixo  todos  stack  traces de erros e explique em
-uma só frase qual o erro.
 
-| Requisições   | Descrição                                                                                                                                                                |
-|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GET           | O método GET solicita a representação de um recurso específico. Requisições utilizando o método GET devem retornar apenas dados.                                         |
-| HEAD          | O método HEAD solicita uma resposta de forma idêntica ao método GET, porém sem conter o corpo da resposta.                                                               |
-| POST          | O método POST é utilizado para submeter uma entidade a um recurso específico, frequentemente causando uma mudança no estado do recurso ou efeitos colaterais no servidor. |
-| PUT           | O método PUT substitui todas as atuais representações do recurso de destino pela carga de dados da requisição.                                                                                                                                                                         |
-| DELETE        | O método DELETE remove um recurso específico                                                                                                                                                                         |
-| CONNECT       | O método CONNECT estabelece um túnel para o servidor identificado pelo recurso de destino.                                                                                                                                                                         |
-| OPTIONS       | O método OPTIONS é usado para descrever as opções de comunicação com o recurso de destino                                                                                                                                                                         |
-| TRACE         | O método TRACE executa um teste de chamada loop-back junto com o caminho para o recurso de destino.                                                                                                                                                                         |
-| PATCH         | O método PATCH é utilizado para aplicar modificações parciais em um recurso.                                                                                                                                                                         |
+**Desenvolva  o  teste  unitário  para  o  método  acima,  digitando  abaixo  todos  stack  traces de erros e explique em
+uma só frase qual o erro.**
 
-https://carlosschults.net/pt/testes-unitarios-iniciantes-parte1
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio12/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry)
+
+| Texto Stack Tracer  | Explicação                                                |
+|---------------|-----------------------------------------------------------|
+|org.opentest4j.AssertionFailedError: Expected java.lang.RuntimeException to be thrown, but nothing was thrown.  |                                                           |
+|java.lang.AssertionError: Status expected:<200> but was:<404>   | Era esperado o status 200 porémn foi lançado o status 404 |
+|java.lang.AssertionError: Status expected:<200> but was:<204> - | Era esperado o status 200 porémn foi lançado o status 204 |
+
+**Referências** \
+https://carlosschults.net/pt/testes-unitarios-iniciantes-parte1 \
 https://www.devmedia.com.br/e-ai-como-voce-testa-seus-codigos/39478

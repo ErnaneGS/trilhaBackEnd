@@ -1,12 +1,13 @@
-package trilha.back.financys.adapters.inbound.http;
+package trilha.back.financys.adapters.inbound.http.Entry;
 
-import Testes.EntryController;
-import Testes.mappers.EntryMapper;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
+import trilha.back.financys.adapters.exceptions.ListaVaziaExceptions;
+import trilha.back.financys.adapters.inbound.http.Entry.mappers.EntryMapper;
 import trilha.back.financys.core.domains.Entry;
 import trilha.back.financys.core.exceptions.EntryNotFoundException;
 import trilha.back.financys.core.services.CategoryService;
@@ -33,7 +34,8 @@ public class TrilhaBackTestesController {
     EntryMapper entryMapper;
 
     @Test
-    public void filterLancamentoErroController() throws Exception {
+    @DisplayName("Deve falhar se parametro forem null")
+    public void deveFalharSeParametrosNUll() throws Exception {
         when(entryService.lancamentosDependentes(null, null, false)).thenThrow(EntryNotFoundException.class);
         mockMvc.perform(get("/entry/filter")
                         .param("paid", "false").contentType("Application/Json"))
@@ -41,7 +43,20 @@ public class TrilhaBackTestesController {
     }
 
     @Test
-    public void filterLancamentoController() throws Exception {
+    @DisplayName("Deve falhar se lista estiver vazia")
+    public void deveFalharSeListaForVazia() throws Exception {
+        when(entryService.lancamentosDependentes("05042022", 10.0, true)).thenThrow(ListaVaziaExceptions.class);
+        this.mockMvc.perform(get("/entry/filter")
+                        .param("date", "05042022")
+                        .param("amount", "10.0")
+                        .param("paid", "true")
+                        .contentType("Application/Json"))
+                .andExpect(status().isNoContent());
+    }
+
+    @Test
+    @DisplayName("Deve ter sucesso ao filtrar lançamentos")
+    public void deveRetornarFiltroDeLancamentos() throws Exception {
         this.mockMvc.perform(get("/entry/filter")
                         .param("date", "05042022")
                         .param("amount", "10.0")
@@ -51,6 +66,15 @@ public class TrilhaBackTestesController {
     }
 
     @Test
+    @DisplayName("Deve falhar ao não encontrar lancamento pelo id")
+    public void DeveFalharSeIdNaoForEncontrado() throws Exception {
+        when(entryService.findById(1L)).thenThrow(EntryNotFoundException.class);
+        this.mockMvc.perform(get("/entry/{id}", 1L))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    @DisplayName("Deve ter sucesso ao buscar id")
     public void DeveRetornarOk() throws Exception {
         Long id = 1L;
         given(entryService.findById(id)).willReturn(any(Entry.class));

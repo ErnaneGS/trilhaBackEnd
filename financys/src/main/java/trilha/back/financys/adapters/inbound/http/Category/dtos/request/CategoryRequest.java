@@ -1,4 +1,4 @@
-package trilha.back.financys.adapters.inbound.http.dtos.request;
+package trilha.back.financys.adapters.inbound.http.Category.dtos.request;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;

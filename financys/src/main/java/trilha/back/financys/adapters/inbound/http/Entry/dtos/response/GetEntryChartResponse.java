@@ -1,4 +1,4 @@
-package Testes.dtos.response;
+package trilha.back.financys.adapters.inbound.http.Entry.dtos.response;
 
 public class GetEntryChartResponse {
 

@@ -1,4 +1,4 @@
-package Testes.dtos.request;
+package trilha.back.financys.adapters.inbound.http.Entry.dtos.request;
 
 import trilha.back.financys.adapters.outbound.persistence.entity.CategoryEntity;
 import javax.validation.constraints.NotBlank;

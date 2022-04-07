@@ -1,12 +1,12 @@
-package Testes;
+package trilha.back.financys.adapters.inbound.http.Entry;
 
-import Testes.dtos.response.EntryResponse;
-import Testes.mappers.EntryMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import Testes.dtos.request.EntryRequest;
-import Testes.dtos.response.GetEntryChartResponse;
+import trilha.back.financys.adapters.inbound.http.Entry.dtos.request.EntryRequest;
+import trilha.back.financys.adapters.inbound.http.Entry.dtos.response.EntryResponse;
+import trilha.back.financys.adapters.inbound.http.Entry.dtos.response.GetEntryChartResponse;
+import trilha.back.financys.adapters.inbound.http.Entry.mappers.EntryMapper;
 import trilha.back.financys.core.domains.Category;
 import trilha.back.financys.core.domains.Entry;
 import trilha.back.financys.core.services.CategoryService;

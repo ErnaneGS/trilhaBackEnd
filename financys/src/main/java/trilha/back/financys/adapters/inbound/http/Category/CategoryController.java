@@ -1,11 +1,11 @@
-package trilha.back.financys.adapters.inbound.http;
+package trilha.back.financys.adapters.inbound.http.Category;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import trilha.back.financys.adapters.inbound.http.mappers.CategoryMapper;
-import trilha.back.financys.adapters.inbound.http.dtos.request.CategoryRequest;
-import trilha.back.financys.adapters.inbound.http.dtos.response.CategoryResponse;
+import trilha.back.financys.adapters.inbound.http.Category.mappers.CategoryMapper;
+import trilha.back.financys.adapters.inbound.http.Category.dtos.request.CategoryRequest;
+import trilha.back.financys.adapters.inbound.http.Category.dtos.response.CategoryResponse;
 import trilha.back.financys.adapters.outbound.persistence.repositories.CategoryRepository;
 import trilha.back.financys.core.domains.Category;
 import trilha.back.financys.core.services.CategoryService;

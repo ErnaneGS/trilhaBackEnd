@@ -10,11 +10,11 @@ public class EntryResponse {
     private String description;
     private String type;
     private Double amount;
-    private LocalDate date;
+    private String date;
     private Boolean paid;
     private Category categoriaId;
 
-    public EntryResponse(Long id, String name, String description, String type, Double amount, LocalDate date, Boolean paid, Category categoriaId) {
+    public EntryResponse(Long id, String name, String description, String type, Double amount, String date, Boolean paid, Category categoriaId) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -68,11 +68,11 @@ public class EntryResponse {
         this.amount = amount;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

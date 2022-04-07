@@ -1,6 +1,8 @@
 package trilha.back.financys.core.ports;
 
 import trilha.back.financys.core.domains.Entry;
+
+import java.time.LocalDate;
 import java.util.List;
 
 public interface EntryServicePort {
@@ -20,5 +22,7 @@ public interface EntryServicePort {
     void delete(Long id);
 
     Boolean validateCategoryById(Long idCategory);
+
+    List<Entry> lancamentosDependentes(String date, Double ammount, Boolean páid);
 
 }

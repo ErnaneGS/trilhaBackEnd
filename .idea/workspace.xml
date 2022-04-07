@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1e54e796-3d28-412d-8d6e-b6b735f4ec64" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry/TrilhaBackTestesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry/TrilhaBackTestesController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,20 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TrilhaBackTestesController.DeveRetornarOk">
+  <component name="RunManager" selected="JUnit.TrilhaBackTestesController.deveRetornarFiltroDeLancamentos">
+    <configuration name="FinancysApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trilha.back.financys.FinancysApplication" />
+      <module name="financys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trilha.back.financys.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TrilhaBackTestesController.DeveFalharSeIdNaoForEncontrado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financys" />
       <extension name="coverage">
@@ -119,22 +132,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrilhaBackTestesController.deveFalharSeParametrosNUll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="financys" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trilha.back.financys.adapters.inbound.http.Entry.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="trilha.back.financys.adapters.inbound.http.Entry" />
-      <option name="MAIN_CLASS_NAME" value="trilha.back.financys.adapters.inbound.http.Entry.TrilhaBackTestesController" />
-      <option name="METHOD_NAME" value="deveFalharSeParametrosNUll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TrilhaBackTestesController.deveRetornarFiltroDeLancamentos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financys" />
       <extension name="coverage">
@@ -153,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TrilhaBackTestesController.deveRetornarFiltroDeLancamentos" />
+        <item itemvalue="Application.FinancysApplication" />
         <item itemvalue="JUnit.TrilhaBackTestesController.DeveRetornarOk" />
         <item itemvalue="JUnit.TrilhaBackTestesController.DeveFalharSeIdNaoForEncontrado" />
-        <item itemvalue="JUnit.TrilhaBackTestesController.deveRetornarFiltroDeLancamentos" />
         <item itemvalue="JUnit.TrilhaBackTestesController.deveFalharSeListaForVazia" />
-        <item itemvalue="JUnit.TrilhaBackTestesController.deveFalharSeParametrosNUll" />
       </list>
     </recent_temporary>
   </component>
@@ -190,10 +187,6 @@
           <properties class="org.springframework.beans.factory.UnsatisfiedDependencyException" package="org.springframework.beans.factory" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.IllegalStateException" package="java.lang" />
-          <option name="timeStamp" value="13" />
-        </breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry/TrilhaBackTestes.java</url>
           <line>38</line>
@@ -205,7 +198,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry/TrilhaBackTestesController.java</url>
-          <line>37</line>
+          <line>42</line>
           <properties class="trilha.back.financys.adapters.inbound.http.Entry.TrilhaBackTestesController" method="deveFalharSeParametrosNUll">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

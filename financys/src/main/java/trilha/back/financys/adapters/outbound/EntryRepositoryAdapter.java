@@ -2,7 +2,7 @@ package trilha.back.financys.adapters.outbound;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import trilha.back.financys.adapters.inbound.http.Entry.mappers.EntryMapper;
+import Testes.mappers.EntryMapper;
 import trilha.back.financys.adapters.outbound.persistence.entity.EntryEntity;
 import trilha.back.financys.adapters.outbound.persistence.repositories.EntryRepository;
 import trilha.back.financys.core.domains.Entry;

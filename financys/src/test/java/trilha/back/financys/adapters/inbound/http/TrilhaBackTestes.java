@@ -1,4 +1,4 @@
-package trilha.back.financys.adapters.inbound.http.Entry;
+package trilha.back.financys.adapters.inbound.http;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

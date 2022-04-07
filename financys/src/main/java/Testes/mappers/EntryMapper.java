@@ -1,8 +1,8 @@
-package trilha.back.financys.adapters.inbound.http.Entry.mappers;
+package Testes.mappers;
 
 import org.mapstruct.Mapper;
-import trilha.back.financys.adapters.inbound.http.Entry.dtos.request.EntryRequest;
-import trilha.back.financys.adapters.inbound.http.Entry.dtos.response.EntryResponse;
+import Testes.dtos.request.EntryRequest;
+import Testes.dtos.response.EntryResponse;
 import trilha.back.financys.adapters.outbound.persistence.entity.EntryEntity;
 import trilha.back.financys.core.domains.Entry;
 

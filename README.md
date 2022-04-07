@@ -17,6 +17,7 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 - [Desafio 9](#-Desafio-9)
 - [Desafio 10](#-Desafio-10)
 - [Desafio 11](#-Desafio-11)
+- [Desafio 12](#-desafio-12)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
@@ -1440,7 +1441,7 @@ erro no sistema.
 **Neste caminho (“src/test/java/”) crie um pacote com o nome “testes”, após a criação do  pacote  crie  uma  classe  chamada
 “TrilhaBackTestes”  (como  mostra  a  figura  abaixo):**
 
-[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/trilha-back-ernane-DDD/financys/src/main/java/trilha/back/financys)
+[Codificação disponível neste link]()
 
 **Crie um end-point:**
 

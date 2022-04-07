@@ -3,7 +3,7 @@ package trilha.back.financys.adapters.outbound;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import trilha.back.financys.adapters.outbound.persistence.entity.CategoryEntity;
-import trilha.back.financys.adapters.inbound.http.Category.mappers.CategoryMapper;
+import trilha.back.financys.adapters.inbound.http.mappers.CategoryMapper;
 import trilha.back.financys.adapters.outbound.persistence.repositories.CategoryRepository;
 import trilha.back.financys.core.domains.Category;
 import trilha.back.financys.core.ports.CategoryRepositoryPort;

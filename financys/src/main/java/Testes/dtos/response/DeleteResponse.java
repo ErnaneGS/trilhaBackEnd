@@ -1,4 +1,4 @@
-package trilha.back.financys.adapters.inbound.http.Category.dtos.response;
+package Testes.dtos.response;//package trilha.back.financys.adapters.dtos.response;
 
 public class DeleteResponse {
 

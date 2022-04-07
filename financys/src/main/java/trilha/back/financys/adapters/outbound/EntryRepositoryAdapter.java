@@ -70,4 +70,15 @@ public class EntryRepositoryAdapter implements EntryRepositoryPort {
                     .collect(Collectors.toList());
         }
     }
+
+    @Override
+    public List<Entry> lancamentosDependentes(String date, Double ammount, Boolean páid){
+        List<EntryEntity> entryEntities = entryRepository.findAllByDateAndAmountAndPaid(date, ammount, páid);
+        List<Entry> entries = entryEntities
+                .stream()
+                .map(entryMapper::entryEntityToEntry)
+                .collect(Collectors.toList());
+        return entries;
+    }
+
 }

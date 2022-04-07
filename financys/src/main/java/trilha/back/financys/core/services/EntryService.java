@@ -1,6 +1,8 @@
 package trilha.back.financys.core.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.webjars.NotFoundException;
+import trilha.back.financys.adapters.exceptions.ListaVaziaExceptions;
 import trilha.back.financys.core.domains.Entry;
 import trilha.back.financys.core.exceptions.CategoryNotFoundExceptions;
 import trilha.back.financys.core.exceptions.DivisãoPorZeroArithmeticException;
@@ -110,6 +112,19 @@ public class EntryService implements EntryServicePort {
             return true;
         } else {
             return false;
+        }
+    }
+
+    @Override
+    public List<Entry> lancamentosDependentes(String date, Double amount, Boolean paid){
+        if (date == null || amount == null ){
+            throw new EntryNotFoundException("Parametros com valores errados");
+        } else {
+            List<Entry> entries = entryRepositoryPort.lancamentosDependentes(date, amount, paid);
+            if(entries.size() == 0) {
+                throw new ListaVaziaExceptions("Não existe os dados pelo parâmetro passado");
+            }
+            return entries;
         }
     }
 }

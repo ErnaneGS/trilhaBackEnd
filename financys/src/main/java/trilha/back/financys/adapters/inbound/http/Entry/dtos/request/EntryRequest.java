@@ -26,7 +26,7 @@ public class EntryRequest {
     private Double amount;
 
     @NotNull(message = "{entry.date.not.null}")
-    private LocalDate date;
+    private String date;
 
     @NotNull(message = "{entry.paid.not.null}")
     private Boolean paid;
@@ -34,7 +34,7 @@ public class EntryRequest {
     @NotNull
     private CategoryEntity categoriaId;
 
-    public EntryRequest(String name, String description, String type, Double amount, LocalDate date, Boolean paid, CategoryEntity categoriaId) {
+    public EntryRequest(String name, String description, String type, Double amount, String date, Boolean paid, CategoryEntity categoriaId) {
         this.name = name;
         this.description = description;
         this.type = type;
@@ -79,11 +79,11 @@ public class EntryRequest {
         this.amount = amount;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

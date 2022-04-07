@@ -17,6 +17,7 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 - [Desafio 9](#-Desafio-9)
 - [Desafio 10](#-Desafio-10)
 - [Desafio 11](#-Desafio-11)
+- [Desafio 12](#-desafio-12)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
@@ -1404,3 +1405,79 @@ https://ichi.pro/pt/as-10-principais-bibliotecas-que-todo-desenvolvedor-java-dev
 https://www.devmedia.com.br/gerenciando-projetos-com-maven/10823 \
 
 ◀️[Voltar para menu de desafios](#-Desafios)
+
+## 🎯 Desafio 12
+O objetivo durante o desafio 12 deve ser realizar o entendimento sobre testes unitários de  forma  rasa  sobre  stack  
+tracer  (pilha  de  erros)    para  compreender  melhor  o  funcionamento do código, e também a análise de um possível
+erro no sistema.
+
+**a) Explique o conceito de teste unitário?**
+> Em programação de computadores, teste unitário é um método de teste de software pelo qual unidades individuais de código
+> fonte são testadas para determinar se são adequadas para o uso. Intuitivamente, pode-se considerar uma unidade como
+> a menor parte testável de uma aplicação. Testes unitários são tipicamente escritos e executados por desenvolvedores
+> para garantir que o código está de acordo com o projeto e se comporta da maneira desejada.
+
+**b) Descreva como fazer um código de teste**
+> 1 - No arquivo POM XML deverá ser adicionado as dependências de acordo com a ferramenta escolhida para realizar os testes; \
+> 2 - Dentro do pacote testes deverá ser criado uma classe para teste; \
+> 3 - Na classe iremos criar os métodos que serão testados usando a anotação @Test; \
+> 4 - Simule o cenário necessário para realizar o teste usando: Um arrange — Um cenário a ser testado (um “dado”).
+> Uma action — Um método para testar (um “quando”). Um assert — Uma chamada para um método de verificação (um “então”).
+
+**c) Qual o intuito do teste unitário?**
+> Com o uso do teste unitário conseguimos fortalecer nossa API, com maior consistência, eliminando erros e impedindo que
+> eles se escondam no código, uma vez que através deste teste iremos issolar cada parte do sitemna para analisar o seu 
+> funcionamento. O teste unitário permite entregar uma aplicação com menos problemas para o cliente além de serem usados
+> como documentação para novos desenvolvedores que começarem a trabalhar na api.
+
+**d)  Quais  são  as  ferramentas  que  utilizamos  para  realizar  testes  unitários(2  pelo  menos).**
+> 1 - Junit : JUnit é um framework open-source, criado por Erich Gamma e Kent Beck, com suporte à criação de testes
+> automatizados na linguagem de programação Java. Esse framework facilita a criação e manutenção do código para a automação
+> de testes com apresentação dos resultados. \
+>
+> 2 - Jest é um framework de teste unitário de código aberto, é uma das ferramentas de teste unitário mais difundidas 
+> dentro da comunidade de JavaScript.
+
+**Neste caminho (“src/test/java/”) crie um pacote com o nome “testes”, após a criação do  pacote  crie  uma  classe  chamada
+“TrilhaBackTestes”  (como  mostra  a  figura  abaixo):**
+
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio12/financys/src/test/java)
+
+**Crie um end-point:**
+```java
+@GetMapping("/filter")
+public ResponseEntity<List<EntryResponse>> getLancamentosDependentes(@RequestParam(value = "date", required = false) String date,
+@RequestParam(value = "amount", required = false) Double amount,
+@RequestParam(value = "paid", required = false) Boolean paid) {
+List<Entry> entries = entryService.lancamentosDependentes(date, amount, paid);
+List<EntryResponse> entriesResponse = entries
+.stream()
+.map(entryMapper::entryToEntryResponse)
+.collect(Collectors.toList());
+return ResponseEntity.ok(entriesResponse);
+}
+```
+
+**Use a classe “service” de lançamentos para fazer as Seguintes regras de negócio:** \
+a) Instancie o método da classe service na classe controller, de forma que receba as 3 variáveis passadas pelo end-point
+b) Verifique se os valores não estão nulos. (OBS: Tratar erro de acordo com o resultado. Ex:  Se  um  valor  estiver  
+nulo,  retorne  um  erro  com  o  status  404  e  a  mensagem  "Parâmetros com valores errados”); \
+c) Faça uma busca de todos os lançamentos na base de dados. \
+d) Agora, filtre pelo parâmetro passado (OBS: Tratar erro de acordo com o resultado. Ex: Se a lista estiver vazia retornar
+um erro com o status 204 e mensagem “Não existe os dados pelo parâmetro passado”) \
+e) E por fim retorne uma lista filtrada pelos parâmetros passados. \
+
+**Desenvolva  o  teste  unitário  para  o  método  acima,  digitando  abaixo  todos  stack  traces de erros e explique em
+uma só frase qual o erro.**
+
+[Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio12/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry)
+
+| Texto Stack Tracer  | Explicação                                                |
+|---------------|-----------------------------------------------------------|
+|org.opentest4j.AssertionFailedError: Expected java.lang.RuntimeException to be thrown, but nothing was thrown.  | Esperava uma exceção no método filter                     |
+|java.lang.AssertionError: Status expected:<200> but was:<404>   | Era esperado o status 200 porémn foi lançado o status 404 |
+|java.lang.AssertionError: Status expected:<200> but was:<204> - | Era esperado o status 200 porémn foi lançado o status 204 |
+
+**Referências** \
+https://carlosschults.net/pt/testes-unitarios-iniciantes-parte1 \
+https://www.devmedia.com.br/e-ai-como-voce-testa-seus-codigos/39478

@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity
 @Data
@@ -20,7 +19,7 @@ public class EntryEntity {
     private String description;
     private String type;
     private Double amount;
-    private LocalDate date;
+    private String date;
     private Boolean paid;
 
     @ManyToOne

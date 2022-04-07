@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="5dc6c3b5-be08-4357-8395-9069f22fd1ca" name="Changes" comment="">
-=======
-    <list default="true" id="d8164504-92de-4325-99d6-3bee9e661fde" name="Changes" comment="">
->>>>>>> 99dca3a9c71cb0ebb0fbbea18d68ba71b632b43f
+    <list default="true" id="fd61b1cf-d2c2-4854-8505-ede5b44be494" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/configuration/ConfigurationCors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/financys/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +26,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="277VvSLrdG4f5ees4VExQLG9c4y" />
+  <component name="ProjectId" id="27UEjcWw5vIfdVvaUkis3w875VO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -63,23 +59,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d8164504-92de-4325-99d6-3bee9e661fde" name="Changes" comment="" />
-      <created>1648671342313</created>
+      <changelist id="fd61b1cf-d2c2-4854-8505-ede5b44be494" name="Changes" comment="" />
+      <created>1649366400886</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1648671342313</updated>
+      <updated>1649366400886</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

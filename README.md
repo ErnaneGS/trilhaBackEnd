@@ -1472,9 +1472,9 @@ uma só frase qual o erro.**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio12/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry)
 
-| Texto Stack Tracer  | Explicação                                                |
-|---------------|-----------------------------------------------------------|
-|org.opentest4j.AssertionFailedError: Expected java.lang.RuntimeException to be thrown, but nothing was thrown.  |                                                           |
+| Texto Stack Tracer  | Explicação                            |
+|---------------|---------------------------------------|
+|org.opentest4j.AssertionFailedError: Expected java.lang.RuntimeException to be thrown, but nothing was thrown.  | Esperava uma exceção mo método filter |
 |java.lang.AssertionError: Status expected:<200> but was:<404>   | Era esperado o status 200 porémn foi lançado o status 404 |
 |java.lang.AssertionError: Status expected:<200> but was:<204> - | Era esperado o status 200 porémn foi lançado o status 204 |
 

@@ -12,9 +12,9 @@ public class EntryResponse {
     private Double amount;
     private String date;
     private Boolean paid;
-    private Category categoriaId;
+    private Category categoryId;
 
-    public EntryResponse(Long id, String name, String description, String type, Double amount, String date, Boolean paid, Category categoriaId) {
+    public EntryResponse(Long id, String name, String description, String type, Double amount, String date, Boolean paid, Category categoryId) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -22,7 +22,7 @@ public class EntryResponse {
         this.amount = amount;
         this.date = date;
         this.paid = paid;
-        this.categoriaId = categoriaId;
+        this.categoryId = categoryId;
     }
 
     public EntryResponse() {
@@ -84,12 +84,11 @@ public class EntryResponse {
         this.paid = paid;
     }
 
-    public Category getCategoriaId() {
-        return categoriaId;
+    public Category getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategoriaId(Category categoriaId) {
-        this.categoriaId = categoriaId;
+    public void setCategoryId(Category categoryId) {
+        this.categoryId = categoryId;
     }
-
 }

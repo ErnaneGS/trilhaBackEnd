@@ -5,7 +5,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
-import java.time.LocalDate;
 
 public class EntryRequest {
 
@@ -32,16 +31,16 @@ public class EntryRequest {
     private Boolean paid;
 
     @NotNull
-    private CategoryEntity categoriaId;
+    private CategoryEntity categoryId;
 
-    public EntryRequest(String name, String description, String type, Double amount, String date, Boolean paid, CategoryEntity categoriaId) {
+    public EntryRequest(String name, String description, String type, Double amount, String date, Boolean paid, CategoryEntity categoryId) {
         this.name = name;
         this.description = description;
         this.type = type;
         this.amount = amount;
         this.date = date;
         this.paid = paid;
-        this.categoriaId = categoriaId;
+        this.categoryId = categoryId;
     }
 
     public EntryRequest() {
@@ -95,12 +94,12 @@ public class EntryRequest {
         this.paid = paid;
     }
 
-    public CategoryEntity getCategoriaId() {
-        return categoriaId;
+    public CategoryEntity getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategoriaId(CategoryEntity categoriaId) {
-        this.categoriaId = categoriaId;
+    public void setCategoryId(CategoryEntity categoryId) {
+        this.categoryId = categoryId;
     }
 
 }

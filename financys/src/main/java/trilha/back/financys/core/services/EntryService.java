@@ -1,7 +1,6 @@
 package trilha.back.financys.core.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.webjars.NotFoundException;
 import trilha.back.financys.adapters.exceptions.ListaVaziaExceptions;
 import trilha.back.financys.core.domains.Entry;
 import trilha.back.financys.core.exceptions.CategoryNotFoundExceptions;
@@ -28,10 +27,10 @@ public class EntryService implements EntryServicePort {
 
     @Override
     public Entry create(Entry entry) {
-        if (validateCategoryById(entry.getCategoriaId().getId()) == false){
+        if (validateCategoryById(entry.getCategoryId().getId()) == false){
             throw new EntryNotFoundException("Impossível criar lançamento pois a categoria não foi encontrada com o ID informado");
         } else {
-            entry.setCategoriaId(categoryRepositoryPort.findById(entry.getCategoriaId().getId()).get());
+            entry.setCategoryId(categoryRepositoryPort.findById(entry.getCategoryId().getId()).get());
             entry = entryRepositoryPort.save(entry);
             return entry;
         }
@@ -78,7 +77,7 @@ public class EntryService implements EntryServicePort {
     public Entry update(Entry entry, Long id) {
         Entry entryObtido = entryRepositoryPort.findById(id).get();
         if(entryObtido != null) {
-            if (validateCategoryById(entryObtido.getCategoriaId().getId()) == false) {
+            if (validateCategoryById(entryObtido.getCategoryId().getId()) == false) {
                 throw new CategoryNotFoundExceptions("Impossível atualizar o lançamento pois a categoria não foi encontrada com o ID informado");
             } else {
                 entryObtido.setName(entry.getName());
@@ -87,7 +86,7 @@ public class EntryService implements EntryServicePort {
                 entryObtido.setPaid(entry.getPaid());
                 entryObtido.setAmount(entry.getAmount());
                 entryObtido.setDescription(entry.getDescription());
-                entryObtido.setCategoriaId(entry.getCategoriaId());
+                entryObtido.setCategoryId(entry.getCategoryId());
                 entryObtido = entryRepositoryPort.save(entryObtido);
                 return entryObtido;
             }

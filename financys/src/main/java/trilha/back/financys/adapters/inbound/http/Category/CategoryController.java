@@ -49,7 +49,7 @@ public class CategoryController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<CategoryResponse> update(@RequestBody @Valid CategoryRequest categoryRequest, @PathVariable long id) {
+    public ResponseEntity<CategoryResponse> update(@RequestBody @Valid CategoryRequest categoryRequest, @PathVariable Long id) {
         Category category = categoryMapper.categoryRequestToCategory(categoryRequest);
         category = categoryService.update(category, id);
         CategoryResponse categoryResponse = categoryMapper.categoryToCategoryResponse(category);
@@ -57,7 +57,7 @@ public class CategoryController {
     }
 
     @DeleteMapping("{id}")
-    public void delete(@PathVariable long id) {
+    public void delete(@PathVariable Long id) {
         categoryService.delete(id);
         ResponseEntity.ok();
     }

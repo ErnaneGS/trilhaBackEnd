@@ -65,7 +65,7 @@ public class EntryController {
                     GetEntryChartResponse getEntryChartResponse = new GetEntryChartResponse();
                     getEntryChartResponse.setName(category.getName());
                     entries.stream()
-                            .filter(entry -> entry.getCategoriaId().getId() == category.getId())
+                            .filter(entry -> entry.getCategoryId().getId() == category.getId())
                             .forEach(entry -> {
                                 getEntryChartResponse.setType(entry.getType());
                                 total.set(total.get() + entry.getAmount());
@@ -82,7 +82,7 @@ public class EntryController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<EntryResponse> update(@RequestBody @Valid EntryRequest entryRequest, @PathVariable long id) {
+    public ResponseEntity<EntryResponse> update(@RequestBody @Valid EntryRequest entryRequest, @PathVariable Long id) {
         Entry entry = entryMapper.entryRequestToEntry(entryRequest);
         entry = entryService.update(entry, id);
         EntryResponse entryResponse = entryMapper.entryToEntryResponse(entry);

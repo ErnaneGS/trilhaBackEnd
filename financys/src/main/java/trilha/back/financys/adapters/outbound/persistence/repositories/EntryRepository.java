@@ -8,6 +8,6 @@ import java.util.List;
 @Repository
 public interface EntryRepository extends JpaRepository<EntryEntity, Long> {
     List<EntryEntity> findByPaid(Boolean paid);
-    List<EntryEntity> findAllByDateAndAmountAndPaid(String date, Double ammount, Boolean páid);
+    List<EntryEntity> findAllByDateAndAmountAndPaid(String date, Double amount, Boolean páid);
 
 }

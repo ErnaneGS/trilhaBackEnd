@@ -24,6 +24,6 @@ public class EntryEntity {
 
     @ManyToOne
     @JoinColumn(name = "categoriaId", referencedColumnName = "id")
-    private CategoryEntity categoriaId;
+    private CategoryEntity categoryId;
 
 }

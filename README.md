@@ -1498,22 +1498,22 @@ IV. Caso não tenha dado certo, acesse o console através do inspecionar do nave
 
 **b)  Tire  evidências  das  telas  e  testes  mostrando  a  integração  dos  dois  códigos  e  adicione no README.md**
  
--- Cadastrando Categorias\
+- Cadastrando Categorias\
 ![imagem](/img_front/Categorias_cadastro01.PNG)
 ![imagem](/img_front/Categorias_cadastro02.PNG)
 
--- Editando Categorias\
+- Editando Categorias\
 ![imagem](/img_front/Categorias_atualizar.PNG)
 
--- Lsitando Categorias\
+- Lsitando Categorias\
 ![imagem](/img_front/Categorias_listar.PNG)
 
--- Cadastrando Lançamentos\
+- Cadastrando Lançamentos\
 ![imagem](/img_front/Lançamento_cadastro01.PNG)
 ![imagem](/img_front/Lançamento_cadastro02.PNG)
 
--- Editando Lançamentos\
+- Editando Lançamentos\
 ![imagem](/img_front/Lançamento_atualizar.PNG)
 
--- Lsitando Lançamentos\
+- Lsitando Lançamentos\
 ![imagem](/img_front/Lançamento_listar.PNG)

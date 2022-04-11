@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b1a0de5-b7fd-4bcf-8071-a2694463da02" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/configuration/ConfigurationCors.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/configuration/ConfigurationCors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Category/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Category/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/EntryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/EntryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/request/EntryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/request/EntryRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/response/EntryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/response/EntryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/EntryRepositoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/EntryRepositoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/entity/EntryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/entity/EntryEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/repositories/EntryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/repositories/EntryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/domains/Entry.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/domains/Entry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryRepositoryPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryRepositoryPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryServicePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryServicePort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/services/EntryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/services/EntryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">

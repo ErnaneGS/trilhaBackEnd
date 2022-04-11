@@ -23,7 +23,7 @@ public class EntryRepositoryAdapter implements EntryRepositoryPort {
     public Entry save(Entry entry) {
         EntryEntity entryEntity = entryMapper.entryToEntryEntity(entry);
         entryEntity = entryRepository.save(entryEntity);
-        entry =  entryMapper.entryEntityToEntry(entryEntity);
+        entry = entryMapper.entryEntityToEntry(entryEntity);
         return entry;
     }
 
@@ -72,8 +72,8 @@ public class EntryRepositoryAdapter implements EntryRepositoryPort {
     }
 
     @Override
-    public List<Entry> lancamentosDependentes(String date, Double ammount, Boolean páid){
-        List<EntryEntity> entryEntities = entryRepository.findAllByDateAndAmountAndPaid(date, ammount, páid);
+    public List<Entry> lancamentosDependentes(String date, Double amount, Boolean páid){
+        List<EntryEntity> entryEntities = entryRepository.findAllByDateAndAmountAndPaid(date, amount, páid);
         List<Entry> entries = entryEntities
                 .stream()
                 .map(entryMapper::entryEntityToEntry)

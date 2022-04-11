@@ -18,6 +18,7 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 - [Desafio 10](#-Desafio-10)
 - [Desafio 11](#-Desafio-11)
 - [Desafio 12](#-desafio-12)
+- [Desafio 13](#-desafio-13)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
@@ -1481,3 +1482,38 @@ uma só frase qual o erro.**
 **Referências** \
 https://carlosschults.net/pt/testes-unitarios-iniciantes-parte1 \
 https://www.devmedia.com.br/e-ai-como-voce-testa-seus-codigos/39478
+
+## 🎯 Desafio 13
+O objetivo durante o desafio 13 é praticar o processo de integração, e entender a importância  de  seguirmos  à  risca
+os  contratos,  entender  a  relevância  de  mudar  uma  letra ou alterar um campo. Garantindo então o que foi combinado
+entre as aplicações, o processo de integração será rápido e sem dores de cabeça.
+
+**a)  Acesse  o  repositório  https://github.com/lssales182/controle-financeiro,  faça  um  clone do projeto e em seguida 
+realize os seguintes passos:**
+I.   Ajuste   as   variáveis   de   ambiente   do   projeto,   para   isso   acesse   o arquivo environment. ts e ajuste
+as variáveis de rotas de acordo com sua API; \
+II. Execute o projeto seguindo o README; \
+III. Teste a integração acessando o link http://localhost:4200/; \
+IV. Caso não tenha dado certo, acesse o console através do inspecionar do navegador e verifique se acusa algum erro;
+
+**b)  Tire  evidências  das  telas  e  testes  mostrando  a  integração  dos  dois  códigos  e  adicione no README.md**
+ 
+-- Cadastrando Categorias\
+![imagem](/img_front/Categorias_cadastro01.PNG)
+![imagem](/img_front/Categorias_cadastro02.PNG)
+
+-- Editando Categorias\
+![imagem](/img_front/Categorias_atualizar.PNG)
+
+-- Lsitando Categorias\
+![imagem](/img_front/Categorias_listar.PNG)
+
+-- Cadastrando Lançamentos\
+![imagem](/img_front/Lançamento_cadastro01.PNG)
+![imagem](/img_front/Lançamento_cadastro02.PNG)
+
+-- Editando Lançamentos\
+![imagem](/img_front/Lançamento_atualizar.PNG)
+
+-- Lsitando Lançamentos\
+![imagem](/img_front/Lançamento_listar.PNG)

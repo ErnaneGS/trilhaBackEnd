@@ -23,6 +23,6 @@ public interface EntryServicePort {
 
     Boolean validateCategoryById(Long idCategory);
 
-    List<Entry> lancamentosDependentes(String date, Double ammount, Boolean páid);
+    List<Entry> lancamentosDependentes(String date, Double amount, Boolean páid);
 
 }

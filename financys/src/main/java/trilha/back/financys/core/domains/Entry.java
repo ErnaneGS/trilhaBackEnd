@@ -1,7 +1,5 @@
 package trilha.back.financys.core.domains;
 
-import java.util.Date;
-
 public class Entry {
 
     private Long id;
@@ -11,9 +9,9 @@ public class Entry {
     private Double amount;
     private String date;
     private Boolean paid;
-    private Category categoriaId;
+    private Category categoryId;
 
-    public Entry(Long id, String name, String description, String type, Double amount, String date, Boolean paid, Category categoriaId) {
+    public Entry(Long id, String name, String description, String type, Double amount, String date, Boolean paid, Category categoryId) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -21,7 +19,7 @@ public class Entry {
         this.amount = amount;
         this.date = date;
         this.paid = paid;
-        this.categoriaId = categoriaId;
+        this.categoryId = categoryId;
     }
 
     public Entry() {
@@ -83,11 +81,12 @@ public class Entry {
         this.paid = paid;
     }
 
-    public Category getCategoriaId() {
-        return categoriaId;
+    public Category getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategoriaId(Category categoriaId) {
-        this.categoriaId = categoriaId;
+    public void setCategoryId(Category categoryId) {
+        this.categoryId = categoryId;
     }
+
 }

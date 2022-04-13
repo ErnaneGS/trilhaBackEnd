@@ -1584,12 +1584,12 @@ II. No que os padrões REST nos auxiliam?
 III. Quais métodos HTTP utilizamos para montar um CRUD?
 > POST, GET, PUT e DELETE
 
-I V.    Qual    a    diferença    entre    as    annotations    @PathVariable, @RequestParam, @RequestBody?  E com quais
+IV.    Qual    a    diferença    entre    as    annotations    @PathVariable, @RequestParam, @RequestBody?  E com quais
 métodos HTTP  elas  podem  ser  utilizadas respectivamente?
 > -- @PathVariableé utilizado quando o valor da variável é passado diretamente na URL, podendo ser utilizada nos métodos GET,
-> PUT e DELETE.
+> PUT e DELETE.\
 > -- @RequestParam utilizado quando queremos passar parâmetros que não fazem parte da URL, podendo ser utilizada nos métodos GET,
-> PUT e DELETE.
+> PUT e DELETE.\
 > -- @RequestBody usado para deserializar o corpo da solicitação em um objeto, podendo ser utilizada nos métodos POST,
 > e PUT.
 
@@ -1611,7 +1611,7 @@ II. De maneira prática como funciona a injeção do Repository? E qual a sua re
 III. Quais são as facilidades em utilizar JPA?
 > Fácil acesso e configuração além de simplificar as consultas de dados.
 
-V. Quais são os passos para configurar um banco de dados em um projeto Spring?
+IV. Quais são os passos para configurar um banco de dados em um projeto Spring?
 > Primeiramente devemos adicionar a dependência do banco de dados escolhido no arquivo pom.xml, após deveremos configurar
 > todas as propriedades do banco de dados no arquivo application.properties e em sequência deveremos declarar os repositórios
 > e realizar o mapeamento das entidades.
@@ -1643,7 +1643,7 @@ I. Quais problemas conseguimos resolver utilizando a camada DTO?
 > determinar quais dados serão usados na requisição e na resposta da classe de visualização, além de otimizar o tráfego de
 > dados.
 
-I.  Qual  a  diferença  de  realizarmos  o  “de  para”  utilizando  constructor  ou  getters  e  setters?
+II.  Qual  a  diferença  de  realizarmos  o  “de  para”  utilizando  constructor  ou  getters  e  setters?
 > Os construtores deverão passar os dados necessários para instanciar uma classe enquanto os get são amis utilizadas
 > para setar e obter informações do objeto.
 
@@ -1651,14 +1651,14 @@ III. No que a utilização do Mapper nos auxilia? Achou fácil a implementação
 > O Mapper auxilia no mapeamento de objetos, como por exemplo de DTO para o domínio. A implantação utilizando Frameworks
 > pode ser considerada fácil.
 
-I V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 6? Se não, justifique;
+IV. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 6? Se não, justifique;
 > Sim, nesse desafio foi possível adquirir conhecimentos necessários para o uso de DTO na API.
 
 ### **g) Desafio 7 - Manipulação de dados:**
 I. Qual é a forma de validar os dados de uma requisição sem utilizar @Valid?
 > Podemos criar uma classe que irá implementar o método com a lógica da validação necessária,
 
-I. Para que serve um ENUM? Cite exemplos;
+II. Para que serve um ENUM? Cite exemplos;
 > A palavra reservada ENUM serve para representar um conjunto fixo de constantes, ou seja uma lista de valores pré-definidos.
 > Um exemplo de ENUM pode ser a definição de uma ENUM para representar o turno de atendimentos de uma empresa.
 
@@ -1811,9 +1811,5 @@ IV. O que é CORS?
 
 V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 13? Se não, justifique
 > Sim, nesse desafio foi possível adquirir conhecimento sobre a integração de uma aplicação.
-
-
-
-
 
 ◀️[Voltar para menu de desafios](#-Desafios)

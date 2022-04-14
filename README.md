@@ -246,24 +246,21 @@ front-end, um micro serviço ou outros tipos de aplicações.
 
 **a) Com suas palavras defina:**
 I. O que é o protocolo de comunicação HTTP e como ele funciona:
-```
-É um protocolo de comunicação entre aplicações para a transmissão de documentos hipermídia. O seu funcionamento segue o
-modelo cliente servidor para a comunicação entre navegadores web w servidores web. O cliente abre uma conexão, executa
-uma requisição e espera até receber uma resposta.
-```
+> É um protocolo de comunicação entre aplicações para a transmissão de documentos hipermídia. O seu funcionamento segue o
+> modelo cliente servidor para a comunicação entre navegadores web w servidores web. O cliente abre uma conexão, executa
+> uma requisição e espera até receber uma resposta.
+
 II. O que é REST, e qual é a sua relação com o protocolo HTTP:
-```
-O REST é um padrão de arquitetura que define diretrizes para a comunicação (requisição e resposta) dos sistemas 
-distributivos. Nas requisições é preciso que o cliente faça a solicitação que consiste em: (um método http, um header
-e um patch). Já na resposta que a aplicação REST retorna é enviado um código de status de resposta http definindo o
-status da requisição. 
-```
+> O REST é um padrão de arquitetura que define diretrizes para a comunicação (requisição e resposta) dos sistemas 
+> distributivos. Nas requisições é preciso que o cliente faça a solicitação que consiste em: (um método http, um header
+> e um patch). Já na resposta que a aplicação REST retorna é enviado um código de status de resposta http definindo o
+> status da requisição. 
+
 III. O que é Web API, e qual é a sua relação com REST:
-```
-API é uma Interface de Programação de Aplicações onde permite que dois softwares diferentes comuniquem-se entre si, 
-podendo utilizar o padrão RESTFul que é uma interface que fornece dados em um formato padronizado baseado em requisições
-HTTP.
-```
+> API é uma Interface de Programação de Aplicações onde permite que dois softwares diferentes comuniquem-se entre si, 
+> podendo utilizar o padrão RESTFul que é uma interface que fornece dados em um formato padronizado baseado em requisições
+> HTTP.
+
 **b) Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e suas respectivas finalidades:**
 
 | Requisições   | Descrição                                                                                                                                                                |
@@ -370,10 +367,8 @@ HTTP.
 ```
 
 **i) O que é Swagger?**
-```
-O Swagger é um framework composto por diversas ferramentas que, independente da linguagem, auxilia a descrição, consumo
-e visualização de serviços de uma API REST. 
-```
+> O Swagger é um framework composto por diversas ferramentas que, independente da linguagem, auxilia a descrição, consumo
+> e visualização de serviços de uma API REST.
 
 **j) Implemente o Swagger na sua Spring Rest API;**
 
@@ -391,26 +386,21 @@ suas próprias classes de repositório.
 
 **a) Com suas palavras conceitue:**
 I. O que é JDBC?
-```
-Java Database Connectivity é um conjunto de classes e interfaces de instruções SQL que ajudam na interação com um banco
-de dados. Por exemplo, quando baixamos os drives do mysql é implementada as interfaces definidas no JDBC para conexão.
-```
+> Java Database Connectivity é um conjunto de classes e interfaces de instruções SQL que ajudam na interação com um banco
+> de dados. Por exemplo, quando baixamos os drives do mysql é implementada as interfaces definidas no JDBC para conexão.
+
 II. O que é ORM, cite 3 exemplos?
-```
-O ORM (mapeamento objeto relacional) é uma ferramenta para o mapeamento de nossos objetos (classes) e seus atributos  
-para o modelo entidade relacionamento do banco de dados, aprimorando o paradigma de orientação a objetos ao paradigma de
-banco de dados relacional. Exemplos: Hibernate, EclipseLink e ActiveJPA.
-```
+> O ORM (mapeamento objeto relacional) é uma ferramenta para o mapeamento de nossos objetos (classes) e seus atributos  
+> para o modelo entidade relacionamento do banco de dados, aprimorando o paradigma de orientação a objetos ao paradigma de
+> banco de dados relacional. Exemplos: Hibernate, EclipseLink e ActiveJPA.
+
 III. O que é JPA e qual é a sua relação com os ORM’s?
-```
-O JPA (API de Persistência do Java) é um framework para persistir objetos Java, ou seja, uma especificação de como o ORM
-deve ser implementado. 
-```   
+> O JPA (API de Persistência do Java) é um framework para persistir objetos Java, ou seja, uma especificação de como o ORM
+> deve ser implementado. 
+  
 IV. O que é Spring Data?
-```
-É um conjunto de projetos para manipulação de dados de diversas formas, como por exemplo o projeto Spring Data JPA para
-o desenvolvimento de aplicações com a Java Persistence API (JPA).
-```
+> É um conjunto de projetos para manipulação de dados de diversas formas, como por exemplo o projeto Spring Data JPA para
+> o desenvolvimento de aplicações com a Java Persistence API (JPA).
 
 **b) Instale, configure e teste um banco de dados SQL.**
 
@@ -421,15 +411,12 @@ desafio anterior.**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio04/financys/src/main/java/trilha/back/financys/repositories)
 
-
 **d) O que caracteriza um projeto “CRUD básico”?**
-```
-Um projeto CRUD é caracterizado pelas quatro operações básicas:
-1 - CREATE: Criar um novo registro;
-2 - READ: Exibir informações de um registro;
-3 - UPDATE: Atualizar informações de um registro;
-4 - DELETE: Deleta um registro;
-```
+> Um projeto CRUD é caracterizado pelas quatro operações básicas:\
+> 1 - CREATE: Criar um novo registro;\
+> 2 - READ: Exibir informações de um registro;\
+> 3 - UPDATE: Atualizar informações de um registro;\
+> 4 - DELETE: Deleta um registro;
 
 **e) Com base nas classes de controller, use as interfaces desenvolvidas e crie/refatore métodos**
 
@@ -444,16 +431,14 @@ conceitos  para diferentes tipos de projetos.
 
 **a)  Defina  com  suas  palavras  qual  é  a  responsabilidade  das  camadas  vistas  até  agora, entity, controller,
 repository e service.**
-```
-- Entity: Classe principal onde possui a lógica da aplicação responsável por determinar as características e comportamentos
-dos objetos, responsável também pelo mapeamento de entidades para o banco de dados.
-- Controller: Camada intermediária entre a entity e a view (parte do sistema que interage com o usuário), responsável por
-intermediar a comunicação do usuário com a aplicação através de requisições e respostas.
-- Repository: Interface responsável pelo relacionamento entre a aplicação e o banco de dados com funções para criar, deletar,
-atualizar, obter e filtrar objetos do banco de dados.
-- Service: Classe responsável pela operação dos serviços de acordo com as regras de negócio definidas em cada um dos métodos
-nela declarados.
-```
+> - Entity: Classe principal onde possui a lógica da aplicação responsável por determinar as características e comportamentos 
+> dos objetos, responsável também pelo mapeamento de entidades para o banco de dados.\
+> - Controller: Camada intermediária entre a entity e a view (parte do sistema que interage com o usuário), responsável por
+> intermediar a comunicação do usuário com a aplicação através de requisições e respostas.\
+> - Repository: Interface responsável pelo relacionamento entre a aplicação e o banco de dados com funções para criar, deletar,
+> atualizar, obter e filtrar objetos do banco de dados.\
+> - Service: Classe responsável pela operação dos serviços de acordo com as regras de negócio definidas em cada um dos métodos
+> nela declarados.
 
 **b) Com base na informação anterior (Entry): \
 I. Crie uma classe de serviço para lançamentos; \
@@ -492,12 +477,10 @@ O objetivo durante o desafio 6 é conhecer o funcionamento das classes de DTO e 
 como viés de trazer maior segurança para a nossa aplicação.
 
 **a) O que significa DTO, e qual sua importância?**
-```
-Data Transfer Object (DTO)  é um padrão de projeto usado em java para o transporte de dados entre diferentes componentes
-de um sistema, atualmente na arquitetura MVC o DTO tem a responsabilidade de separar as camadas model e view, deixando
-explicito quais campos da model irão para a camada de view, assim os responses terão apenas informações necessárias para 
-atender certa requisição. 
-```
+> Data Transfer Object (DTO)  é um padrão de projeto usado em java para o transporte de dados entre diferentes componentes 
+> de um sistema, atualmente na arquitetura MVC o DTO tem a responsabilidade de separar as camadas model e view, deixando
+> explicito quais campos da model irão para a camada de view, assim os responses terão apenas informações necessárias para 
+> atender certa requisição. 
 
 **b) Com base no artigo passado, crie classes de DTO’s para as entidades de lançamento e de categoria**
 
@@ -533,7 +516,7 @@ III. Crie um método dentro da controller de lançamentos para retornar a lista 
  ```
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio06/financys/src/main/java/trilha/back/financys/services/EntryService.java)
 
-**d)  Implemente uma nova serialização dos dados utilizando Mapper**
+**d) Implemente uma nova serialização dos dados utilizando Mapper**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/mappers)
 
@@ -548,21 +531,19 @@ II. description: não pode ser nulo ou vazio, min = 15 e max = 50**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/java/trilha/back/financys/dtos/request/CategoryRequest.java)
 
-**b) Crie uma validação para a entidade de lançamento seguindo os seguintes requisitos: \
-I. name: não pode ser nulo ou vazio, min = 3 e max = 45 \
-II. description: não pode ser nulo ou vazio, min = 15 e max = 150 \
-III. type: não pode ser nulo ou vazio, min = 3 e max = 10 (nota extra pra quem usar enum) \
-IV. amount: não pode ser nulo ou vazio, < 0; \
-V. date: não pode ser nulo ou vazio; \
+**b) Crie uma validação para a entidade de lançamento seguindo os seguintes requisitos:\
+I. name: não pode ser nulo ou vazio, min = 3 e max = 45\
+II. description: não pode ser nulo ou vazio, min = 15 e max = 150\
+III. type: não pode ser nulo ou vazio, min = 3 e max = 10 (nota extra pra quem usar enum)\
+IV. amount: não pode ser nulo ou vazio, < 0;\
+V. date: não pode ser nulo ou vazio;\
 VI. paid: não pode ser nulo ou vazio;**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/java/trilha/back/financys/dtos/request/EntryRequest.java)
 
-
 **c) Configure mensagens específicas para cada uma das validações**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/resources/validationMessages.properties)
-
 
 **e) No desafio anterior, mais especificamente na letra c é utilizando o comando for para criar o agrupamento das informações
 necessárias para criar o gráfico. Existem maneiras mais otimizadas para realizar essas manipulações, experimente refatorar
@@ -577,43 +558,31 @@ O objetivo durante o desafio 8 é entender como funcionam as exceptions, e ser c
 um bom funcionamento da API.
 
 **a) O que são exceptions?**
-```
-Exceptions são eventos que ocorrem durante a execução de um programa, fazendo com que a execução da aplicação seja
-interrompida e encerrada de forma anormal, uma exceção pode acontecer por vários motivos e devem ser tratadas.
-```
+> Exceptions são eventos que ocorrem durante a execução de um programa, fazendo com que a execução da aplicação seja
+> interrompida e encerrada de forma anormal, uma exceção pode acontecer por vários motivos e devem ser tratadas.
 
 **b) Qual é o funcionamento do try, catch e finally?**
-```
-O Try-Cath-Finally é usado para capturar exceções na execução de programas, no bloco Try é inserido códigos que
-são propensos a exceções que caso aconteçam serão tratadas pelos comandos do bloco catch associado a ela. No bloco
-fo Finally teremos comandos que sempre serão executados independendo da exceção ser executada ou não, basicamente o 
-finally irá forçar a execução dos comandos do seu bloco sem depender de outros resultados.
-```
+> O Try-Cath-Finally é usado para capturar exceções na execução de programas, no bloco Try é inserido códigos que
+> são propensos a exceções que caso aconteçam serão tratadas pelos comandos do bloco catch associado a ela. No bloco
+> fo Finally teremos comandos que sempre serão executados independendo da exceção ser executada ou não, basicamente o 
+> finally irá forçar a execução dos comandos do seu bloco sem depender de outros resultados.
 
 **c) Qual a relação entre “try, catch e finally” e “throws”?**
-```
-Ambos são usados no tratamento de exceções, porém o throws é usado na assinatura do método para declarar as exceções
-que podem ser lançadas naquele método, deixando de modo explícito o erro que pode acontecer no método. Desse modo as
-poderão ser tratadas nos demais momentos em que o método comn a assinatura for chamado.
-```
+> Ambos são usados no tratamento de exceções, porém o throws é usado na assinatura do método para declarar as exceções
+> que podem ser lançadas naquele método, deixando de modo explícito o erro que pode acontecer no método. Desse modo as
+> poderão ser tratadas nos demais momentos em que o método comn a assinatura for chamado.
 
 **d) Para que serve a annotation @ExceptionHandler?**
-```
-A @ExceptionHandler é uma anotação do Spring  para manusear exceções em classes de manipuladores específicas e/ou métodos
-de manipulador.
-```
+> A @ExceptionHandler é uma anotação do Spring  para manusear exceções em classes de manipuladores específicas e/ou métodos
+> de manipulador.
 
 **e) Para que serve o comando throw?**
-```
-A instrução throw é usada para lançar uma exceção explicitamente. O lançamento é seguido por uma instância da classe
-Exception e é realizado dentro do corpo de um método.
-```
+> A instrução throw é usada para lançar uma exceção explicitamente. O lançamento é seguido por uma instância da classe
+> Exception e é realizado dentro do corpo de um método.
 
 **f) Para que serve a annotation @ControllerAdvice?**
-```
-@ControllerAdvice é uma especialização da anotação que permite lidar com exceções em toda a aplicação em um componente
-de manuseio global. Pode ser visto como um interceptador de exceções lançadas por métodos anotados e similares.
-```
+> @ControllerAdvice é uma especialização da anotação que permite lidar com exceções em toda a aplicação em um componente
+> de manuseio global. Pode ser visto como um interceptador de exceções lançadas por métodos anotados e similares.
 
 **g) Crie o seguinte método na classe de serviço do lançamento
 Integer calculaMedia(Integer x, Integer y) {     return (x/y);**
@@ -676,13 +645,11 @@ utilizando @ControllerAdvice**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio08/financys/src/main/java/trilha/back/financys/exceptions/handle/ExceptionHandle.java)
 
-
 **g) VII. Realize novos testes, verifique o resultado final e escreva sua própria conclusão sobre exceptions:**
-```
-Podemos concluir que as exceções quando usadas da melhor forma melhoram a legibilidade, confiabilidade e manutenção de
-um programa, pois ajuda a detectar e tratar possíveis erros que possam acontecer. O tratamento das exceções, é o 
-mecanismo responsável pelo tratamento da ocorrência de condições que alteram o fluxo normal da execução de programas.
-```
+> Podemos concluir que as exceções quando usadas da melhor forma melhoram a legibilidade, confiabilidade e manutenção de
+> um programa, pois ajuda a detectar e tratar possíveis erros que possam acontecer. O tratamento das exceções, é o 
+> mecanismo responsável pelo tratamento da ocorrência de condições que alteram o fluxo normal da execução de programas.
+
 ◀️[Voltar para menu de desafios](#-Desafios)
 
 ## 🎯 Desafio 9
@@ -1050,10 +1017,10 @@ desenvolvimento e otimizar a performance da aplicação
 
 **b) Cite 3 exemplos de ferramentas Spring e suas respectivas finalidades**
 > **Spring Data:** projeto com o objetivo de tornar mais fácil a integração de aplicações Spring a novos modelos de bancos
-> de dados. 
+> de dados.\
 > **Spring Security:** é uma estrutura que se concentra em fornecer autenticação e autorização para aplicações Java. Como
 > todos os projetos da Spring, o verdadeiro poder da Segurança da Spring é encontrado na facilidade com que ele pode ser
-> estendido para atender aos requisitos personalizados. 
+> estendido para atender aos requisitos personalizados.\
 > **Spring Cloud:** estrutura que fornece ferramentas para que os desenvolvedores construam rapidamente alguns dos padrões
 > comuns em sistemas distribuídos (por exemplo, gerenciamento de configuração, detecção de serviços, disjuntores, roteamento
 > inteligente, microproxy, barramento de controle, tokens únicos, fechaduras globais, eleição de liderança, sessões 
@@ -1545,10 +1512,11 @@ III. Qual a diferença entre: git add -all // git add  -u // git add -A // git a
 
 IV.  Qual  é  a  ordem  dos  comandos  para  subir  novas  atualizações,  verificando  se existem alterações a serem
 recebidas?
-> 1 - git status  (Verificar status de arquivos novos, modificados ou removidos)\
-> 2 - git add (adicionar os arquivos no stage)\
-> 3 - git commit (salvar e identificar as alterações)\
-> 4 - git push (enviar o conteúdo do repositório local para o remoto)
+> 1 - git pull (atualizar o repositório local de acordo com o remoto)
+> 2 - git status  (Verificar status de arquivos novos, modificados ou removidos)\
+> 3 - git add (adicionar os arquivos no stage)\
+> 4 - git commit (salvar e identificar as alterações)\
+> 5 - git push (enviar o conteúdo do repositório local para o remoto)
 
 V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 1? Se não, justifique;
 > Sim, consegui adquirir os conhecimentos e comandos necessários para o trabalho com o sistema de versionamento git.
@@ -1724,7 +1692,7 @@ I. Qual a diferença entre Java e Spring?
 > de programação.
 
 II. É possível utilizar Spring Data sozinho?
-> Não, sendo que o Spring Data contém subprojetos específicos que dependem de cada um dos bancos de dados, seja ele JPA,
+> Não, se considerado que o Spring Data contém subprojetos específicos que dependem de cada um dos bancos de dados, seja ele JPA,
 > MongoDB entre outros.
 
 III. É possível utilizar Spring Boot, Spring Data e Spring Security em apenas um projeto? Se sim, como é feito a integração?
@@ -1735,10 +1703,10 @@ IV. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 10?
 
 ### **k) Desafio 11 - Libs:**
 I. Cite 5 libs que utilizou durante a trilha e suas respectivas funcionalidades;
-> 1 - validation: validação de dados na api;
-> 2 - H2: persistência de dados da api (banco de dados);
-> 3 - Junit: prescrever testes na aplicação;
-> 4 - Lombok: geração automática de construtores, getters e setters;
+> 1 - validation: validação de dados na api;\
+> 2 - H2: persistência de dados da api (banco de dados);\
+> 3 - Junit: prescrever testes na aplicação;\
+> 4 - Lombok: geração automática de construtores, getters e setters;\
 > 5 - Sweggar: projetar, construir, documentar e consumir APIs REST.
 
 II. Qual a diferença entre uma lib e um driver?
@@ -1802,7 +1770,7 @@ II. Quais foram as principais dificuldades?
 > porém consegui adquirir muitos conhecimentos nesse processo.
 
 III. Obteve algum erro de CORS?
-> Não
+> Não, uma vez que o CORS foi configurado primeiro.
 
 IV. O que é CORS?
 > O CORS (Cross-origin Resource Sharing) é um mecanismo utilizado pelos navegadores para compartilhar recursos entre

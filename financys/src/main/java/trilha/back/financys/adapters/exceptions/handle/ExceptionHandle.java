@@ -89,6 +89,4 @@ public class ExceptionHandle {
         return ResponseEntity.status(defaultException.getStatus()).body(defaultException);
     }
 
-
-
 }

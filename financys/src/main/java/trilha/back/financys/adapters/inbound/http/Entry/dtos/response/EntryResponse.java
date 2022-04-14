@@ -1,7 +1,6 @@
 package trilha.back.financys.adapters.inbound.http.Entry.dtos.response;//package trilha.back.financys.adapters.dtos.response;
 
 import trilha.back.financys.core.domains.Category;
-import java.time.LocalDate;
 
 public class EntryResponse {
 

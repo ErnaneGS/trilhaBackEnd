@@ -19,6 +19,7 @@ A missão nessa nova jornada é a capacitação nos pontos de vista técnico e p
 - [Desafio 11](#-Desafio-11)
 - [Desafio 12](#-desafio-12)
 - [Desafio 13](#-desafio-13)
+- [Desafio 14](#-desafio-14)
 
 ## 🎯 Desafio 1
 O objetivo durante o desafio 1 deve ser realizar o entendimento do que é um sistema de controle de versão, quais são suas vantagens na prática e aprender os comandos básicos para entregar os próximos desafios.
@@ -245,24 +246,21 @@ front-end, um micro serviço ou outros tipos de aplicações.
 
 **a) Com suas palavras defina:**
 I. O que é o protocolo de comunicação HTTP e como ele funciona:
-```
-É um protocolo de comunicação entre aplicações para a transmissão de documentos hipermídia. O seu funcionamento segue o
-modelo cliente servidor para a comunicação entre navegadores web w servidores web. O cliente abre uma conexão, executa
-uma requisição e espera até receber uma resposta.
-```
+> É um protocolo de comunicação entre aplicações para a transmissão de documentos hipermídia. O seu funcionamento segue o
+> modelo cliente servidor para a comunicação entre navegadores web w servidores web. O cliente abre uma conexão, executa
+> uma requisição e espera até receber uma resposta.
+
 II. O que é REST, e qual é a sua relação com o protocolo HTTP:
-```
-O REST é um padrão de arquitetura que define diretrizes para a comunicação (requisição e resposta) dos sistemas 
-distributivos. Nas requisições é preciso que o cliente faça a solicitação que consiste em: (um método http, um header
-e um patch). Já na resposta que a aplicação REST retorna é enviado um código de status de resposta http definindo o
-status da requisição. 
-```
+> O REST é um padrão de arquitetura que define diretrizes para a comunicação (requisição e resposta) dos sistemas 
+> distributivos. Nas requisições é preciso que o cliente faça a solicitação que consiste em: (um método http, um header
+> e um patch). Já na resposta que a aplicação REST retorna é enviado um código de status de resposta http definindo o
+> status da requisição. 
+
 III. O que é Web API, e qual é a sua relação com REST:
-```
-API é uma Interface de Programação de Aplicações onde permite que dois softwares diferentes comuniquem-se entre si, 
-podendo utilizar o padrão RESTFul que é uma interface que fornece dados em um formato padronizado baseado em requisições
-HTTP.
-```
+> API é uma Interface de Programação de Aplicações onde permite que dois softwares diferentes comuniquem-se entre si, 
+> podendo utilizar o padrão RESTFul que é uma interface que fornece dados em um formato padronizado baseado em requisições
+> HTTP.
+
 **b) Liste todos os métodos de solicitações HTTP utilizados pelo padrão REST e suas respectivas finalidades:**
 
 | Requisições   | Descrição                                                                                                                                                                |
@@ -369,10 +367,8 @@ HTTP.
 ```
 
 **i) O que é Swagger?**
-```
-O Swagger é um framework composto por diversas ferramentas que, independente da linguagem, auxilia a descrição, consumo
-e visualização de serviços de uma API REST. 
-```
+> O Swagger é um framework composto por diversas ferramentas que, independente da linguagem, auxilia a descrição, consumo
+> e visualização de serviços de uma API REST.
 
 **j) Implemente o Swagger na sua Spring Rest API;**
 
@@ -390,26 +386,21 @@ suas próprias classes de repositório.
 
 **a) Com suas palavras conceitue:**
 I. O que é JDBC?
-```
-Java Database Connectivity é um conjunto de classes e interfaces de instruções SQL que ajudam na interação com um banco
-de dados. Por exemplo, quando baixamos os drives do mysql é implementada as interfaces definidas no JDBC para conexão.
-```
+> Java Database Connectivity é um conjunto de classes e interfaces de instruções SQL que ajudam na interação com um banco
+> de dados. Por exemplo, quando baixamos os drives do mysql é implementada as interfaces definidas no JDBC para conexão.
+
 II. O que é ORM, cite 3 exemplos?
-```
-O ORM (mapeamento objeto relacional) é uma ferramenta para o mapeamento de nossos objetos (classes) e seus atributos  
-para o modelo entidade relacionamento do banco de dados, aprimorando o paradigma de orientação a objetos ao paradigma de
-banco de dados relacional. Exemplos: Hibernate, EclipseLink e ActiveJPA.
-```
+> O ORM (mapeamento objeto relacional) é uma ferramenta para o mapeamento de nossos objetos (classes) e seus atributos  
+> para o modelo entidade relacionamento do banco de dados, aprimorando o paradigma de orientação a objetos ao paradigma de
+> banco de dados relacional. Exemplos: Hibernate, EclipseLink e ActiveJPA.
+
 III. O que é JPA e qual é a sua relação com os ORM’s?
-```
-O JPA (API de Persistência do Java) é um framework para persistir objetos Java, ou seja, uma especificação de como o ORM
-deve ser implementado. 
-```   
+> O JPA (API de Persistência do Java) é um framework para persistir objetos Java, ou seja, uma especificação de como o ORM
+> deve ser implementado. 
+  
 IV. O que é Spring Data?
-```
-É um conjunto de projetos para manipulação de dados de diversas formas, como por exemplo o projeto Spring Data JPA para
-o desenvolvimento de aplicações com a Java Persistence API (JPA).
-```
+> É um conjunto de projetos para manipulação de dados de diversas formas, como por exemplo o projeto Spring Data JPA para
+> o desenvolvimento de aplicações com a Java Persistence API (JPA).
 
 **b) Instale, configure e teste um banco de dados SQL.**
 
@@ -420,15 +411,12 @@ desafio anterior.**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio04/financys/src/main/java/trilha/back/financys/repositories)
 
-
 **d) O que caracteriza um projeto “CRUD básico”?**
-```
-Um projeto CRUD é caracterizado pelas quatro operações básicas:
-1 - CREATE: Criar um novo registro;
-2 - READ: Exibir informações de um registro;
-3 - UPDATE: Atualizar informações de um registro;
-4 - DELETE: Deleta um registro;
-```
+> Um projeto CRUD é caracterizado pelas quatro operações básicas:\
+> 1 - CREATE: Criar um novo registro;\
+> 2 - READ: Exibir informações de um registro;\
+> 3 - UPDATE: Atualizar informações de um registro;\
+> 4 - DELETE: Deleta um registro;
 
 **e) Com base nas classes de controller, use as interfaces desenvolvidas e crie/refatore métodos**
 
@@ -443,16 +431,14 @@ conceitos  para diferentes tipos de projetos.
 
 **a)  Defina  com  suas  palavras  qual  é  a  responsabilidade  das  camadas  vistas  até  agora, entity, controller,
 repository e service.**
-```
-- Entity: Classe principal onde possui a lógica da aplicação responsável por determinar as características e comportamentos
-dos objetos, responsável também pelo mapeamento de entidades para o banco de dados.
-- Controller: Camada intermediária entre a entity e a view (parte do sistema que interage com o usuário), responsável por
-intermediar a comunicação do usuário com a aplicação através de requisições e respostas.
-- Repository: Interface responsável pelo relacionamento entre a aplicação e o banco de dados com funções para criar, deletar,
-atualizar, obter e filtrar objetos do banco de dados.
-- Service: Classe responsável pela operação dos serviços de acordo com as regras de negócio definidas em cada um dos métodos
-nela declarados.
-```
+> - Entity: Classe principal onde possui a lógica da aplicação responsável por determinar as características e comportamentos 
+> dos objetos, responsável também pelo mapeamento de entidades para o banco de dados.\
+> - Controller: Camada intermediária entre a entity e a view (parte do sistema que interage com o usuário), responsável por
+> intermediar a comunicação do usuário com a aplicação através de requisições e respostas.\
+> - Repository: Interface responsável pelo relacionamento entre a aplicação e o banco de dados com funções para criar, deletar,
+> atualizar, obter e filtrar objetos do banco de dados.\
+> - Service: Classe responsável pela operação dos serviços de acordo com as regras de negócio definidas em cada um dos métodos
+> nela declarados.
 
 **b) Com base na informação anterior (Entry): \
 I. Crie uma classe de serviço para lançamentos; \
@@ -491,12 +477,10 @@ O objetivo durante o desafio 6 é conhecer o funcionamento das classes de DTO e 
 como viés de trazer maior segurança para a nossa aplicação.
 
 **a) O que significa DTO, e qual sua importância?**
-```
-Data Transfer Object (DTO)  é um padrão de projeto usado em java para o transporte de dados entre diferentes componentes
-de um sistema, atualmente na arquitetura MVC o DTO tem a responsabilidade de separar as camadas model e view, deixando
-explicito quais campos da model irão para a camada de view, assim os responses terão apenas informações necessárias para 
-atender certa requisição. 
-```
+> Data Transfer Object (DTO)  é um padrão de projeto usado em java para o transporte de dados entre diferentes componentes 
+> de um sistema, atualmente na arquitetura MVC o DTO tem a responsabilidade de separar as camadas model e view, deixando
+> explicito quais campos da model irão para a camada de view, assim os responses terão apenas informações necessárias para 
+> atender certa requisição. 
 
 **b) Com base no artigo passado, crie classes de DTO’s para as entidades de lançamento e de categoria**
 
@@ -532,7 +516,7 @@ III. Crie um método dentro da controller de lançamentos para retornar a lista 
  ```
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio06/financys/src/main/java/trilha/back/financys/services/EntryService.java)
 
-**d)  Implemente uma nova serialização dos dados utilizando Mapper**
+**d) Implemente uma nova serialização dos dados utilizando Mapper**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/tree/desafio06/financys/src/main/java/trilha/back/financys/mappers)
 
@@ -547,21 +531,19 @@ II. description: não pode ser nulo ou vazio, min = 15 e max = 50**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/java/trilha/back/financys/dtos/request/CategoryRequest.java)
 
-**b) Crie uma validação para a entidade de lançamento seguindo os seguintes requisitos: \
-I. name: não pode ser nulo ou vazio, min = 3 e max = 45 \
-II. description: não pode ser nulo ou vazio, min = 15 e max = 150 \
-III. type: não pode ser nulo ou vazio, min = 3 e max = 10 (nota extra pra quem usar enum) \
-IV. amount: não pode ser nulo ou vazio, < 0; \
-V. date: não pode ser nulo ou vazio; \
+**b) Crie uma validação para a entidade de lançamento seguindo os seguintes requisitos:\
+I. name: não pode ser nulo ou vazio, min = 3 e max = 45\
+II. description: não pode ser nulo ou vazio, min = 15 e max = 150\
+III. type: não pode ser nulo ou vazio, min = 3 e max = 10 (nota extra pra quem usar enum)\
+IV. amount: não pode ser nulo ou vazio, < 0;\
+V. date: não pode ser nulo ou vazio;\
 VI. paid: não pode ser nulo ou vazio;**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/java/trilha/back/financys/dtos/request/EntryRequest.java)
 
-
 **c) Configure mensagens específicas para cada uma das validações**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio07/financys/src/main/resources/validationMessages.properties)
-
 
 **e) No desafio anterior, mais especificamente na letra c é utilizando o comando for para criar o agrupamento das informações
 necessárias para criar o gráfico. Existem maneiras mais otimizadas para realizar essas manipulações, experimente refatorar
@@ -576,43 +558,31 @@ O objetivo durante o desafio 8 é entender como funcionam as exceptions, e ser c
 um bom funcionamento da API.
 
 **a) O que são exceptions?**
-```
-Exceptions são eventos que ocorrem durante a execução de um programa, fazendo com que a execução da aplicação seja
-interrompida e encerrada de forma anormal, uma exceção pode acontecer por vários motivos e devem ser tratadas.
-```
+> Exceptions são eventos que ocorrem durante a execução de um programa, fazendo com que a execução da aplicação seja
+> interrompida e encerrada de forma anormal, uma exceção pode acontecer por vários motivos e devem ser tratadas.
 
 **b) Qual é o funcionamento do try, catch e finally?**
-```
-O Try-Cath-Finally é usado para capturar exceções na execução de programas, no bloco Try é inserido códigos que
-são propensos a exceções que caso aconteçam serão tratadas pelos comandos do bloco catch associado a ela. No bloco
-fo Finally teremos comandos que sempre serão executados independendo da exceção ser executada ou não, basicamente o 
-finally irá forçar a execução dos comandos do seu bloco sem depender de outros resultados.
-```
+> O Try-Cath-Finally é usado para capturar exceções na execução de programas, no bloco Try é inserido códigos que
+> são propensos a exceções que caso aconteçam serão tratadas pelos comandos do bloco catch associado a ela. No bloco
+> fo Finally teremos comandos que sempre serão executados independendo da exceção ser executada ou não, basicamente o 
+> finally irá forçar a execução dos comandos do seu bloco sem depender de outros resultados.
 
 **c) Qual a relação entre “try, catch e finally” e “throws”?**
-```
-Ambos são usados no tratamento de exceções, porém o throws é usado na assinatura do método para declarar as exceções
-que podem ser lançadas naquele método, deixando de modo explícito o erro que pode acontecer no método. Desse modo as
-poderão ser tratadas nos demais momentos em que o método comn a assinatura for chamado.
-```
+> Ambos são usados no tratamento de exceções, porém o throws é usado na assinatura do método para declarar as exceções
+> que podem ser lançadas naquele método, deixando de modo explícito o erro que pode acontecer no método. Desse modo as
+> poderão ser tratadas nos demais momentos em que o método comn a assinatura for chamado.
 
 **d) Para que serve a annotation @ExceptionHandler?**
-```
-A @ExceptionHandler é uma anotação do Spring  para manusear exceções em classes de manipuladores específicas e/ou métodos
-de manipulador.
-```
+> A @ExceptionHandler é uma anotação do Spring  para manusear exceções em classes de manipuladores específicas e/ou métodos
+> de manipulador.
 
 **e) Para que serve o comando throw?**
-```
-A instrução throw é usada para lançar uma exceção explicitamente. O lançamento é seguido por uma instância da classe
-Exception e é realizado dentro do corpo de um método.
-```
+> A instrução throw é usada para lançar uma exceção explicitamente. O lançamento é seguido por uma instância da classe
+> Exception e é realizado dentro do corpo de um método.
 
 **f) Para que serve a annotation @ControllerAdvice?**
-```
-@ControllerAdvice é uma especialização da anotação que permite lidar com exceções em toda a aplicação em um componente
-de manuseio global. Pode ser visto como um interceptador de exceções lançadas por métodos anotados e similares.
-```
+> @ControllerAdvice é uma especialização da anotação que permite lidar com exceções em toda a aplicação em um componente
+> de manuseio global. Pode ser visto como um interceptador de exceções lançadas por métodos anotados e similares.
 
 **g) Crie o seguinte método na classe de serviço do lançamento
 Integer calculaMedia(Integer x, Integer y) {     return (x/y);**
@@ -675,13 +645,11 @@ utilizando @ControllerAdvice**
 
 [Codificação disponível neste link](https://github.com/ErnaneGS/trilhaBackEnd/blob/desafio08/financys/src/main/java/trilha/back/financys/exceptions/handle/ExceptionHandle.java)
 
-
 **g) VII. Realize novos testes, verifique o resultado final e escreva sua própria conclusão sobre exceptions:**
-```
-Podemos concluir que as exceções quando usadas da melhor forma melhoram a legibilidade, confiabilidade e manutenção de
-um programa, pois ajuda a detectar e tratar possíveis erros que possam acontecer. O tratamento das exceções, é o 
-mecanismo responsável pelo tratamento da ocorrência de condições que alteram o fluxo normal da execução de programas.
-```
+> Podemos concluir que as exceções quando usadas da melhor forma melhoram a legibilidade, confiabilidade e manutenção de
+> um programa, pois ajuda a detectar e tratar possíveis erros que possam acontecer. O tratamento das exceções, é o 
+> mecanismo responsável pelo tratamento da ocorrência de condições que alteram o fluxo normal da execução de programas.
+
 ◀️[Voltar para menu de desafios](#-Desafios)
 
 ## 🎯 Desafio 9
@@ -1049,10 +1017,10 @@ desenvolvimento e otimizar a performance da aplicação
 
 **b) Cite 3 exemplos de ferramentas Spring e suas respectivas finalidades**
 > **Spring Data:** projeto com o objetivo de tornar mais fácil a integração de aplicações Spring a novos modelos de bancos
-> de dados. 
+> de dados.\
 > **Spring Security:** é uma estrutura que se concentra em fornecer autenticação e autorização para aplicações Java. Como
 > todos os projetos da Spring, o verdadeiro poder da Segurança da Spring é encontrado na facilidade com que ele pode ser
-> estendido para atender aos requisitos personalizados. 
+> estendido para atender aos requisitos personalizados.\
 > **Spring Cloud:** estrutura que fornece ferramentas para que os desenvolvedores construam rapidamente alguns dos padrões
 > comuns em sistemas distribuídos (por exemplo, gerenciamento de configuração, detecção de serviços, disjuntores, roteamento
 > inteligente, microproxy, barramento de controle, tokens únicos, fechaduras globais, eleição de liderança, sessões 
@@ -1519,5 +1487,297 @@ IV. Caso não tenha dado certo, acesse o console através do inspecionar do nave
 
 - Lsitando Lançamentos\
 ![imagem](/img_front/Lançamento_listar.PNG)
+
+◀️[Voltar para menu de desafios](#-Desafios)
+
+## 🎯 Desafio 14
+O objetivo durante o desafio 14 é sintetizar os conhecimentos adquiridos ao longo desse percurso. Se chegou até aqui
+seguindo os passos da trilha, não irá ser difícil de provar para si mesmo que é digno.
+
+### **a) Desafio 1 - Git:**
+I. Dê 2 exemplos de situações onde é necessário utilizar merge:
+> 1 - Mwesclar o código de uma branch com a branch main (principal);
+> 2 - Unificação de código de uma equipe de trabalho em uma única branch.
+
+II. Com qual objetivo realizamos o commit?
+> Com o objetivo de salvar e identificar as alterações realizadas na branch
+
+III. Qual a diferença entre: git add -all // git add  -u // git add -A // git add
+> realiza a inclusão ou modificação do arquivo no diretório local, preparando ele para ser entregue ao servidor remoto.
+> Abaixo veja as diferenças do git add na versão 2.x:\
+> ```git add -all:``` Coloca todos arquivos (novos, modificados e removidos) no index/stage ou área temporária.\
+> ```git add -u:``` Coloca no Stage apenas arquivos modificados e removidos.\
+> ```git add -A:``` Coloca todos arquivos (novos, modificados e removidos) no index/stage.\
+> ```git add .:``` Coloca todos arquivos (novos, modificados e removidos) no index/stage.
+
+IV.  Qual  é  a  ordem  dos  comandos  para  subir  novas  atualizações,  verificando  se existem alterações a serem
+recebidas?
+> 1 - git pull (atualizar o repositório local de acordo com o remoto)
+> 2 - git status  (Verificar status de arquivos novos, modificados ou removidos)\
+> 3 - git add (adicionar os arquivos no stage)\
+> 4 - git commit (salvar e identificar as alterações)\
+> 5 - git push (enviar o conteúdo do repositório local para o remoto)
+
+V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 1? Se não, justifique;
+> Sim, consegui adquirir os conhecimentos e comandos necessários para o trabalho com o sistema de versionamento git.
+
+### **b) Desafio 2 - POO e Entity:**
+I. Qual é a finalidade da camada Entity?
+> Considerando a Entity como o domínio da nossa aplicação, podemos dizer que é a camada responsável por definir propriedades,
+> métodos e atributos dos nossos objetos.
+
+II. Para você, por que acha que seguimos a programação orientada a objetos?
+> Usamos a POO para aproximar a lógica da programação ao mundo real, possibilitando assim o desenvolvimento de aplicações
+> mais eficientes, com códigos bem estruturados, fáceis de reutilizar e mais seguros.
+
+III. Qual é o ideal por trás de utilizar os métodos getters e setters?
+> O uso dos getters e setter nos ajuda a seguir um dos pilares da POO, o encapsulamento, sendo que os métodos de acesso e
+> modificação permitem o acesso aos atributos do objeto de forma segura, protegendo aqueles que não necessariamente
+> precisarão ser acessados e modificados.
+
+IV. Qual o propósito de um construtor em uma classe? Podemos criar uma classe sem construtor?
+> Os construtores definem quais atributos serão inicializados na criação de um novo objeto. Em java as classes que são
+> codificadas sem a presença de um construtor, receberão um construtor padrão (vazio) no momento da compilação do código.
+
+V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 2? Se não, justifique;
+> Sim, consegui entender os conceitos da POO e dos domínios para o desenvolvimento de uma aplicação eficiente.
+
+### **c) Desafio 3 - HTTP, REST e Controller:**
+I. Qual é o objetivo da camada Controller?
+> Controlar as requisições e respostas entre as camadas view e model.
+
+II. No que os padrões REST nos auxiliam?
+> Facilitar e auxiliar nas solicitações HTTP.
+
+III. Quais métodos HTTP utilizamos para montar um CRUD?
+> POST, GET, PUT e DELETE
+
+IV.    Qual    a    diferença    entre    as    annotations    @PathVariable, @RequestParam, @RequestBody?  E com quais
+métodos HTTP  elas  podem  ser  utilizadas respectivamente?
+> -- @PathVariableé utilizado quando o valor da variável é passado diretamente na URL, podendo ser utilizada nos métodos GET,
+> PUT e DELETE.\
+> -- @RequestParam utilizado quando queremos passar parâmetros que não fazem parte da URL, podendo ser utilizada nos métodos GET,
+> PUT e DELETE.\
+> -- @RequestBody usado para deserializar o corpo da solicitação em um objeto, podendo ser utilizada nos métodos POST,
+> e PUT.
+
+V. Para que serve ResponseEntity?
+> Para representar uma resposta HTTP, incluindo cabeçalhos, corpo e status.
+
+VI. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 3? Se não, justifique;
+> Sim, nesse desafio foi possível entender sobre o funcionamento da camada controller juntamente com o protocolo HTTP.
+
+### **d) Desafio 4 - JPA e Repository:**
+I. Qual é o propósito da camada Repository?
+> Responsável pelo relacionamento entre a aplicação e o banco de dados com funções para criar, deletar, atualizar, obter
+> e filtrar objetos do banco de dados.
+
+II. De maneira prática como funciona a injeção do Repository? E qual a sua relação com @Autowired?
+> Quando injetamos a classe de persistência em outras classes que precisam ter acessos ao banco de dados de nossa aplicação,
+> essa injeção é realizada utilizando o @Autowired que irá criar uma instância da classe em que estamos injetando.
+
+III. Quais são as facilidades em utilizar JPA?
+> Fácil acesso e configuração além de simplificar as consultas de dados.
+
+IV. Quais são os passos para configurar um banco de dados em um projeto Spring?
+> Primeiramente devemos adicionar a dependência do banco de dados escolhido no arquivo pom.xml, após deveremos configurar
+> todas as propriedades do banco de dados no arquivo application.properties e em sequência deveremos declarar os repositórios
+> e realizar o mapeamento das entidades.
+
+V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 4? Se não, justifique;
+> Sim, nesse desafio consegui adquirir conhecimentos necessários para trabalhar com a camada de persistência na aplicação
+
+### **e) Desafio 5 - Service:**
+I. Qual é a finalidade da camada Service?
+> Camada responsável pela operação dos serviços de acordo com as regras de negócio definidas para a construção da API.
+
+II. Qual o sentido de um método ter apenas um propósito?
+> Facilitar o reaproveitamento de códigos, a refatoração, a aplicação de testes automatizados e possibilitar a geração
+> de menos bugs na aplicação. princípio Single Responsiblity Principle do SOLID.
+
+III. Qual a diferença entre um método void e métodos tipados?
+> Os métodos voids executam o código composto em seu bloco sem retornar nenhuma informação ou resultado, já os métodos
+> tipados são métodos que retornam um valor do mesmo tipo de dado com que ele foi declarado.
+
+IV. É normal um serviço chamar outro?
+> Sim, uma vez que uma service poderá depender do serviço de outra.
+
+V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 5? Se não, justifique;
+> Sim, nesse desafio foi possível entender as funcionalidades da camada service.
+
+### **f) Desafio 6 - DTO:**
+I. Quais problemas conseguimos resolver utilizando a camada DTO?
+> O principal problema resolvido com o uso de DTO é a exposição de dados na camada view, uma vez que com o DTO conseguimos
+> determinar quais dados serão usados na requisição e na resposta da classe de visualização, além de otimizar o tráfego de
+> dados.
+
+II.  Qual  a  diferença  de  realizarmos  o  “de  para”  utilizando  constructor  ou  getters  e  setters?
+> Os construtores deverão passar os dados necessários para instanciar uma classe enquanto os get são amis utilizadas
+> para setar e obter informações do objeto.
+
+III. No que a utilização do Mapper nos auxilia? Achou fácil a implementação?
+> O Mapper auxilia no mapeamento de objetos, como por exemplo de DTO para o domínio. A implantação utilizando Frameworks
+> pode ser considerada fácil.
+
+IV. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 6? Se não, justifique;
+> Sim, nesse desafio foi possível adquirir conhecimentos necessários para o uso de DTO na API.
+
+### **g) Desafio 7 - Manipulação de dados:**
+I. Qual é a forma de validar os dados de uma requisição sem utilizar @Valid?
+> Podemos criar uma classe que irá implementar o método com a lógica da validação necessária,
+
+II. Para que serve um ENUM? Cite exemplos;
+> A palavra reservada ENUM serve para representar um conjunto fixo de constantes, ou seja uma lista de valores pré-definidos.
+> Um exemplo de ENUM pode ser a definição de uma ENUM para representar o turno de atendimentos de uma empresa.
+
+```java
+ public enum Turno {
+        MANHA,
+        TARDE,
+        NOITE;
+    }
+```
+III. Como criamos um custom validator? E qual o objetivo de criar um?
+> È necessário adicionar as dependências de validação no pom.xml e após poderá ser customizado uma interface para a
+> validação, deixando o processo de validação mais eficaz.
+
+IV. Qual foi a diferença entre utilizar for e streams no desafio 6?
+> Com o uso da strean podemos reduzir consideravelmente o código do nosso método, isso permitiu que o código ficasse mais
+> legível além de possibilitar a implementação da solução de uma forma mais fácil, rápida e com mais possibilidades.
+
+V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 7? Se não, justifique
+> Sim, consegui entender os conceitos de manipulação de dados propostos.
+
+### **h) Desafio 8 - Tratamento de exceptions:**
+I. Qual a finalidade de trata-las?
+> Tratamos a ocorrência de condições que alteram o fluxo normal de excução da aplicação para que seja possível mostrar de
+> forma mais clara oque realmente aconteceu com a execução do programa
+
+II. Como as descobrimos?
+> Ao realizar testes na aplicação e sermos deparados com a ocorrência de condições que afetam o seu fluxo de execução normal.
+
+III. Como fazemos para estourar um exception em uma determinada linha?
+> Através de testes onde iremos simular uma condição anormal na execução da api.
+
+IV. Qual é a melhor forma de implementarmos nosso controle de exceções?
+> Criando uma classe específica para realizarmos o tratamento das exceções, como por exemplo uma classe ExceptionHandle.
+
+V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 8? Se não, justifique;>
+> Sim, nesse desafio foi possível compreender a importância do tratamento de exceções e como ele pode ser realizado.
+
+### **i) Desafio 9 - Patterns, SOLID e Arquitetura:**
+I. O que é Singleton Pattern?
+> É um padrão de projeto criacional que permite a você garantir que uma classe tenha apenas uma instância, enquanto provê
+> um ponto de acesso global para essa instância.
+
+II. O que significa a letra D de SOLID e como se aplica na camada de Repository?
+> D - Dependency Inversion Principle: Princípio da Inversão de Dependência, um módulo não deve depender diretamente de
+> detalhes de implementação de outros módulos, mais sim de abstrações. Na Repository aplica-se esse princípio no desacoplamento
+> de módulos
+
+III. Qual o objetivo das camadas?
+> Definir responsabilidades únicas, definidas em partes "camadas" na aplicação.
+
+IV. Qual arquitetura é melhor DDD, Hexagonal ou Clean?
+> Cada arquitetura possui definições que poderão ser consideradas melhores dependendo do cenário em que ela será aplicada,
+> porém podemos considerar que a arquitetura hexagonal tem uma maior capacidade de realizar o encapsulamento do core da api,
+> gerando grandes benefícios para o código.
+
+V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 9? Se não, justifique;
+> Sim, nesse desafio consegui adquirir novos conhecimentos relacionados a padrões de projetos e arquiteturas.
+
+### **j) Desafio 10 - Spring:**
+I. Qual a diferença entre Java e Spring?
+> Spring é um framework que poderá ser implementada durante os trabalhos de desenvolvimento com o java que é uma linguagem
+> de programação.
+
+II. É possível utilizar Spring Data sozinho?
+> Não, se considerado que o Spring Data contém subprojetos específicos que dependem de cada um dos bancos de dados, seja ele JPA,
+> MongoDB entre outros.
+
+III. É possível utilizar Spring Boot, Spring Data e Spring Security em apenas um projeto? Se sim, como é feito a integração?
+> Sim, através de inclusão de cada uma das dependências no projeto.
+
+IV. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 10? Se não, justifique;
+> Sim, nesse desafio foi possível aprimorar os conhecimentos em spring.
+
+### **k) Desafio 11 - Libs:**
+I. Cite 5 libs que utilizou durante a trilha e suas respectivas funcionalidades;
+> 1 - validation: validação de dados na api;\
+> 2 - H2: persistência de dados da api (banco de dados);\
+> 3 - Junit: prescrever testes na aplicação;\
+> 4 - Lombok: geração automática de construtores, getters e setters;\
+> 5 - Sweggar: projetar, construir, documentar e consumir APIs REST.
+
+II. Qual a diferença entre uma lib e um driver?
+> Driver é um arquivo jar que na aplicação será usado para fazer a comunicação com o banco de dados, já as libs são subprogramas
+> que facilitam e agilizam o desenvolvimento de um sistema.
+
+III. Existe limite de libs por projeto?
+> Não, isso dependerá da necessidade do programa.
+
+IV. Por que utilizar um gerenciador de dependências?
+> O uso do gerenciador facilita a inclusão de dependências nos projetos eliminando trabalhos que seriam realizados de forma
+> manual pelo desenvolvedor.
+
+V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 11? Se não, justifique
+> Sim, nesse desafio foi possível assimilar de forma mais clara as definições de libs.
+
+### **l) Desafio 12 - Testes unitários:**
+I. Por que DEVOPS exige uma porcentagem de cobertura mínima nos projetos?
+> Para seguir um dos seus princípios: Maior segurança automatizando práticas de conformidade.
+
+II. Qual o objetivo de utilizar Mockito? Dê um exemplo;
+> Simulação comportamento de classes e métodos para a realização de testes:
+```java
+@WebMvcTest(EntryController.class)
+public class TrilhaBackTestesController {
+
+    @Autowired
+    MockMvc mockMvc;
+
+    @MockBean
+    EntryService entryService;
+
+    @MockBean
+    CategoryService categoryService;
+
+    @MockBean
+    EntryMapper entryMapper;
+
+    @Test
+    @DisplayName("Deve falhar se parametro forem null")
+    public void deveFalharSeParametrosNUll() throws Exception {
+        when(entryService.lancamentosDependentes(null, null, false)).thenThrow(EntryNotFoundException.class);
+        mockMvc.perform(get("/entry/filter")
+                        .param("paid", "false").contentType("Application/Json"))
+                .andExpect(status().isNotFound());
+    }
+```
+III. O que é o Sonar? E qual é o seu papel?
+> Ferramenta para a medição da qualidade de um sistema.
+
+IV. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 12? Se não, justifique
+> Sim, neste desafio foi possível aplicar entender os testes em api.
+
+### **m) Desafio 13 - Integração:**
+I. Como foi o processo de integração?
+> Foi necessário instalar o NodeJS e clonar a aplicação front disponibilizada, após foi preciso realizar alguns ajustes
+> em minha aplicação e no front com a ajuda do mentor, para que o processo gerasse o resultado esperado.
+
+II. Quais foram as principais dificuldades?
+> Por ser minha primeira experiência com um processo de integração, entender o funcionamento do front foi desafiador,
+> porém consegui adquirir muitos conhecimentos nesse processo.
+
+III. Obteve algum erro de CORS?
+> Não, uma vez que o CORS foi configurado primeiro.
+
+IV. O que é CORS?
+> O CORS (Cross-origin Resource Sharing) é um mecanismo utilizado pelos navegadores para compartilhar recursos entre
+> diferentes origens. O CORS é uma especificação do W3C e faz uso de headers do HTTP para informar aos navegadores se
+> determinado recurso pode ser ou não acessado.
+
+V. Você conseguiu adquirir os conhecimentos transmitidos durante o desafio 13? Se não, justifique
+> Sim, nesse desafio foi possível adquirir conhecimento sobre a integração de uma aplicação.
 
 ◀️[Voltar para menu de desafios](#-Desafios)

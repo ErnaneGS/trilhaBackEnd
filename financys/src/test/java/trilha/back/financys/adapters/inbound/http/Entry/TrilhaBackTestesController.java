@@ -13,7 +13,6 @@ import trilha.back.financys.core.domains.Entry;
 import trilha.back.financys.core.exceptions.EntryNotFoundException;
 import trilha.back.financys.core.services.CategoryService;
 import trilha.back.financys.core.services.EntryService;
-
 import java.util.ArrayList;
 import java.util.List;
 

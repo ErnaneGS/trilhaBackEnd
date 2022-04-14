@@ -1,8 +1,6 @@
 package trilha.back.financys.core.ports;
 
 import trilha.back.financys.core.domains.Entry;
-
-import java.time.LocalDate;
 import java.util.List;
 
 public interface EntryServicePort {

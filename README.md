@@ -1469,24 +1469,24 @@ IV. Caso não tenha dado certo, acesse o console através do inspecionar do nave
 **b)  Tire  evidências  das  telas  e  testes  mostrando  a  integração  dos  dois  códigos  e  adicione no README.md**
  
 - Cadastrando Categorias\
-![imagem](/img_front/Categorias_cadastro01.PNG)
-![imagem](/img_front/Categorias_cadastro02.PNG)
+![imagem](/front_img/Categorias_cadastro01.PNG)
+![imagem](/front_img/Categorias_cadastro02.PNG)
 
 - Editando Categorias\
-![imagem](/img_front/Categorias_atualizar.PNG)
+  ![imagem](/front_img/Categorias_atualizar.PNG)
 
 - Lsitando Categorias\
-![imagem](/img_front/Categorias_listar.PNG)
+  ![imagem](/front_img/Categorias_listar.PNG)
 
 - Cadastrando Lançamentos\
-![imagem](/img_front/Lançamento_cadastro01.PNG)
-![imagem](/img_front/Lançamento_cadastro02.PNG)
+  ![imagem](/front_img/Lançamento_cadastro01.PNG)
+  ![imagem](/front_img/Lançamento_cadastro02.PNG)
 
 - Editando Lançamentos\
-![imagem](/img_front/Lançamento_atualizar.PNG)
+  ![imagem](/front_img/Lançamento_atualizar.PNG)
 
 - Lsitando Lançamentos\
-![imagem](/img_front/Lançamento_listar.PNG)
+  ![imagem](/front_img/Lançamento_listar.PNG)
 
 ◀️[Voltar para menu de desafios](#-Desafios)
 

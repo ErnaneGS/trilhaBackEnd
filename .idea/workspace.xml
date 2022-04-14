@@ -7,15 +7,10 @@
     <list default="true" id="4b1a0de5-b7fd-4bcf-8071-a2694463da02" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/exceptions/CalculaMediaExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/exceptions/CalculaMediaExceptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/exceptions/ListaVaziaExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/exceptions/ListaVaziaExceptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/exceptions/handle/ExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/exceptions/handle/ExceptionHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/response/EntryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/inbound/http/Entry/dtos/response/EntryResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/repositories/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/repositories/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/repositories/EntryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/adapters/outbound/persistence/repositories/EntryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryRepositoryPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryRepositoryPort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryServicePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/core/ports/EntryServicePort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry/TrilhaBackTestesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/test/java/trilha/back/financys/adapters/inbound/http/Entry/TrilhaBackTestesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/financys/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/financys/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/financys/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/FinancysApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/financys/src/main/java/trilha/back/financys/FinancysApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
